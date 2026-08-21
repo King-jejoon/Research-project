@@ -1,0 +1,8 @@
+V5C HI#2 LOSS-TERM ABLATION — stage-2 base (healthy-range tables, ungated), dev only; test = planned 15th opening, not run here
+  SANITY base = 7.56 ± 0.05 (expected 7.56 ± 0.05)
+      base | RUL   7.56 ±  0.05 | NASA    30.3 | shape 3/3 | p vs base      —
+     no_l0 | RUL   9.78 ±  0.51 | NASA    41.9 | shape 0/3 | p vs base 0.0001
+    no_end | RUL  39.32 ±  1.78 | NASA  2505.3 | shape 0/3 | p vs base 0.0000
+   no_flat | RUL   8.42 ±  0.57 | NASA    34.1 | shape 3/3 | p vs base 0.0013
+
+wall=0.7 min

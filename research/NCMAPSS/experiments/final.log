@@ -1,0 +1,9 @@
+FINAL pipeline (NO filter)  seeds=[0, 1, 2]  NPER=60  lambda=(1.0,6.0,2.0)
+  seed0: RUL RMSE = 8.70  (by trunc 50%:4.52 60%:9.96 70%:10.67 80%:8.30)  transitions=[48, 18, 11, 11, 11, 11, 11, 11, 12]
+  seed1: RUL RMSE = 9.77  (by trunc 50%:5.02 60%:11.19 70%:11.91 80%:9.46)  transitions=[11, 11, 12, 12, 11, 12, 11, 11, 24]
+  seed2: RUL RMSE = 9.45  (by trunc 50%:5.34 60%:10.96 70%:11.50 80%:8.73)  transitions=[13, 14, 12, 11, 11, 12, 11, 11, 12]
+========================================================
+FINAL  RUL RMSE = 9.30 +/- 0.45 cycles   (reference old pipeline = 9.67)
+wall time = 542s
+========================================================
+saved hi_curves_final.png

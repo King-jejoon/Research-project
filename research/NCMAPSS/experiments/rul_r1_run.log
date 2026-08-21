@@ -1,0 +1,14 @@
+R1: per-flight RUL input tables  sensors=['T30', 'T48', 'T50', 'Nc', 'Wf']  gate=V(q15) abs  summaries=[mean,median,trim25]  seeds=[0, 1, 2]
+seed0: final model rebuilt (778s)
+seed0: dev point stats done (1028s)
+seed0: test point stats done (1164s)
+seed0: saved /Users/a1/Desktop/Research-project/research/NCMAPSS/experiments/rul_input_s0.npz  V*=20.2795  (1164s total)
+seed1: final model rebuilt (778s)
+seed1: dev point stats done (1004s)
+seed1: test point stats done (1138s)
+seed1: saved /Users/a1/Desktop/Research-project/research/NCMAPSS/experiments/rul_input_s1.npz  V*=20.0785  (1138s total)
+seed2: final model rebuilt (769s)
+seed2: dev point stats done (1005s)
+seed2: test point stats done (1143s)
+seed2: saved /Users/a1/Desktop/Research-project/research/NCMAPSS/experiments/rul_input_s2.npz  V*=20.1785  (1144s total)
+R1 DONE  wall=57.4 min

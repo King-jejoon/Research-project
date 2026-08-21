@@ -1,0 +1,29 @@
+V5 COVERAGE-CONDITIONAL GATE — one-time test verification (8th DS03 test opening, disclosed).  Rule frozen on dev: nbase<10 -> V=19.0, else V=20.2.
+baseline cycle count: u10:7 u11:8 u12:26 u13:9 u14:24 u15:12  -> sparse rule fires on: u10 u11 u13
+
+SANITY GATES (must reproduce the benchmark table):
+  frozen gate overall = 11.11  (expected 11.11)
+  ungated overall     = 9.01  (expected 9.01)
+
+   variant | overall | long u10/11/13 | short+med | mean delay
+   ungated |    9.01 |          11.38 |      5.73 |      +7.39
+    frozen |   11.11 |          14.70 |      5.54 |      +8.22
+        v5 |    8.54 |          10.73 |      5.54 |      +6.83
+
+per-unit signed onset error, 3 seeds  (ungated | frozen | v5):
+  u10 nb= 7: +14 +17 +14  |  +20 +19 +22  |  +14 +17 +15
+  u11 nb= 8:  +7  +7 +11  |  +12  +7 +19  |   +7  +7  +7
+  u12 nb=26:  +9  +9  +9  |   +8  +9  +9  |   +8  +9  +9
+  u13 nb= 9: +11  +0 +12  |   -1  +0 +12  |   +6  +0 +12
+  u14 nb=24:  +2  -2  +3  |   +2  -2  +3  |   +2  -2  +3
+  u15 nb=12:  +4  +2  +4  |   +4  +1  +4  |   +4  +1  +4
+
+mechanism — sigma0 ratio vs ungated (mean over seeds) and kept-vs-rejected LL gap in baseline cycles at the applied V:
+  u10: sigma0 frozen  2.54x  v5  0.91x   worst kept-rejected LL gap: frozen  -13.41  v5   -7.25
+  u11: sigma0 frozen  2.77x  v5  0.79x   worst kept-rejected LL gap: frozen  -22.07  v5  -34.65
+  u12: sigma0 frozen  1.04x  v5  1.04x   worst kept-rejected LL gap: frozen   -0.46  v5   -0.46
+  u13: sigma0 frozen  0.94x  v5  0.87x   worst kept-rejected LL gap: frozen   +1.39  v5  -20.53
+  u14: sigma0 frozen  1.00x  v5  1.00x   worst kept-rejected LL gap: frozen   -0.76  v5   -0.76
+  u15: sigma0 frozen  0.82x  v5  0.82x   worst kept-rejected LL gap: frozen   -0.37  v5   -0.37
+
+wall=0.0 min

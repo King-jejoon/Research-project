@@ -1,0 +1,31 @@
+M2 VALIDITY PROBE (small GP, 2048 training pts, seeds=[0, 1, 2])
+  m2 cut 15.09 (chi2_5 p<0.01, absolute) | kNN cut 5.0
+seed0: m2 pct[50,90,99]=[ 0.26  1.83 22.07]  flags m2=1.42% knn=3.60%  overlap=33/232m2 33/590knn  (132s)
+  flags in S: m2=27 knn=85
+      base: in=1.0005/0.4849/0.4084  early=1.0082/0.3806/0.3214  (62s)
+   m2clean: in=1.0115/0.4718/0.4013  early=1.2002/0.3779/0.3297  (63s)
+  knnclean: in=0.9748/0.4878/0.4047  early=0.8377/0.3636/0.3200  (66s)
+      rand: in=1.0050/0.4897/0.4164  early=0.9374/0.3781/0.3232  (64s)
+seed1: m2 pct[50,90,99]=[ 0.27  1.95 21.21]  flags m2=1.49% knn=3.58%  overlap=62/244m2 62/586knn  (136s)
+  flags in S: m2=25 knn=62
+      base: in=1.0010/0.5224/0.4497  early=1.0075/0.4582/0.3953  (72s)
+   m2clean: in=0.9534/0.5240/0.4563  early=0.9683/0.4551/0.3911  (74s)
+  knnclean: in=0.9716/0.5293/0.4637  early=0.9119/0.4560/0.3922  (71s)
+      rand: in=0.9847/0.5359/0.4690  early=0.9608/0.4666/0.3995  (71s)
+seed2: m2 pct[50,90,99]=[ 0.22  1.66 20.28]  flags m2=1.32% knn=3.63%  overlap=51/217m2 51/595knn  (140s)
+  flags in S: m2=31 knn=86
+      base: in=1.0005/0.5847/0.4938  early=1.0149/0.5627/0.4952  (67s)
+   m2clean: in=1.0463/0.5586/0.4799  early=1.0041/0.5350/0.4782  (67s)
+  knnclean: in=0.9645/0.5814/0.4957  early=0.8844/0.5479/0.4941  (72s)
+      rand: in=0.9914/0.5835/0.4963  early=0.9937/0.5568/0.4957  (67s)
+
+=== eval_in (mean over seeds; d = rand - X, +는 X 우세) ===
+   zRMSE: base 1.0007 | m2 1.0038 (vs rand 1/3, -1.01%) | knn 0.9703 (vs rand 3/3, +2.35%) | rand 0.9937
+    trim: base 0.5307 | m2 0.5181 (vs rand 3/3, +3.40%) | knn 0.5328 (vs rand 3/3, +0.66%) | rand 0.5364
+     med: base 0.4506 | m2 0.4459 (vs rand 3/3, +3.19%) | knn 0.4547 (vs rand 3/3, +1.28%) | rand 0.4606
+=== eval_early (mean over seeds; d = rand - X, +는 X 우세) ===
+   zRMSE: base 1.0102 | m2 1.0576 (vs rand 0/3, -9.71%) | knn 0.8780 (vs rand 3/3, +8.92%) | rand 0.9640
+    trim: base 0.4672 | m2 0.4560 (vs rand 3/3, +2.39%) | knn 0.4558 (vs rand 3/3, +2.43%) | rand 0.4672
+     med: base 0.4040 | m2 0.3997 (vs rand 2/3, +1.59%) | knn 0.4021 (vs rand 3/3, +0.98%) | rand 0.4061
+
+wall=20.4 min

@@ -1,0 +1,14 @@
+V5 ABLATIONS — re-baselined on the coverage-conditional chain, dev only
+
+1. HI loss-term ablation (conditional tables)
+   variant |      RUL RMSE |     NASA | shape | start/end
+      base |   7.10 ± 0.07 |     26.7 | 3/3 | 0.22/0.95
+     no_l0 |  10.12 ± 0.39 |     42.6 | 0/3 | 0.97/1.02
+    no_end |  40.54 ± 0.21 |   2786.1 | 0/3 | -0.07/-0.02
+   no_flat |   7.55 ± 0.19 |     28.7 | 3/3 | 0.21/0.97
+
+2. Gate vs ungated on the final metric (conditional chain)
+  RUL: conditional 7.10 vs ungated 7.12, paired p=0.193
+  onset: conditional 5.21 vs ungated 6.78, paired p=0.003
+
+wall=1.0 min

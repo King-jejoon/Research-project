@@ -1,0 +1,48 @@
+DS05 V6 TEST — FIRST v6 test opening of this subset, pre-registered (onset gate check, HI#2/HI#1 RUL, benchmark)
+frozen: rule {'NB': 16, 'V_sparse': 19.75, 'V_dense': 20.36, 'wval': 25.0, 'wmode': 'fh', 'clip': 4.0}; HI#1 recipe (16.0, 0.25); HI#2 recipe (16.0, 2.0)
+SANITY c3 seed0: dev LOO 11.03 (frozen 11.03)
+SANITY hr seed0: dev LOO 11.40 (frozen 11.40)
+test units [7, 8, 9, 10]: u7(L85, 2.44 h/cyc, hs 24), u8(L91, 1.18 h/cyc, hs 36), u9(L69, 4.26 h/cyc, hs 19), u10(L82, 1.25 h/cyc, hs 37)
+seed0 c3: test stats written (122s)
+seed0 hr: test stats written (135s)
+
+(a) ONSET test (4 cases): conditional 10.51 vs ungated 11.91, paired p=1.000
+    sparse (2 cases, units [7, 9]): conditional 12.59 vs ungated 14.92
+    dense (2 cases, units [8, 10]): conditional 7.91 vs ungated 7.81
+    dev recap: conditional 7.67 vs ungated 9.38
+    u7: conditional errors [14], ungated [18]
+    u8: conditional errors [-11], ungated [-11]
+    u9: conditional errors [11], ungated [11]
+    u10: conditional errors [-2], ungated [-1]
+
+(b) HI#2 (proposed): test RUL 6.49 ± 0.00  NASA 10.3 ± 0.0
+    per level RMSE/score: 20%: 10.47/5.3 | 40%: 6.10/2.6 | 60%: 3.59/1.5 | 80%: 2.93/1.0 | all%: 6.49/10.3
+
+(b) HI#1 (cycle<=3): test RUL 6.79 ± 0.00  NASA 12.6 ± 0.0
+    per level RMSE/score: 20%: 9.45/5.0 | 40%: 8.67/5.2 | 60%: 3.88/1.7 | 80%: 2.17/0.8 | all%: 6.79/12.6
+    paired |err| HI#2 vs HI#1 (16 preds, unit n=4): p=0.706
+
+(c) BENCHMARK — competitors on the identical cycle<=3 rows, HI#1 recipe (16.0, 0.25) retrained per model, ungated
+  seed0 llke: residuals ready (417s)
+  seed0 bspline: residuals ready (5s)
+  seed0 lr: residuals ready (0s)
+  seed0 cabn: residuals ready (0s)
+  llke: dev 11.59 ± 0.00 | test 7.09 ± 0.00  NASA 12.0 ± 0.0  shape 1/3  vs HI#2 p=0.298
+    per level RMSE/score: 20%: 11.12/6.0 | 40%: 7.54/3.5 | 60%: 3.71/1.6 | 80%: 2.63/0.8 | all%: 7.09/12.0
+  bspline: dev 93.57 ± 0.00 | test 81.63 ± 0.00  NASA 92871.1 ± 0.0  shape 0/3  vs HI#2 p=0.000
+    per level RMSE/score: 20%: 66.39/4669.4 | 40%: 80.42/20718.1 | 60%: 87.62/33105.0 | 80%: 90.01/34378.6 | all%: 81.63/92871.1
+  lr: dev 10.89 ± 0.00 | test 264442445222769.25 ± 0.00  NASA inf ± nan  shape 0/3  vs HI#2 p=0.562
+    per level RMSE/score: 20%: 528884890445538.50/inf | 40%: 19.55/38.9 | 60%: 6.38/3.1 | 80%: 2.78/1.1 | all%: 264442445222769.25/inf
+  cabn: dev 10.89 ± 0.00 | test 264442445222769.25 ± 0.00  NASA inf ± nan  shape 0/3  vs HI#2 p=0.562
+    per level RMSE/score: 20%: 528884890445538.50/inf | 40%: 19.55/38.9 | 60%: 6.38/3.1 | 80%: 2.78/1.1 | all%: 264442445222769.25/inf
+
+SUMMARY DS05 (test units n=4, 3 seeds)
+  onset: conditional 10.51 vs ungated 11.91 (p=1.000); dev 7.67 vs 9.38
+  Proposed (HI#2)    test 6.49 ± 0.00  NASA 10.3 ± 0.0  levels 10.47 / 6.10 / 3.59 / 2.93
+  MOGP (HI#1)        test 6.79 ± 0.00  NASA 12.6 ± 0.0  levels 9.45 / 8.67 / 3.88 / 2.17
+  LLKE               test 7.09 ± 0.00  NASA 12.0 ± 0.0  levels 11.12 / 7.54 / 3.71 / 2.63
+  B-spline           test 81.63 ± 0.00  NASA 92871.1 ± 0.0  levels 66.39 / 80.42 / 87.62 / 90.01
+  LR                 test 264442445222769.25 ± 0.00  NASA inf ± nan  levels 528884890445538.50 / 19.55 / 6.38 / 2.78
+  CaBN               test 264442445222769.25 ± 0.00  NASA inf ± nan  levels 528884890445538.50 / 19.55 / 6.38 / 2.78
+
+wall=11.7 min

@@ -1,0 +1,7 @@
+config: device=cpu dtype=float32 threads=6 rank=2 kernel=rbf m=30 steps=250 lr=0.05
+held-out val = 1331 pts | abn = 6630 pts
+======================================================================
+                method | n_train |    RMSE | meanSNR | SNR_HI3 |    sec
+----------------------------------------------------------------------
+        ExactGP (prev) |     180 |  0.9461 |   4.503 |  11.329 |    2.4
+          MOGP-Vecchia |     900 |  0.8600 |   5.099 |  12.285 |  502.7

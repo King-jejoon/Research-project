@@ -1,0 +1,21 @@
+PHASE 2 — residual-data cleaning scored by onset detection
+  detector frozen: 30 flight-hour baseline, clip mu0-10*sigma0, mean-drop
+  dev units=[1, 2, 3, 4, 5, 6, 7, 8, 9]  seeds=[0, 1, 2]
+  V* (15th pct of pooled dev detcov) per seed: [20.165, 20.153, 20.22]
+
+        filter | kept% |    mean |  median |     q75 |     q90 |  trim25
+------------------------------------------------------------------------
+          none | 100.0 |   16.57 |    7.54 |    4.85 |    4.42 |    9.95
+        detcov |  85.0 |   15.81 |    7.32 |    4.72 |    4.55 |   10.40
+      m2+15.09 |  53.8 |    7.83 |    5.56 |    4.84 |    4.63 |    5.80
+       m2+30.0 |  62.2 |    9.95 |    6.02 |    4.82 |    4.69 |    7.00
+        wz+4.0 |  93.2 |    7.65 |    6.64 |    4.66 |    4.55 |    6.46
+        wz+3.0 |  90.7 |    7.82 |    6.25 |    4.79 |    4.55 |    6.44
+        wz+2.5 |  88.6 |    7.08 |    6.22 |    4.79 |    4.59 |    6.09
+ wz+detcov+3.0 |  78.6 |    6.83 |    5.64 |    4.64 |    4.63 |    6.08
+
+BEST: filter=none  summary=q90  onset RMSE=4.42 cycles  (mean delay +1.48, |d|<=3 in 56%)
+CURRENT frozen chain (detcov gate + q75): RMSE=4.72  (mean delay +1.74, |d|<=3 in 52%)
+NO point filter (q75)                   : RMSE=4.85  (mean delay +2.04, |d|<=3 in 63%)
+
+wall=0.06 min

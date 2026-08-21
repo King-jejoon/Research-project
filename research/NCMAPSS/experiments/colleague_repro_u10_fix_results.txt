@@ -1,0 +1,20 @@
+COLLEAGUE DEMO REPRO  DS02-006  unit=10  seed=0  m=100/200  steps=200 lr=0.01  probe=False
+[data] dev rows=5263447  W_var=[np.str_('alt'), np.str_('Mach'), np.str_('TRA'), np.str_('T2')]  outputs=[np.str_('T30'), np.str_('T48'), np.str_('T50'), np.str_('Nc'), np.str_('Wf')]  (0s)
+[data] train (8192, 4) from cycle<5 pool, inputs=[alt,Mach,TRA,T2] (FIXED)
+[train] m=100 steps=200 lr=0.01: final LL=-8127.1 (3214s)
+  cycle 10/82  (23s)
+  cycle 20/82  (45s)
+  cycle 30/82  (67s)
+  cycle 40/82  (91s)
+  cycle 50/82  (114s)
+  cycle 60/82  (137s)
+  cycle 70/82  (161s)
+  cycle 80/82  (186s)
+  cycle 82/82  (191s)
+[filter] detcov>3.6: kept 9434/9840 pts (95.9%)  detcov pct [5,25,50,75,95]=[3.61 3.68 3.7  3.7  3.71]
+[filter] kept per cycle: min=74 max=120 / 120
+[onset] correct hs==0 first cycle = 17   notebook cell-14 value (full-frame iloc bug) = 16
+[changepoint] raw LL: tau+1=23   filtered LL: tau+1=23   (true onset=17)
+[gp-quality] healthy-cycle residual RMS (scaled): raw=0.0254  filtered=0.0239
+[gp-quality] all-cycle    residual RMS (scaled): raw=0.0728  filtered=0.0700
+DONE  wall=191s

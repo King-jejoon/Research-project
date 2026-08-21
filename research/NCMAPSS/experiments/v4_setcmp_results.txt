@@ -1,0 +1,14 @@
+V4 STAGE 4 — set decision (identical rule: q75, 30h baseline, clip 10s; per-set absolute sweep)
+  set3: gate-off RMSE= 7.15 | sweep V=10.4..12.3 -> min RMSE=6.41 at V=11.7 (kept 88%, p=0.0337 vs off)
+          tie band (<=min+0.1): 11.7(6.41)
+  set5: gate-off RMSE= 6.78 | sweep V=18.1..20.4 -> min RMSE=5.65 at V=20.2 (kept 63%, p=0.0210 vs off)
+          tie band (<=min+0.1): 20.2(5.65)
+  set7: gate-off RMSE= 6.95 | sweep V=25.8..28.7 -> min RMSE=5.76 at V=28.3 (kept 74%, p=0.0015 vs off)
+          tie band (<=min+0.1): 28.3(5.76), 28.4(5.81)
+
+  set5 vs set3 (each at own best V, paired 27): better 9 worse 6  Wilcoxon p=0.402
+  set5 vs set7 (each at own best V, paired 27): better 5 worse 3  Wilcoxon p=0.581
+
+SELECTED SET: 5  (gated RMSE 5.65; others [(3, np.float64(6.41)), (7, np.float64(5.76))]; gate-off ranking [(3, np.float64(7.15)), (5, np.float64(6.78)), (7, np.float64(6.95))])
+
+wall=0.10 min

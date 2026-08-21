@@ -1,0 +1,37 @@
+BENCHMARK: competing normal models in the MOGP slot, frozen downstream
+  seeds=[0, 1, 2]  fracs=[0.2, 0.4, 0.6, 0.8]  detector and HI network frozen
+  `mogp` = the frozen pipeline itself (rul_input_s*.npz, untouched)
+
+      mogp done  beta=[30, 30, 30]  (11s)
+      llke done  beta=[30, 30, 30]  (22s)
+   bspline done  beta=[30, 30, 30]  (32s)
+        lr done  beta=[30, 30, 30]  (43s)
+      cabn done  beta=[30, 30, 30]  (54s)
+
+   model | onset dev onset test |   dev LOO RUL |      test RUL |     test NASA
+--------------------------------------------------------------------------------------------
+    mogp |      4.58       6.84 |   7.38+/-0.03 |   7.35+/-0.10 |   18.2+/- 0.5
+    llke |      6.98       6.53 |   7.54+/-0.01 |   7.63+/-0.09 |   18.7+/- 0.3
+ bspline |      9.43       8.62 |   7.25+/-0.05 |   7.31+/-0.06 |   18.1+/- 0.4
+      lr |      9.24       8.56 |   7.65+/-0.06 |   7.32+/-0.01 |   18.6+/- 0.2
+    cabn |      9.60       8.58 |   7.65+/-0.06 |   7.32+/-0.01 |   18.6+/- 0.2
+
+   model |     20%     40%     60%     80%   (test RMSE)
+----------------------------------------------------
+    mogp |   11.22    7.96    4.49    2.55
+    llke |   11.31    8.32    4.97    3.27
+ bspline |   11.18    7.96    4.38    2.46
+      lr |   11.24    7.87    4.49    2.41
+    cabn |   11.24    7.87    4.49    2.41
+
+RUNNING TIME of the normal-model stage (seconds per seed, measured)
+   model |  training  dev infer  test infer |     total
+----------------------------------------------------------
+    mogp |     775.0      237.3       136.0 |    1148.3
+    llke |      21.9      158.8       105.2 |     285.9
+ bspline |       0.6        4.6         3.1 |       8.3
+      lr |       0.0        0.5         0.4 |       1.0
+    cabn |       0.1        0.6         0.4 |       1.1
+  (mogp timings come from the rul_r1 build log; NTHREADS=10, idle machine)
+
+wall=0.9 min

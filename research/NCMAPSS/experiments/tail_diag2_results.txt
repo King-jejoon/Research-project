@@ -1,0 +1,23 @@
+PHASE 0b — W-region effect vs unit/flight effect
+  neighbour composition (k=10): same unit 33.5%  same flight 18.8%
+  neighbour distance in standardized W: median 0.0660 p95 0.2254
+
+  corr(|z|, neighbour mean |z|)              = 0.9020   (all neighbours)
+  corr(|z|, CROSS-UNIT neighbour mean |z|)   = 0.8189   (7572 of 8192 points have a cross-unit neighbour)
+  -> cross-unit correlation staying high = the operating REGION is bad for every engine (not a per-unit bias)
+
+  error concentration by unit:
+    unit  1: n=  726  mean|z|=0.259  share of total z^2 =   0.9%
+    unit  2: n= 1003  mean|z|=0.288  share of total z^2 =   2.7%
+    unit  3: n=  931  mean|z|=0.290  share of total z^2 =   2.0%
+    unit  4: n=  945  mean|z|=0.299  share of total z^2 =   2.1%
+    unit  5: n=  717  mean|z|=0.252  share of total z^2 =   1.0%
+    unit  6: n= 1130  mean|z|=0.449  share of total z^2 =   9.6%
+    unit  7: n=  990  mean|z|=0.721  share of total z^2 =  73.7%
+    unit  8: n=  987  mean|z|=0.421  share of total z^2 =   6.2%
+    unit  9: n=  763  mean|z|=0.371  share of total z^2 =   1.8%
+
+  top-1% points (|z|>=2.33): 82 pts, 8 distinct units, 17 distinct cycles
+    unit histogram: {np.int64(2): np.int64(5), np.int64(3): np.int64(3), np.int64(4): np.int64(3), np.int64(5): np.int64(1), np.int64(6): np.int64(22), np.int64(7): np.int64(27), np.int64(8): np.int64(19), np.int64(9): np.int64(2)}
+    their neighbours are same-unit 70.9% of the time
+    mean |z| of their neighbours = 3.856 (overall mean 0.382)

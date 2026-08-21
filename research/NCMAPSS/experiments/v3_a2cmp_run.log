@@ -1,0 +1,11 @@
+A2 — sensor-set decision (identical rule: q75, 30h baseline, clip 10s)
+  set3: gate-off RMSE=10.02 (delay +8.70) | gate@p25 RMSE= 7.64 (delay +6.00)  V*=[11.9, 11.73, 11.92]
+  set5: gate-off RMSE= 8.68 (delay +7.93) | gate@p25 RMSE= 7.47 (delay +6.37)  V*=[20.11, 19.93, 20.12]
+  set7: gate-off RMSE= 9.02 (delay +8.11) | gate@p25 RMSE= 8.41 (delay +7.30)  V*=[28.27, 28.24, 28.25]
+
+  set5 vs set3 (gated, paired 27): better 5 worse 2  Wilcoxon p=0.433
+  set5 vs set7 (gated, paired 27): better 6 worse 4  Wilcoxon p=0.400
+
+SELECTED SET: 5  (gated RMSE 7.47; others [(3, np.float64(7.64)), (7, np.float64(8.41))])
+
+wall=0.01 min

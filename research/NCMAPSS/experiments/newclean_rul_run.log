@@ -1,0 +1,12 @@
+PHASE 1d — per-flight RUL inputs with raw-data cleaning (score>5.0)
+seed0: model built (331s)
+seed0: point stats done, V*=20.2236 (531s)
+seed0: saved (531s total)
+seed1: model built (333s)
+seed1: point stats done, V*=20.1676 (528s)
+seed1: saved (529s total)
+seed2: model built (339s)
+seed2: point stats done, V*=20.2927 (514s)
+seed2: saved (514s total)
+
+wall=26.3 min

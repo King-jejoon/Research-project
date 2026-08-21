@@ -1,0 +1,14 @@
+V4 STAGE 7 — dev LOO truncation RUL (cycle axis, beta by nested-LOO NASA)
+  chain: set5 rbf r1, cycle<=3 27k, gate V*=20.2 (absolute), HI l1=8 l2=0.5, frozen recipe
+  seed0: shape=OK (start 0.22 end 0.95)  RMSE=7.49  NASA=29.5  beta=30  (3s)
+  seed1: shape=OK (start 0.22 end 0.95)  RMSE=7.35  NASA=28.1  beta=30  (7s)
+  seed2: shape=OK (start 0.23 end 0.94)  RMSE=7.78  NASA=30.1  beta=35  (10s)
+
+OFFICIAL v4 dev numbers (3 seeds):
+  LOO RUL RMSE = 7.54 ± 0.18
+  per truncation (20/40/60/80% of life): 10.86 / 8.34 / 5.01 / 3.78
+  NASA score = 29.2 ± 0.8
+  beta per seed = [30, 30, 35]
+  [DS03 test remains SEALED — opening requires an explicit user decision and is counted in the protocol]
+
+wall=0.2 min

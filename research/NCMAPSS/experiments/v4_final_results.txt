@@ -1,0 +1,18 @@
+V4 FINAL (revised HI recipe) — l1=8 l2=0.25, median-3 HI filter, gate V*=20.2 abs
+seed0 dev: shape=OK (start 0.22 end 0.95)  LOO RMSE=7.23  NASA=27.6  beta=30
+seed0 test: RMSE=7.44  NASA=18.9
+seed1 dev: shape=OK (start 0.22 end 0.95)  LOO RMSE=7.14  NASA=26.7  beta=30
+seed1 test: RMSE=7.57  NASA=19.3
+seed2 dev: shape=OK (start 0.22 end 0.94)  LOO RMSE=7.52  NASA=27.8  beta=35
+seed2 test: RMSE=7.69  NASA=18.6
+
+OFFICIAL v4 numbers (revised recipe, 3 seeds):
+  dev LOO RUL  = 7.30 ± 0.16  NASA 27.4 ± 0.5  beta=[30, 30, 35]
+  dev per-trunc = 10.65 / 7.90 / 4.76 / 3.73
+  test RUL     = 7.57 ± 0.10  NASA 18.9 ± 0.3
+    20%: RMSE= 10.96  NASA=  26.3
+    40%: RMSE=  8.94  NASA=  18.3
+    60%: RMSE=  4.69  NASA=   8.5
+    80%: RMSE=  2.65  NASA=   3.7
+
+wall=0.2 min

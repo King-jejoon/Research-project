@@ -1,0 +1,16 @@
+R5 PURE TEST VERIFICATION  (frozen chain, one-time)
+  seed0 onset: u10:t18/d31(+13)  u11:t19/d20(+1)  u12:t37/d45(+8)  u13:t19/d25(+6)  u14:t36/d34(-2)  u15:t25/d26(+1)
+  seed0 RUL: beta=30  test RMSE=7.21  NASA=17.6  (3s)
+  seed1 onset: u10:t18/d32(+14)  u11:t19/d20(+1)  u12:t37/d46(+9)  u13:t19/d19(+0)  u14:t36/d34(-2)  u15:t25/d26(+1)
+  seed1 RUL: beta=30  test RMSE=7.43  NASA=18.4  (6s)
+  seed2 onset: u10:t18/d32(+14)  u11:t19/d20(+1)  u12:t37/d46(+9)  u13:t19/d19(+0)  u14:t36/d34(-2)  u15:t25/d26(+1)
+  seed2 RUL: beta=30  test RMSE=7.41  NASA=18.7  (9s)
+
+ONSET (test 6u x 3sd): RMSE=6.84 cyc  mean delay=+4.06  |d|<=3: 61%  (dev was 4.72)
+RUL   (test 6u x 4fr x 3sd): RMSE=7.35 +/- 0.10  NASA=18.2 +/- 0.5  (official baseline 7.23 +/- 0.10 / 17.8)
+  frac |   RMSE |   NASA
+   20% |  11.22 |    9.1
+   40% |   7.96 |    5.3
+   60% |   4.49 |    2.7
+   80% |   2.55 |    1.1
+wall=0.2 min

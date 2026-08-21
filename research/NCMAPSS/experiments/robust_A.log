@@ -1,0 +1,30 @@
+캐시 로드. held-out clean 검증풀=2700
+
+==============================================================================
+Stage A — 학습점 선택 robust (출력 스파이크 주입 → clean held-out RMSE)
+  낮을수록 좋음. 오염↑에도 RMSE가 안 오르면 robust.
+==============================================================================
+  [done p=0%]
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/gpytorch/distributions/multivariate_normal.py:376: NumericalWarning: Negative variance values detected. This is likely due to numerical instabilities. Rounding negative variances up to 1e-06.
+  warnings.warn(
+  [done p=10%]
+  [done p=20%]
+  [done p=30%]
+
+  method                p=0%    p=10%   p=20%   p=30%   
+  --------------------------------------------------------------------------
+  baseline(linspace)    0.9099  27.1825 33.7492 41.0565 
+  A-1(window median)    0.9379  1.0786  1.1317  1.3640  
+  A-2(Hampel+linsp)     0.9581  12.3458 22.7662 28.3534 
+  --------------------------------------------------------------------------
+  p=30%에서 A-1(window median)     baseline 대비 ΔRMSE=+96.68% (오염에 강함)
+  p=30%에서 A-2(Hampel+linsp)      baseline 대비 ΔRMSE=+30.94% (오염에 강함)
+
+==============================================================================
+Stage A-3 — steady-state 필터 (transient 위치 스파이크 주입)
+==============================================================================
+  baseline(linspace)     오염후 RMSE=24.6803  (선택점 중 transient비율=32%)
+  A-3(steady-state)      오염후 RMSE=0.9958  (선택점 중 transient비율=0%)
+  → A-3가 baseline 대비 ΔRMSE=+95.97% (transient 오염에 강함)
+
+Stage A 총 소요 174.0s

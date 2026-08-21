@@ -1,0 +1,35 @@
+BENCH EXPERIMENT 3 — competitor residuals through the frozen downstream, scored on DS03 test (7th opening, benchmark batch)
+seed0 llke: residuals ready (322s)
+seed0 bspline: residuals ready (3s)
+seed0 lr: residuals ready (0s)
+seed0 cabn: residuals ready (0s)
+seed1 llke: residuals ready (790s)
+seed1 bspline: residuals ready (6s)
+seed1 lr: residuals ready (0s)
+seed1 cabn: residuals ready (0s)
+seed2 llke: residuals ready (786s)
+seed2 bspline: residuals ready (6s)
+seed2 lr: residuals ready (0s)
+seed2 cabn: residuals ready (0s)
+llke seed0: shape=OK (start 0.22 end 0.95) beta=30 test RMSE=7.77 NASA=19.8
+llke seed1: shape=OK (start 0.22 end 0.95) beta=30 test RMSE=7.65 NASA=19.1
+llke seed2: shape=OK (start 0.22 end 0.95) beta=30 test RMSE=7.79 NASA=19.3
+bspline seed0: shape=OK (start 0.21 end 0.96) beta=30 test RMSE=7.31 NASA=18.1
+bspline seed1: shape=OK (start 0.21 end 0.96) beta=30 test RMSE=7.55 NASA=18.7
+bspline seed2: shape=OK (start 0.21 end 0.96) beta=30 test RMSE=7.32 NASA=18.3
+lr seed0: shape=OK (start 0.21 end 0.96) beta=30 test RMSE=7.54 NASA=19.0
+lr seed1: shape=OK (start 0.20 end 0.97) beta=30 test RMSE=7.28 NASA=17.7
+lr seed2: shape=OK (start 0.21 end 0.97) beta=30 test RMSE=7.34 NASA=18.1
+cabn seed0: shape=OK (start 0.21 end 0.96) beta=30 test RMSE=7.54 NASA=19.0
+cabn seed1: shape=OK (start 0.20 end 0.97) beta=30 test RMSE=7.28 NASA=17.7
+cabn seed2: shape=OK (start 0.21 end 0.97) beta=30 test RMSE=7.34 NASA=18.1
+
+SUMMARY — test truncation RUL, frozen downstream (mogp row = the chain with its gate; competitors ungated, gate not constructible)
+     model |    20%    40%    60%    80% |   overall RMSE |        NASA | shape | beta
+      mogp |  10.96   8.94   4.69   2.65 |   7.57 ± 0.10 |  18.9 ± 0.3 | 3/3 | [np.int64(30), np.int64(30), np.int64(35)]
+      llke |  11.25   8.74   5.17   3.14 |   7.74 ± 0.06 |  19.4 ± 0.3 | 3/3 | [30, 30, 30]
+   bspline |  11.30   8.03   4.50   2.49 |   7.39 ± 0.11 |  18.3 ± 0.3 | 3/3 | [30, 30, 30]
+        lr |  10.95   8.33   4.64   2.70 |   7.38 ± 0.11 |  18.2 ± 0.6 | 3/3 | [30, 30, 30]
+      cabn |  10.95   8.33   4.64   2.70 |   7.38 ± 0.11 |  18.2 ± 0.6 | 3/3 | [30, 30, 30]
+
+wall=32.6 min

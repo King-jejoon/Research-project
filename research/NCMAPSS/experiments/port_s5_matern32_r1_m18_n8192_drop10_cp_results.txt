@@ -1,0 +1,22 @@
+DS03-012 PORT of colleague workflow  tag=s5_matern32_r1_m18_n8192  drop=0.1  detect=cp
+  sensors=['T30', 'T48', 'T50', 'Nc', 'Wf']  kernel=matern32 rank=1 m=18 npts=8192 steps=120 mcond=15  train=cycle<5
+  seed0: stats ready (0s)
+  seed0: det acc=47.7%  trans=[67, 65, 60, 51, 85, 55, 69, 64, 76]  RUL RMSE=9.18  score=31.4  (3s)
+  seed1: stats ready (0s)
+  seed1: det acc=47.8%  trans=[67, 65, 60, 51, 85, 55, 69, 64, 75]  RUL RMSE=8.95  score=29.7  (6s)
+  seed2: stats ready (0s)
+  seed2: det acc=47.6%  trans=[67, 65, 60, 51, 86, 55, 70, 64, 75]  RUL RMSE=9.66  score=35.3  (9s)
+
+============================================================================
+DETECTION (cp, fixed LL): acc = 47.7%  mean |delay| = 38.4 cyc
+============================================================================
+ data used |         RMSE s0/s1/s2 | RMSE mean | score mean
+----------------------------------------------------------------------------
+      20% |   9.83   8.75   9.59 |      9.39 |        6.8
+      40% |   6.99   8.59   6.32 |      7.30 |        4.5
+      60% |   9.62   8.08  11.11 |      9.60 |        9.8
+      80% |   9.95  10.23  10.86 |     10.35 |       11.0
+----------------------------------------------------------------------------
+   OVERALL |   9.18   8.95   9.66 |      9.26 |       32.1
+OVERALL RUL RMSE = 9.26 +/- 0.30   NASA score = 32.1 +/- 2.3  (n=24 preds/seed)
+wall time = 9s

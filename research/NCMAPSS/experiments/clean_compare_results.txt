@@ -1,0 +1,29 @@
+PHASE 1c — onset detection: detcov cleaning vs raw-data cleaning
+  detector frozen: q of LL -> 30 flight-hour baseline -> clip 10 sigma -> mean-drop;  9 dev units x 3 seeds
+  V* (15th pct pooled detcov, detcov): [20.165, 20.153, 20.22]
+  V* (15th pct pooled detcov, rawclean): [20.228, 20.119, 20.298]
+
+  cleaning |   gate | q70   | q75   | q80   | q85   | q90  
+--------------------------------------------------------------
+    detcov |   True |  4.99 |  4.72 |  4.64 |  4.62 |  4.55
+    detcov |  False |  5.06 |  4.85 |  4.67 |  4.64 |  4.42
+  rawclean |   True |  3.72 |  3.84 |  4.23 |  4.33 |  4.86
+  rawclean |  False |  4.25 |  4.16 |  4.35 |  3.87 |  4.28
+
+paired comparison at the frozen setting (q75 + detcov gate):
+  detcov  cleaning: RMSE=4.72  per-seed [5.5  4.32 4.23]  mean delay +1.74
+  rawdata cleaning: RMSE=3.84  per-seed [3.96 3.4  4.14]  mean delay +1.96
+  rawclean better in 8 cases, worse in 3, tied in 16  | Wilcoxon p=0.109
+
+per-unit signed error (rawclean / detcov), seed 0 | 1 | 2:
+  unit  1 |   +1 /  +1 |   -1 /  -1 |   -1 /  +1
+  unit  2 |   -1 /  -4 |   -1 /  -1 |   -1 /  -4
+  unit  3 |   +2 /  +1 |   +2 /  +2 |   +2 /  +2
+  unit  4 |   -3 /  -3 |   +0 /  -3 |   -3 /  -3
+  unit  5 |   +6 /  +8 |   +6 /  +6 |   +8 /  +6
+  unit  6 |   +3 / -10 |   +3 /  +6 |   +3 /  +3
+  unit  7 |   +8 /  +8 |   -4 /  +8 |   +7 /  +7
+  unit  8 |   +4 /  +4 |   +6 /  +4 |   +4 /  +6
+  unit  9 |   +1 /  +1 |   +1 /  +1 |   +1 /  +1
+
+wall=0.02 min

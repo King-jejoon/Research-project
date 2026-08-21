@@ -1,0 +1,32 @@
+V4 STAGE 6 — HI lambda1 x lambda2 grid  (set5, absolute gate V*=20.2, trim25)
+  frozen: lambda0=1, thr=0.2, end_target=1.03, flat=(800,0.004), 1e-3x1000ep
+  l1= 2.0 l2=0.5: Mon=  -29.43  Curv=   3.75  Range=0.753  Shift=0.0313  LOO RUL=7.63±0.18  shape 3/3
+  l1= 2.0 l2=1.0: Mon=  -28.39  Curv=   3.79  Range=0.744  Shift=0.0306  LOO RUL=7.59±0.16  shape 3/3
+  l1= 2.0 l2=2.0: Mon=  -26.71  Curv=   3.84  Range=0.727  Shift=0.0294  LOO RUL=7.67±0.32  shape 3/3
+  l1= 2.0 l2=4.0: Mon=  -24.58  Curv=   3.83  Range=0.695  Shift=0.0276  LOO RUL=7.57±0.18  shape 2/3
+  l1= 4.0 l2=0.5: Mon=  -27.55  Curv=   3.88  Range=0.742  Shift=0.0301  LOO RUL=7.72±0.38  shape 3/3
+  l1= 4.0 l2=1.0: Mon=  -26.70  Curv=   3.91  Range=0.734  Shift=0.0296  LOO RUL=7.64±0.29  shape 3/3
+  l1= 4.0 l2=2.0: Mon=  -25.47  Curv=   3.92  Range=0.718  Shift=0.0286  LOO RUL=7.57±0.21  shape 3/3
+  l1= 4.0 l2=4.0: Mon=  -24.03  Curv=   3.87  Range=0.685  Shift=0.0271  LOO RUL=7.55±0.14  shape 0/3
+  l1= 8.0 l2=0.5: Mon=  -25.25  Curv=   4.04  Range=0.724  Shift=0.0287  LOO RUL=7.54±0.18  shape 3/3
+  l1= 8.0 l2=1.0: Mon=  -24.82  Curv=   4.04  Range=0.715  Shift=0.0283  LOO RUL=7.53±0.16  shape 3/3
+  l1= 8.0 l2=2.0: Mon=  -24.16  Curv=   3.99  Range=0.700  Shift=0.0276  LOO RUL=7.53±0.13  shape 2/3
+  l1= 8.0 l2=4.0: Mon=  -22.92  Curv=   3.87  Range=0.667  Shift=0.0262  LOO RUL=7.69±0.23  shape 0/3
+  l1=16.0 l2=0.5: Mon=  -22.92  Curv=   4.06  Range=0.690  Shift=0.0267  LOO RUL=7.63±0.16  shape 1/3
+  l1=16.0 l2=1.0: Mon=  -22.53  Curv=   4.03  Range=0.682  Shift=0.0264  LOO RUL=7.79±0.10  shape 0/3
+  l1=16.0 l2=2.0: Mon=  -20.52  Curv=   3.94  Range=0.662  Shift=0.0251  LOO RUL=7.83±0.17  shape 0/3
+  l1=16.0 l2=4.0: Mon=  -19.93  Curv=   3.76  Range=0.632  Shift=0.0240  LOO RUL=7.72±0.15  shape 0/3
+
+TABLE (rows lambda1; column groups lambda2; cells: Mon | Curv | Range | Shift)
+  l1\l2 |                    0.5                 |                    1.0                 |                    2.0                 |                    4.0                 
+    2.0 |   -29.43    3.75 0.753 0.0313 |   -28.39    3.79 0.744 0.0306 |   -26.71    3.84 0.727 0.0294 |   -24.58    3.83 0.695 0.0276 
+    4.0 |   -27.55    3.88 0.742 0.0301 |   -26.70    3.91 0.734 0.0296 |   -25.47    3.92 0.718 0.0286 |   -24.03    3.87 0.685 0.0271 
+    8.0 |   -25.25    4.04 0.724 0.0287 |   -24.82    4.04 0.715 0.0283 |   -24.16    3.99 0.700 0.0276 |   -22.92    3.87 0.667 0.0262 
+   16.0 |   -22.92    4.06 0.690 0.0267 |   -22.53    4.03 0.682 0.0264 |   -20.52    3.94 0.662 0.0251 |   -19.93    3.76 0.632 0.0240 
+
+shape-passing combos: [(2.0, 0.5), (2.0, 1.0), (2.0, 2.0), (4.0, 0.5), (4.0, 1.0), (4.0, 2.0), (8.0, 0.5), (8.0, 1.0)]
+SELECTED (property composite): lambda1=8.0, lambda2=0.5  composite=0.750
+  its LOO RUL: 7.54 ± 0.18  (grid best RUL: 7.53)
+figure: /Users/a1/Desktop/master/논문/fig_v4_hi_curves.png
+
+wall=2.7 min

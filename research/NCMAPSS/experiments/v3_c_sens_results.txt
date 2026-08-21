@@ -1,0 +1,12 @@
+STAGE C — detector sensitivity, set5, gate V@p15, q75
+
+  clip |   8cyc |  12cyc |  20cyc ||  30h |  50h |  80h
+    10 |   7.76 |   8.45 |  10.76 ||   7.59 |  12.45 |  22.00
+    12 |   8.69 |   9.70 |  11.89 ||   8.90 |  13.65 |  23.04
+    14 |   9.90 |  10.70 |  12.63 ||  10.39 |  14.35 |  24.00
+    16 |  10.26 |  11.72 |  13.55 ||  11.55 |  15.28 |  25.10
+  best: 30flight-h clip 10s -> RMSE 7.59
+  figure: fig_v3_sens_cycle.png
+  figure: fig_v3_sens_flighth.png
+
+wall=0.00 min

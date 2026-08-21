@@ -1,0 +1,8 @@
+V5B DEV — re-frozen chain lambda1=12, lambda2=0.25 (conditional gate everywhere), vs lambda8 on identical tables
+l12: dev LOO = 7.22 ± 0.08  NASA 27.3 ± 0.8  shape 3/3  beta=[30, 30, 35]
+  per-trunc = 10.60 / 7.50 / 5.02 / 3.82
+l8: dev LOO = 7.10 ± 0.07  NASA 26.7 ± 0.5  shape 3/3  beta=[30, 30, 30]
+  per-trunc = 10.50 / 7.18 / 5.04 / 3.78
+
+paired |err| lambda12 vs lambda8 (108 preds): p=0.391
+wall=0.3 min

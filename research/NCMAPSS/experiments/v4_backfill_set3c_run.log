@@ -1,0 +1,18 @@
+
+STAGE 2b BACKFILL — set3: retry ladder on Cholesky-failed cells
+  (source table: v4_grid_set3_backfilled.npz, ladder from f5)
+   matern52 r2 seed0: rescued[f5] zRMSE=0.02794  (759s)
+   matern52 r2 seed1: rescued[f5] zRMSE=0.01598  (781s)
+   matern52 r3 seed0: rescued[f5] zRMSE=0.02885  (777s)
+   matern52 r3 seed2: rescued[f5] zRMSE=0.01928  (742s)
+
+completed table (mean zRMSE over available seeds; tags per seed: a1=first-try, j1/j2=jitter 1e-5/1e-4, d3=50-row redraw):
+     kernel |                     rank 1 |                     rank 2 |                     rank 3
+        rbf |  0.01668±0.00229[a1,a1,a1] |  0.03523±0.02805[a1,a1,a1] |  0.03389±0.02610[a1,a1,a1]
+   matern52 |  0.01965±0.00264[d3,a1,j2] |  0.02139±0.00495[f5,f5,a1] |  0.02140±0.00542[f5,j2,f5]
+   matern32 |  0.01738±0.00166[a1,a1,a1] |  0.01739±0.00165[a1,a1,a1] |  0.01733±0.00165[a1,a1,a1]
+   matern12 |  0.01787±0.00284[a1,a1,a1] |  0.01799±0.00292[a1,a1,a1] |  0.01812±0.00310[a1,a1,a1]
+
+best by mean (complete configs): rbf r1 (0.01668); within-sd candidates: [('matern12', 1), ('matern12', 2), ('matern12', 3), ('matern32', 1), ('matern32', 2), ('matern32', 3), ('rbf', 1)]
+RESELECTED (simplicity rule, complete configs): kernel=rbf, rank=1
+backfill wall=51.0 min

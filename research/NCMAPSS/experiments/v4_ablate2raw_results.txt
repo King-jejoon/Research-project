@@ -1,0 +1,9 @@
+ABLATION 2 — raw sensor cycle means replace the MOGP residuals (downstream frozen; no gate possible)
+seed0: shape=FAIL (start 0.32 end 0.82) beta=40 LOO RUL=9.08 NASA=37.5
+seed1: shape=FAIL (start 0.33 end 0.81) beta=40 LOO RUL=9.50 NASA=41.2
+seed2: shape=FAIL (start 0.33 end 0.80) beta=40 LOO RUL=9.42 NASA=40.7
+
+RAW-MEAN input : RUL RMSE=9.33 ± 0.18  NASA=39.8  shape 0/3
+chain reference: RUL RMSE=7.30 ± 0.16  NASA=27.4  shape 3/3
+
+wall=0.2 min

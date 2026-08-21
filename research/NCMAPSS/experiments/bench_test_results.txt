@@ -1,0 +1,47 @@
+BENCHMARK TEST PASS (frozen dev choices, one shot)
+  methods=['ours', 'lr', 'bspline', 'llke', 'cabn']  seeds=[0, 1, 2]  fracs=[0.2, 0.4, 0.6, 0.8]
+      ours: hp={}  beta=[30, 30, 30]  (dev RMSE 7.46)
+        lr: hp={'smooth': 7}  beta=[30, 30, 30]  (dev RMSE 8.73)
+   bspline: hp={'n_knots': 1, 'smooth': 0}  beta=[6, 8, 8]  (dev RMSE 8.43)
+      llke: hp={'h': 2.5, 'smooth': 0}  beta=[20, 20, 20]  (dev RMSE 8.65)
+      cabn: hp={'n_healthy': 5, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 5}  beta=[35, 35, 35]  (dev RMSE 8.50)
+
+      ours: RMSE per seed [7.11 7.35 7.35]  (49s)
+        lr: RMSE per seed [8.61 9.68 8.93]  (50s)
+   bspline: RMSE per seed [7.76 8.9  8.62]  (50s)
+      llke: RMSE per seed [8.39 8.81 8.56]  (51s)
+      cabn: RMSE per seed [89.33 89.16 89.13]  (52s)
+
+  method |     test RMSE |          NASA |    20%    40%    60%    80%
+--------------------------------------------------------------------------
+    ours |   7.27+/-0.11 |   18.6+/- 0.5 |  11.09   7.87   4.53   2.42
+      lr |   9.07+/-0.45 |   24.6+/- 2.5 |  12.79  11.08   5.38   3.70
+ bspline |   8.43+/-0.49 |   22.1+/- 1.6 |  11.81   6.99   6.97   6.79
+    llke |   8.59+/-0.17 |   21.9+/- 0.8 |  12.86   8.35   5.57   5.37
+    cabn |  15.04+/-0.53 |  234.1+/- 7.5 |  13.81  25.15   8.08   3.56
+  (divergence cap applied to every method; raw values below)
+
+  method |  RMSE raw  RMSE cap |     NASA raw  NASA cap | diverged
+--------------------------------------------------------------------
+    ours |      7.27      7.27 |        18.64      18.6 |   0/72
+      lr |      9.07      9.07 |        24.55      24.6 |   0/72
+ bspline |      8.43      8.43 |        22.08      22.1 |   0/72
+    llke |      8.59      8.59 |         21.9      21.9 |   0/72
+    cabn |     89.21     15.04 |    7.053e+18     234.1 |   3/72
+
+RUNNING TIME of the model being benchmarked (per seed, ms).
+  training = fit the HI model on the 9 dev units (663 flights x 5 features)
+  testing  = HI curves of the 6 test units + first-passage RUL
+  LLKE has no fitting step: it stores the sample and defers the work to
+  inference, so compare its testing column, not its training column.
+
+  method |   TRAINING |   HI pred       RUL    TESTING
+----------------------------------------------------------
+    ours |   3242.14ms |    0.06ms   25.26ms     25.32ms
+      lr |      0.13ms |    0.07ms   22.97ms     23.05ms
+ bspline |      0.76ms |    0.98ms   22.42ms     23.40ms
+    llke |      0.07ms |   22.00ms   22.89ms     44.89ms
+    cabn |      6.26ms |    0.14ms   37.29ms     37.43ms
+
+reference (frozen pipeline): test RMSE 7.35 +/- 0.10, NASA 18.2 +/- 0.5
+wall=0.9 min

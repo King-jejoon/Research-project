@@ -1,0 +1,35 @@
+V5B TEST BATCH — TENTH DS03 test opening, pre-registered, re-frozen chain l1=12 l2=0.25
+
+(a) re-frozen chain, conditional gate
+  chain seed0: dev LOO=7.24 shape=OK beta=30 test=7.40 NASA=19.5
+  chain seed1: dev LOO=7.11 shape=OK beta=30 test=7.58 NASA=19.7
+  chain seed2: dev LOO=7.30 shape=OK beta=35 test=7.59 NASA=18.5
+  chain: dev 7.22 ± 0.08 | test 7.52 ± 0.09  NASA 19.2 ± 0.5  trunc 11.05 / 8.75 / 4.67 / 2.47
+  SANITY dev = 7.22 (expected 7.22 ± 0.08)
+  paired |err| vs lambda8 conditional chain (72 preds): p=0.724
+
+(b) MOGP ungated, l12 downstream
+  ungated seed0: dev LOO=7.28 shape=OK beta=30 test=7.52 NASA=20.5
+  ungated seed1: dev LOO=7.14 shape=OK beta=30 test=7.50 NASA=19.3
+  ungated seed2: dev LOO=7.03 shape=OK beta=30 test=7.38 NASA=18.7
+  ungated: dev 7.15 ± 0.10 | test 7.47 ± 0.06  NASA 19.5 ± 0.8  trunc 11.09 / 8.47 / 4.74 / 2.44
+
+(c) competitors, l12 downstream, ungated
+  llke seed0: dev LOO=7.71 shape=OK beta=30 test=7.74 NASA=19.8
+  llke seed1: dev LOO=7.50 shape=OK beta=30 test=7.57 NASA=19.2
+  llke seed2: dev LOO=7.52 shape=OK beta=30 test=7.70 NASA=19.1
+  llke: dev 7.58 ± 0.10 | test 7.67 ± 0.07  NASA 19.4 ± 0.3  trunc 11.14 / 8.65 / 5.21 / 3.07
+  bspline seed0: dev LOO=7.38 shape=OK beta=30 test=7.23 NASA=18.4
+  bspline seed1: dev LOO=7.42 shape=OK beta=30 test=7.47 NASA=18.7
+  bspline seed2: dev LOO=7.52 shape=OK beta=30 test=7.25 NASA=18.8
+  bspline: dev 7.44 ± 0.06 | test 7.32 ± 0.11  NASA 18.6 ± 0.2  trunc 11.12 / 7.95 / 4.62 / 2.44
+  lr seed0: dev LOO=7.65 shape=OK beta=30 test=7.45 NASA=19.0
+  lr seed1: dev LOO=7.72 shape=OK beta=30 test=7.23 NASA=17.9
+  lr seed2: dev LOO=7.77 shape=OK beta=30 test=7.26 NASA=18.2
+  lr: dev 7.72 ± 0.05 | test 7.31 ± 0.10  NASA 18.3 ± 0.5  trunc 10.85 / 8.24 / 4.66 / 2.57
+  cabn seed0: dev LOO=7.65 shape=OK beta=30 test=7.45 NASA=19.0
+  cabn seed1: dev LOO=7.72 shape=OK beta=30 test=7.23 NASA=17.9
+  cabn seed2: dev LOO=7.77 shape=OK beta=30 test=7.26 NASA=18.2
+  cabn: dev 7.72 ± 0.05 | test 7.31 ± 0.10  NASA 18.3 ± 0.5  trunc 10.85 / 8.24 / 4.66 / 2.57
+
+wall=1.0 min

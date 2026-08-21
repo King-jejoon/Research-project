@@ -1,0 +1,25 @@
+DETCOV-BASED INSPECTION ON MY DS03 PIPELINE STATS  tag=s3_rbf_r2_m18_n8192_p200_lr0.1
+  evaluation = GP prediction quality (residual vs actual), no RUL/score
+
+seed0: healthy dev pts=47400  degraded=85200  spearman(detcov, |resid|) = -0.194 (p=0.0e+00)
+seed1: healthy dev pts=47400  degraded=85200  spearman(detcov, |resid|) = -0.155 (p=5.8e-254)
+seed2: healthy dev pts=47400  degraded=85200  spearman(detcov, |resid|) = -0.156 (p=5.0e-255)
+
+ drop% |  kept% | healthy zRMSE | degraded zRMS | test zRMSE | separation
+------------------------------------------------------------------------------
+    0% | 100.0% |  1.0675±0.0182 |  5.2524±0.4020 |     4.9349 |      3.917
+    2% |  98.0% |  1.0043±0.0268 |  5.2446±0.4026 |     4.9071 |      4.219
+    5% |  95.0% |  0.9756±0.0271 |  5.2427±0.4027 |     4.8871 |      4.370
+   10% |  90.0% |  0.9373±0.0323 |  5.2457±0.4035 |     4.8602 |      4.590
+   15% |  85.0% |  0.9167±0.0347 |  5.2489±0.4028 |     4.8436 |      4.719
+   20% |  80.0% |  0.8898±0.0481 |  5.2505±0.4053 |     4.8221 |      4.894
+   30% |  70.0% |  0.8542±0.0607 |  5.2574±0.4062 |     4.7978 |      5.153
+   40% |  60.0% |  0.8324±0.0747 |  5.2682±0.4099 |     4.7824 |      5.337
+   50% |  50.0% |  0.8041±0.0825 |  5.2828±0.4094 |     4.7697 |      5.591
+
+per-sensor healthy RMSE (raw units, seed mean), drop=0% vs 10% vs 30%:
+  drop=  0%: healthy T48=2.469  T50=1.858  Wf=0.011 | degraded T48=13.601  T50=10.858  Wf=0.025
+  drop= 10%: healthy T48=2.179  T50=1.645  Wf=0.009 | degraded T48=13.594  T50=10.877  Wf=0.025
+  drop= 30%: healthy T48=1.967  T50=1.507  Wf=0.008 | degraded T48=13.612  T50=10.920  Wf=0.024
+
+figures: fig_detcov_gpquality.png, fig_detcov_gpquality_units.png

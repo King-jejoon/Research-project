@@ -1,0 +1,19 @@
+V2 BASELINE MODEL — 5 sensors, RBF rank1, cycle<3, 1000 rows/(unit,cycle)
+  pool cycle<3: 165841 rows | early (cyc 3-8, pre-onset): 314662 rows
+seed0: train=18000 rows (9 units x 2 cycles x 1000)
+seed0: fitted (595s)  noise=0.00013
+seed0 eval_   in: zRMSE=1.0008 trim=0.3804 med=0.2976 | T30=0.290 T48=1.434 T50=1.373 Nc=0.994 Wf=0.005
+seed0 eval_early: zRMSE=1.0017 trim=0.2799 med=0.1685 | T30=3.369 T48=6.159 T50=4.805 Nc=11.215 Wf=0.033
+seed0: done (618s total)
+seed1: train=18000 rows (9 units x 2 cycles x 1000)
+seed1: fitted (685s)  noise=0.00013
+seed1 eval_   in: zRMSE=1.3231 trim=0.3952 med=0.2910 | T30=0.437 T48=1.578 T50=1.558 Nc=1.440 Wf=0.006
+seed1 eval_early: zRMSE=1.9693 trim=0.3105 med=0.1890 | T30=5.286 T48=8.996 T50=13.360 Nc=16.890 Wf=0.071
+seed1: done (713s total)
+seed2: train=18000 rows (9 units x 2 cycles x 1000)
+seed2: fitted (674s)  noise=0.00013
+seed2 eval_   in: zRMSE=1.0403 trim=0.3772 med=0.2997 | T30=0.250 T48=1.671 T50=1.482 Nc=0.863 Wf=0.006
+seed2 eval_early: zRMSE=0.8013 trim=0.2323 med=0.1572 | T30=2.807 T48=4.352 T50=4.034 Nc=9.274 Wf=0.026
+seed2: done (702s total)
+
+wall=33.9 min

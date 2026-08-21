@@ -1,0 +1,64 @@
+V4 STAGE 2 GRID — set5 ['T30', 'T48', 'T50', 'Nc', 'Wf']  kernels x ranks [1, 2, 3]  (cycle<=3, 27k train)
+  splits fixed: train=27000, eval=8192 per seed; shared by every config within a seed
+
+FULL GRID — kernels x ranks
+        rbf r1 seed0: zRMSE=0.01272  (927s)
+        rbf r1 seed1: zRMSE=0.01103  (934s)
+        rbf r1 seed2: zRMSE=0.01293  (913s)
+  -> rbf r1: mean=0.01223 ± 0.00085  (fails 0/3)
+        rbf r2 seed0: zRMSE=0.01593  (934s)
+        rbf r2 seed1: zRMSE=0.01123  (963s)
+        rbf r2 seed2: zRMSE=0.01309  (950s)
+  -> rbf r2: mean=0.01341 ± 0.00193  (fails 0/3)
+        rbf r3 seed0: zRMSE=0.01599  (933s)
+        rbf r3 seed1: zRMSE=0.01124  (944s)
+        rbf r3 seed2: zRMSE=0.01313  (944s)
+  -> rbf r3: mean=0.01345 ± 0.00195  (fails 0/3)
+   matern52 r1 seed0: CHOLESKY FAIL  (916s)
+   matern52 r1 seed1: zRMSE=0.01160  (989s)
+   matern52 r1 seed2: CHOLESKY FAIL  (890s)
+  -> matern52 r1: mean=0.01160 ± 0.00000  (fails 2/3)
+   matern52 r2 seed0: CHOLESKY FAIL  (906s)
+   matern52 r2 seed1: zRMSE=0.01171  (980s)
+   matern52 r2 seed2: CHOLESKY FAIL  (933s)
+  -> matern52 r2: mean=0.01171 ± 0.00000  (fails 2/3)
+   matern52 r3 seed0: CHOLESKY FAIL  (919s)
+   matern52 r3 seed1: zRMSE=0.01181  (976s)
+   matern52 r3 seed2: CHOLESKY FAIL  (920s)
+  -> matern52 r3: mean=0.01181 ± 0.00000  (fails 2/3)
+   matern32 r1 seed0: zRMSE=0.01472  (937s)
+   matern32 r1 seed1: zRMSE=0.01165  (951s)
+   matern32 r1 seed2: zRMSE=0.01456  (938s)
+  -> matern32 r1: mean=0.01364 ± 0.00141  (fails 0/3)
+   matern32 r2 seed0: zRMSE=0.01514  (962s)
+   matern32 r2 seed1: zRMSE=0.01188  (971s)
+   matern32 r2 seed2: zRMSE=0.01461  (957s)
+  -> matern32 r2: mean=0.01387 ± 0.00143  (fails 0/3)
+   matern32 r3 seed0: zRMSE=0.01525  (955s)
+   matern32 r3 seed1: zRMSE=0.01191  (972s)
+   matern32 r3 seed2: zRMSE=0.01462  (948s)
+  -> matern32 r3: mean=0.01393 ± 0.00145  (fails 0/3)
+   matern12 r1 seed0: zRMSE=0.02035  (934s)
+   matern12 r1 seed1: zRMSE=0.01215  (946s)
+   matern12 r1 seed2: zRMSE=0.01440  (934s)
+  -> matern12 r1: mean=0.01563 ± 0.00346  (fails 0/3)
+   matern12 r2 seed0: zRMSE=0.02057  (946s)
+   matern12 r2 seed1: zRMSE=0.01220  (963s)
+   matern12 r2 seed2: zRMSE=0.01449  (949s)
+  -> matern12 r2: mean=0.01575 ± 0.00353  (fails 0/3)
+   matern12 r3 seed0: zRMSE=0.02096  (949s)
+   matern12 r3 seed1: zRMSE=0.01218  (962s)
+   matern12 r3 seed2: zRMSE=0.01469  (946s)
+  -> matern12 r3: mean=0.01594 ± 0.00369  (fails 0/3)
+
+summary (mean zRMSE, fails in parentheses):
+     kernel |           rank 1 |           rank 2 |           rank 3
+        rbf | 0.01223±0.00085     | 0.01341±0.00193     | 0.01345±0.00195    
+   matern52 | 0.01160±0.00000(2F) | 0.01171±0.00000(2F) | 0.01181±0.00000(2F)
+   matern32 | 0.01364±0.00141     | 0.01387±0.00143     | 0.01393±0.00145    
+   matern12 | 0.01563±0.00346     | 0.01575±0.00353     | 0.01594±0.00369    
+
+best by mean: matern52 r1 (0.01160); within-sd candidates: [('matern52', 1)]
+SELECTED (simplicity rule): kernel=matern52, rank=1
+
+wall=566.6 min

@@ -1,0 +1,2984 @@
+데이터 로딩 중...
+W shape: (9822837, 4)
+X_s shape: (9822837, 14)
+X_v shape: (9822837, 14)
+T shape: (9822837, 10)
+A shape: (9822837, 4)
+
+======================================================================
+  PIPELINE: Baseline (no window)  (window=0)
+======================================================================
+
+=== Normal Range summary (A_dev index) ===
+Total normal ranges : 9
+  Engine 1 : [0, 156352] (len=156353)
+  Engine 2 : [308489, 526119] (len=217631)
+  Engine 3 : [955653, 1167122] (len=211470)
+  Engine 4 : [1545490, 1752373] (len=206884)
+  Engine 5 : [2084577, 2236339] (len=151763)
+  Engine 6 : [2485720, 2754276] (len=268557)
+  Engine 7 : [3432229, 3656713] (len=224485)
+  Engine 8 : [4132089, 4383309] (len=251221)
+  Engine 9 : [5207095, 5368001] (len=160907)
+
+=== Abnormal Range summary (A_dev index) ===
+Total abnormal ranges : 9
+  Engine 1 : [156353, 308488] (len=152136)
+  Engine 2 : [526120, 955652] (len=429533)
+  Engine 3 : [1167123, 1545489] (len=378367)
+  Engine 4 : [1752374, 2084576] (len=332203)
+  Engine 5 : [2236340, 2485719] (len=249380)
+  Engine 6 : [2754277, 3432228] (len=677952)
+  Engine 7 : [3656714, 4132088] (len=475375)
+  Engine 8 : [4383310, 5207094] (len=823785)
+  Engine 9 : [5368002, 5571276] (len=203275)
+
+=== DEV All Range summary (A_dev index) ===
+Total dev ranges : 9
+  Engine 1 : [0, 308488] (len=308489)
+  Engine 2 : [308489, 955652] (len=647164)
+  Engine 3 : [955653, 1545489] (len=589837)
+  Engine 4 : [1545490, 2084576] (len=539087)
+  Engine 5 : [2084577, 2485719] (len=401143)
+  Engine 6 : [2485720, 3432228] (len=946509)
+  Engine 7 : [3432229, 4132088] (len=699860)
+  Engine 8 : [4132089, 5207094] (len=1075006)
+  Engine 9 : [5207095, 5571276] (len=364182)
+
+=== Test Abnormal Range summary (A_test index) ===
+Total test abnormal ranges : 6
+  Engine 10 : [249848, 951108] (len=701261)
+  Engine 11 : [1212316, 1775600] (len=563285)
+  Engine 12 : [1931041, 2181009] (len=249969)
+  Engine 13 : [2432683, 3287901] (len=855219)
+  Engine 14 : [3447483, 3633385] (len=185903)
+  Engine 15 : [3850316, 4251559] (len=401244)
+
+=== TEST All Range summary (A_test index) ===
+Total test ranges : 6
+  Engine 10 : [0, 951108] (len=951109)
+  Engine 11 : [951109, 1775600] (len=824492)
+  Engine 12 : [1775601, 2181009] (len=405409)
+  Engine 13 : [2181010, 3287901] (len=1106892)
+  Engine 14 : [3287902, 3633385] (len=345484)
+  Engine 15 : [3633386, 4251559] (len=618174)
+
+=== DEV sampling (normal state, from A_dev) ===
+Target engines : [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9)]
+Samples per range (K) : 20
+  Engine 1 | range [0,156352] | range_len=156353 | sampled=20
+  Engine 2 | range [308489,526119] | range_len=217631 | sampled=20
+  Engine 3 | range [955653,1167122] | range_len=211470 | sampled=20
+  Engine 4 | range [1545490,1752373] | range_len=206884 | sampled=20
+  Engine 5 | range [2084577,2236339] | range_len=151763 | sampled=20
+  Engine 6 | range [2485720,2754276] | range_len=268557 | sampled=20
+  Engine 7 | range [3432229,3656713] | range_len=224485 | sampled=20
+  Engine 8 | range [4132089,4383309] | range_len=251221 | sampled=20
+  Engine 9 | range [5207095,5368001] | range_len=160907 | sampled=20
+
+DEV sampled count by engine:
+  Engine 1 : 20
+  Engine 2 : 20
+  Engine 3 : 20
+  Engine 4 : 20
+  Engine 5 : 20
+  Engine 6 : 20
+  Engine 7 : 20
+  Engine 8 : 20
+  Engine 9 : 20
+
+Total DEV sampled indices: 180
+
+=== DEV sampling (abnormal state, from A_dev) ===
+Samples per cycle (N) : 10
+
+Total DEV sampled indices: 6630
+
+=== TEST sampling (abnormal state, from A_test) ===
+Samples per cycle (N) : 10
+
+Total TEST sampled indices: 4380
+
+[Data prep] window=0
+  Training data size    : 180
+  Outlier rate (>3σ)    : 0.0056
+  Mean IQR (sensors)    : 87.1154
+
+[GPR training]
+  GPR Iter 10/100 - Loss: 0.8604
+  GPR Iter 20/100 - Loss: 0.3596
+  GPR Iter 30/100 - Loss: -0.1514
+  GPR Iter 40/100 - Loss: -0.6635
+  GPR Iter 50/100 - Loss: -1.1605
+  GPR Iter 60/100 - Loss: -1.6362
+  GPR Iter 70/100 - Loss: -2.0632
+  GPR Iter 80/100 - Loss: -2.4085
+  GPR Iter 90/100 - Loss: -2.6404
+  GPR Iter 100/100 - Loss: -2.7725
+  GPR final loss: -2.7725
+  Residual STD (avg over sensors): 1.8175
+  Residual MAE (avg over sensors): 1.3671
+T48: mean=6.1236, std=8.3204
+T50: mean=4.8460, std=6.7190
+Wf: mean=0.0103, std=0.0133
+
+[MLP training] epochs=1000
+Debug epochs: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+Number of engines: 9
+  Engine 1: 72 cycles
+  Engine 2: 73 cycles
+  Engine 3: 67 cycles
+  Engine 4: 60 cycles
+  Engine 5: 93 cycles
+  Engine 6: 63 cycles
+  Engine 7: 80 cycles
+  Engine 8: 71 cycles
+  Engine 9: 84 cycles
+
+================================================================================
+EPOCH 100 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.092324, 0.224827]
+  HI[0] (first): 0.102712
+  HI[71] (last): 0.222900
+  Loss Term 1 contribution: 0.603884 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.002256
+  Monotonicity violations: 33/71
+  Loss Term 3 contribution: 0.005638
+  Convexity violations: 34/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.001693, Std: 0.007637
+
+[Engine 2] T_n=73
+  HI range: [0.096045, 0.250056]
+  HI[0] (first): 0.098932
+  HI[72] (last): 0.246174
+  Loss Term 1 contribution: 0.568254 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001836
+  Monotonicity violations: 26/72
+  Loss Term 3 contribution: 0.004535
+  Convexity violations: 39/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.002045, Std: 0.006615
+
+[Engine 3] T_n=67
+  HI range: [0.096323, 0.251958]
+  HI[0] (first): 0.108248
+  HI[66] (last): 0.251958
+  Loss Term 1 contribution: 0.559567 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001988
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.004766
+  Convexity violations: 33/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.002177, Std: 0.007472
+
+[Engine 4] T_n=60
+  HI range: [0.100114, 0.230338]
+  HI[0] (first): 0.104295
+  HI[59] (last): 0.230338
+  Loss Term 1 contribution: 0.592379 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001136
+  Monotonicity violations: 16/59
+  Loss Term 3 contribution: 0.003074
+  Convexity violations: 28/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.002136, Std: 0.005248
+
+[Engine 5] T_n=93
+  HI range: [0.092998, 0.259490]
+  HI[0] (first): 0.101789
+  HI[92] (last): 0.259490
+  Loss Term 1 contribution: 0.548356 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001908
+  Monotonicity violations: 34/92
+  Loss Term 3 contribution: 0.004240
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.001714, Std: 0.006672
+
+[Engine 6] T_n=63
+  HI range: [0.101539, 0.250095]
+  HI[0] (first): 0.108486
+  HI[62] (last): 0.250095
+  Loss Term 1 contribution: 0.562357 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001222
+  Monotonicity violations: 24/62
+  Loss Term 3 contribution: 0.003761
+  Convexity violations: 28/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.002284, Std: 0.005773
+
+[Engine 7] T_n=80
+  HI range: [0.099349, 0.257897]
+  HI[0] (first): 0.107887
+  HI[79] (last): 0.257897
+  Loss Term 1 contribution: 0.550717 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001956
+  Monotonicity violations: 27/79
+  Loss Term 3 contribution: 0.004742
+  Convexity violations: 36/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.001899, Std: 0.006907
+
+[Engine 8] T_n=71
+  HI range: [0.101997, 0.262778]
+  HI[0] (first): 0.103006
+  HI[70] (last): 0.262778
+  Loss Term 1 contribution: 0.543497 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001042
+  Monotonicity violations: 18/70
+  Loss Term 3 contribution: 0.002939
+  Convexity violations: 33/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.002282, Std: 0.004963
+
+[Engine 9] T_n=84
+  HI range: [0.101514, 0.260592]
+  HI[0] (first): 0.102164
+  HI[83] (last): 0.260592
+  Loss Term 1 contribution: 0.546724 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.002238
+  Monotonicity violations: 30/83
+  Loss Term 3 contribution: 0.005412
+  Convexity violations: 38/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.001909, Std: 0.007819
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.000000 (×1.0)
+  Term 1 (Target HI=1): 5.075735 (×1.0)
+  Term 2 (Monotonicity): 0.015582 (×6.0)
+  Term 3 (Convexity): 0.039107 (×2.0)
+  Total Loss: 5.247440
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00068886, std=0.02738866, max_abs=0.03665616
+  b1: mean=-0.00042979, std=0.01573192, max_abs=0.01638218
+  W2: mean=-0.00001296, std=0.11137162, max_abs=0.11649961
+  b2: mean=-0.00547303, std=0.16148918, max_abs=0.16696221
+  W3: mean=0.00831152, std=0.72217051, max_abs=0.73048203
+  b3: mean=-1.50172849, std=0.00000000, max_abs=1.50172849
+
+ADAM OPTIMIZER UPDATE (step 100):
+  W1: update_mean=0.00002080, update_max_abs=0.00134437
+  b1: update_mean=0.00002049, update_max_abs=0.00145476
+
+================================================================================
+EPOCH 200 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.207860, 0.580693]
+  HI[0] (first): 0.243915
+  HI[71] (last): 0.580693
+  Loss Term 1 contribution: 0.175819 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005976
+  Monotonicity violations: 29/71
+  Loss Term 3 contribution: 0.014732
+  Convexity violations: 34/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.004743, Std: 0.020227
+
+[Engine 2] T_n=73
+  HI range: [0.222336, 0.607873]
+  HI[0] (first): 0.234621
+  HI[72] (last): 0.606909
+  Loss Term 1 contribution: 0.154520 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004735
+  Monotonicity violations: 26/72
+  Loss Term 3 contribution: 0.011681
+  Convexity violations: 38/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.005171, Std: 0.018115
+
+[Engine 3] T_n=67
+  HI range: [0.217344, 0.611384]
+  HI[0] (first): 0.246162
+  HI[66] (last): 0.611384
+  Loss Term 1 contribution: 0.151023 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004889
+  Monotonicity violations: 24/66
+  Loss Term 3 contribution: 0.012219
+  Convexity violations: 33/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.005534, Std: 0.019260
+
+[Engine 4] T_n=60
+  HI range: [0.243618, 0.590089]
+  HI[0] (first): 0.252720
+  HI[59] (last): 0.590089
+  Loss Term 1 contribution: 0.168027 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003100
+  Monotonicity violations: 16/59
+  Loss Term 3 contribution: 0.008809
+  Convexity violations: 27/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.005718, Std: 0.013767
+
+[Engine 5] T_n=93
+  HI range: [0.202666, 0.616474]
+  HI[0] (first): 0.236459
+  HI[92] (last): 0.616474
+  Loss Term 1 contribution: 0.147092 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005616
+  Monotonicity violations: 35/92
+  Loss Term 3 contribution: 0.012204
+  Convexity violations: 48/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.004131, Std: 0.019326
+
+[Engine 6] T_n=63
+  HI range: [0.246203, 0.611494]
+  HI[0] (first): 0.264906
+  HI[62] (last): 0.611494
+  Loss Term 1 contribution: 0.150937 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003014
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.008487
+  Convexity violations: 30/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.005590, Std: 0.014627
+
+[Engine 7] T_n=80
+  HI range: [0.245475, 0.616842]
+  HI[0] (first): 0.271525
+  HI[79] (last): 0.616842
+  Loss Term 1 contribution: 0.146810 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004953
+  Monotonicity violations: 28/79
+  Loss Term 3 contribution: 0.012033
+  Convexity violations: 37/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.004371, Std: 0.017964
+
+[Engine 8] T_n=71
+  HI range: [0.240113, 0.621310]
+  HI[0] (first): 0.240891
+  HI[70] (last): 0.621310
+  Loss Term 1 contribution: 0.143406 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.002765
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.007773
+  Convexity violations: 33/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.005435, Std: 0.013298
+
+[Engine 9] T_n=84
+  HI range: [0.238833, 0.617769]
+  HI[0] (first): 0.238833
+  HI[83] (last): 0.617769
+  Loss Term 1 contribution: 0.146101 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005908
+  Monotonicity violations: 28/83
+  Loss Term 3 contribution: 0.013582
+  Convexity violations: 38/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.004565, Std: 0.020257
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.021875 (×1.0)
+  Term 1 (Target HI=1): 1.383735 (×1.0)
+  Term 2 (Monotonicity): 0.040955 (×6.0)
+  Term 3 (Convexity): 0.101519 (×2.0)
+  Total Loss: 1.854375
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=0.00005117, std=0.01369636, max_abs=0.02384734
+  b1: mean=0.00002967, std=0.00417835, max_abs=0.00427953
+  W2: mean=-0.00000332, std=0.04651859, max_abs=0.04860053
+  b2: mean=-0.00212618, std=0.06625420, max_abs=0.06838038
+  W3: mean=0.00223907, std=0.51967441, max_abs=0.52191348
+  b3: mean=-0.68822367, std=0.00000000, max_abs=0.68822367
+
+ADAM OPTIMIZER UPDATE (step 200):
+  W1: update_mean=-0.00000569, update_max_abs=0.00139451
+  b1: update_mean=0.00001505, update_max_abs=0.00068179
+
+Epoch 200/1000, Loss: 1.854375
+
+================================================================================
+EPOCH 300 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.214197, 0.761336]
+  HI[0] (first): 0.271815
+  HI[71] (last): 0.761336
+  Loss Term 1 contribution: 0.056961 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007450
+  Monotonicity violations: 28/71
+  Loss Term 3 contribution: 0.018138
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.006895, Std: 0.025586
+
+[Engine 2] T_n=73
+  HI range: [0.244680, 0.790725]
+  HI[0] (first): 0.263539
+  HI[72] (last): 0.790725
+  Loss Term 1 contribution: 0.043796 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006004
+  Monotonicity violations: 21/72
+  Loss Term 3 contribution: 0.014541
+  Convexity violations: 35/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.007322, Std: 0.024274
+
+[Engine 3] T_n=67
+  HI range: [0.231649, 0.794363]
+  HI[0] (first): 0.256663
+  HI[66] (last): 0.794363
+  Loss Term 1 contribution: 0.042287 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005609
+  Monotonicity violations: 24/66
+  Loss Term 3 contribution: 0.015349
+  Convexity violations: 34/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.008147, Std: 0.023914
+
+[Engine 4] T_n=60
+  HI range: [0.273125, 0.772237]
+  HI[0] (first): 0.287256
+  HI[59] (last): 0.772237
+  Loss Term 1 contribution: 0.051876 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004250
+  Monotonicity violations: 20/59
+  Loss Term 3 contribution: 0.012592
+  Convexity violations: 28/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.008220, Std: 0.019385
+
+[Engine 5] T_n=93
+  HI range: [0.208629, 0.797018]
+  HI[0] (first): 0.257192
+  HI[92] (last): 0.797018
+  Loss Term 1 contribution: 0.041202 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007663
+  Monotonicity violations: 39/92
+  Loss Term 3 contribution: 0.016966
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.005868, Std: 0.026630
+
+[Engine 6] T_n=63
+  HI range: [0.271671, 0.796557]
+  HI[0] (first): 0.301549
+  HI[62] (last): 0.796557
+  Loss Term 1 contribution: 0.041389 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004451
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.012291
+  Convexity violations: 32/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.007984, Std: 0.021033
+
+[Engine 7] T_n=80
+  HI range: [0.288244, 0.800320]
+  HI[0] (first): 0.319838
+  HI[79] (last): 0.800320
+  Loss Term 1 contribution: 0.039872 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006242
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.015965
+  Convexity violations: 38/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.006082, Std: 0.023833
+
+[Engine 8] T_n=71
+  HI range: [0.263492, 0.805503]
+  HI[0] (first): 0.263492
+  HI[70] (last): 0.805503
+  Loss Term 1 contribution: 0.037829 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004273
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.011928
+  Convexity violations: 35/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.007743, Std: 0.019356
+
+[Engine 9] T_n=84
+  HI range: [0.252950, 0.798855]
+  HI[0] (first): 0.261689
+  HI[83] (last): 0.798855
+  Loss Term 1 contribution: 0.040459 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007601
+  Monotonicity violations: 26/83
+  Loss Term 3 contribution: 0.017199
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.006472, Std: 0.025816
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.055800 (×1.0)
+  Term 1 (Target HI=1): 0.395670 (×1.0)
+  Term 2 (Monotonicity): 0.053544 (×6.0)
+  Term 3 (Convexity): 0.134969 (×2.0)
+  Total Loss: 1.042673
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00001869, std=0.00320773, max_abs=0.00433211
+  b1: mean=0.00033319, std=0.01374753, max_abs=0.01420624
+  W2: mean=-0.00000250, std=0.01394003, max_abs=0.01489375
+  b2: mean=-0.00052374, std=0.00566835, max_abs=0.00619209
+  W3: mean=0.00039609, std=0.24032296, max_abs=0.24071904
+  b3: mean=-0.26667813, std=0.00000000, max_abs=0.26667813
+
+ADAM OPTIMIZER UPDATE (step 300):
+  W1: update_mean=-0.00000576, update_max_abs=0.00031540
+  b1: update_mean=-0.00000435, update_max_abs=0.00116171
+
+================================================================================
+EPOCH 400 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.193435, 0.817946]
+  HI[0] (first): 0.250712
+  HI[71] (last): 0.817946
+  Loss Term 1 contribution: 0.033144 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007297
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.018384
+  Convexity violations: 33/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.007989, Std: 0.026208
+
+[Engine 2] T_n=73
+  HI range: [0.224469, 0.864188]
+  HI[0] (first): 0.243698
+  HI[72] (last): 0.864188
+  Loss Term 1 contribution: 0.018445 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006019
+  Monotonicity violations: 22/72
+  Loss Term 3 contribution: 0.014764
+  Convexity violations: 35/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.008618, Std: 0.024853
+
+[Engine 3] T_n=67
+  HI range: [0.211365, 0.869604]
+  HI[0] (first): 0.232367
+  HI[66] (last): 0.869604
+  Loss Term 1 contribution: 0.017003 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005452
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.015898
+  Convexity violations: 36/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.009655, Std: 0.024745
+
+[Engine 4] T_n=60
+  HI range: [0.251766, 0.834756]
+  HI[0] (first): 0.266318
+  HI[59] (last): 0.834756
+  Loss Term 1 contribution: 0.027305 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004360
+  Monotonicity violations: 20/59
+  Loss Term 3 contribution: 0.013516
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.009635, Std: 0.021040
+
+[Engine 5] T_n=93
+  HI range: [0.188359, 0.872754]
+  HI[0] (first): 0.235694
+  HI[92] (last): 0.872754
+  Loss Term 1 contribution: 0.016192 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007787
+  Monotonicity violations: 39/92
+  Loss Term 3 contribution: 0.017659
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.006925, Std: 0.027507
+
+[Engine 6] T_n=63
+  HI range: [0.249633, 0.874057]
+  HI[0] (first): 0.279939
+  HI[62] (last): 0.874057
+  Loss Term 1 contribution: 0.015862 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004620
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.013540
+  Convexity violations: 34/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.009583, Std: 0.022444
+
+[Engine 7] T_n=80
+  HI range: [0.269576, 0.879616]
+  HI[0] (first): 0.299659
+  HI[79] (last): 0.879616
+  Loss Term 1 contribution: 0.014492 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006481
+  Monotonicity violations: 27/79
+  Loss Term 3 contribution: 0.017016
+  Convexity violations: 39/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.007341, Std: 0.025067
+
+[Engine 8] T_n=71
+  HI range: [0.241960, 0.889005]
+  HI[0] (first): 0.241960
+  HI[70] (last): 0.889005
+  Loss Term 1 contribution: 0.012320 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004602
+  Monotonicity violations: 17/70
+  Loss Term 3 contribution: 0.013345
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.009243, Std: 0.020992
+
+[Engine 9] T_n=84
+  HI range: [0.229581, 0.876017]
+  HI[0] (first): 0.240470
+  HI[83] (last): 0.876017
+  Loss Term 1 contribution: 0.015372 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007677
+  Monotonicity violations: 28/83
+  Loss Term 3 contribution: 0.017823
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.007657, Std: 0.026643
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.030922 (×1.0)
+  Term 1 (Target HI=1): 0.170135 (×1.0)
+  Term 2 (Monotonicity): 0.054294 (×6.0)
+  Term 3 (Convexity): 0.141945 (×2.0)
+  Total Loss: 0.810712
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=0.00008664, std=0.00504543, max_abs=0.00712143
+  b1: mean=0.00038276, std=0.01014929, max_abs=0.01081498
+  W2: mean=-0.00000199, std=0.00469657, max_abs=0.00514481
+  b2: mean=-0.00031496, std=0.00417052, max_abs=0.00448548
+  W3: mean=0.00011812, std=0.12920990, max_abs=0.12932803
+  b3: mean=-0.16249760, std=0.00000000, max_abs=0.16249760
+
+ADAM OPTIMIZER UPDATE (step 400):
+  W1: update_mean=-0.00000441, update_max_abs=0.00044004
+  b1: update_mean=0.00000691, update_max_abs=0.00089157
+
+Epoch 400/1000, Loss: 0.810712
+
+================================================================================
+EPOCH 500 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.189405, 0.824509]
+  HI[0] (first): 0.240708
+  HI[71] (last): 0.824509
+  Loss Term 1 contribution: 0.030797 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006708
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.017365
+  Convexity violations: 33/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008223, Std: 0.025213
+
+[Engine 2] T_n=73
+  HI range: [0.217331, 0.891814]
+  HI[0] (first): 0.234255
+  HI[72] (last): 0.891814
+  Loss Term 1 contribution: 0.011704 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005470
+  Monotonicity violations: 22/72
+  Loss Term 3 contribution: 0.013815
+  Convexity violations: 35/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009133, Std: 0.023478
+
+[Engine 3] T_n=67
+  HI range: [0.205623, 0.900340]
+  HI[0] (first): 0.225084
+  HI[66] (last): 0.900340
+  Loss Term 1 contribution: 0.009932 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005005
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.015280
+  Convexity violations: 35/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.010231, Std: 0.024191
+
+[Engine 4] T_n=60
+  HI range: [0.241714, 0.848114]
+  HI[0] (first): 0.254550
+  HI[59] (last): 0.848114
+  Loss Term 1 contribution: 0.023069 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003982
+  Monotonicity violations: 20/59
+  Loss Term 3 contribution: 0.012706
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010060, Std: 0.020615
+
+[Engine 5] T_n=93
+  HI range: [0.184711, 0.906304]
+  HI[0] (first): 0.227409
+  HI[92] (last): 0.906304
+  Loss Term 1 contribution: 0.008779 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007137
+  Monotonicity violations: 39/92
+  Loss Term 3 contribution: 0.016651
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007379, Std: 0.025975
+
+[Engine 6] T_n=63
+  HI range: [0.239979, 0.906873]
+  HI[0] (first): 0.267194
+  HI[62] (last): 0.906873
+  Loss Term 1 contribution: 0.008673 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004194
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.012814
+  Convexity violations: 32/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.010317, Std: 0.021459
+
+[Engine 7] T_n=80
+  HI range: [0.257004, 0.916394]
+  HI[0] (first): 0.284490
+  HI[79] (last): 0.916394
+  Loss Term 1 contribution: 0.006990 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006054
+  Monotonicity violations: 27/79
+  Loss Term 3 contribution: 0.016463
+  Convexity violations: 39/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.007999, Std: 0.024162
+
+[Engine 8] T_n=71
+  HI range: [0.233187, 0.932534]
+  HI[0] (first): 0.233187
+  HI[70] (last): 0.932534
+  Loss Term 1 contribution: 0.004552 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004318
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.013061
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.009991, Std: 0.020685
+
+[Engine 9] T_n=84
+  HI range: [0.222529, 0.911455]
+  HI[0] (first): 0.231843
+  HI[83] (last): 0.911455
+  Loss Term 1 contribution: 0.007840 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007128
+  Monotonicity violations: 28/83
+  Loss Term 3 contribution: 0.017081
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008188, Std: 0.025527
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.020955 (×1.0)
+  Term 1 (Target HI=1): 0.112336 (×1.0)
+  Term 2 (Monotonicity): 0.049998 (×6.0)
+  Term 3 (Convexity): 0.135235 (×2.0)
+  Total Loss: 0.703750
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=0.00005116, std=0.00261893, max_abs=0.00360000
+  b1: mean=0.00037347, std=0.00583664, max_abs=0.00659965
+  W2: mean=-0.00000207, std=0.00334405, max_abs=0.00366092
+  b2: mean=-0.00029589, std=0.00731803, max_abs=0.00761392
+  W3: mean=0.00009572, std=0.08720129, max_abs=0.08729701
+  b3: mean=-0.12509891, std=0.00000000, max_abs=0.12509891
+
+ADAM OPTIMIZER UPDATE (step 500):
+  W1: update_mean=-0.00000132, update_max_abs=0.00025732
+  b1: update_mean=0.00001662, update_max_abs=0.00059156
+
+================================================================================
+EPOCH 600 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.188743, 0.826200]
+  HI[0] (first): 0.236694
+  HI[71] (last): 0.826200
+  Loss Term 1 contribution: 0.030206 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006342
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.016696
+  Convexity violations: 33/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008303, Std: 0.024636
+
+[Engine 2] T_n=73
+  HI range: [0.214878, 0.908698]
+  HI[0] (first): 0.230619
+  HI[72] (last): 0.908698
+  Loss Term 1 contribution: 0.008336 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005147
+  Monotonicity violations: 22/72
+  Loss Term 3 contribution: 0.013218
+  Convexity violations: 35/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009418, Std: 0.022734
+
+[Engine 3] T_n=67
+  HI range: [0.203957, 0.919649]
+  HI[0] (first): 0.222319
+  HI[66] (last): 0.919649
+  Loss Term 1 contribution: 0.006456 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004728
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.014855
+  Convexity violations: 34/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.010566, Std: 0.023925
+
+[Engine 4] T_n=60
+  HI range: [0.237652, 0.854446]
+  HI[0] (first): 0.249591
+  HI[59] (last): 0.854446
+  Loss Term 1 contribution: 0.021186 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003759
+  Monotonicity violations: 20/59
+  Loss Term 3 contribution: 0.012193
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010252, Std: 0.020404
+
+[Engine 5] T_n=93
+  HI range: [0.184313, 0.927752]
+  HI[0] (first): 0.224308
+  HI[92] (last): 0.927752
+  Loss Term 1 contribution: 0.005220 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006749
+  Monotonicity violations: 39/92
+  Loss Term 3 contribution: 0.016015
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007646, Std: 0.025133
+
+[Engine 6] T_n=63
+  HI range: [0.236081, 0.927908]
+  HI[0] (first): 0.261546
+  HI[62] (last): 0.927908
+  Loss Term 1 contribution: 0.005197 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003945
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.012408
+  Convexity violations: 32/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.010748, Std: 0.021039
+
+[Engine 7] T_n=80
+  HI range: [0.251758, 0.940601]
+  HI[0] (first): 0.277613
+  HI[79] (last): 0.940601
+  Loss Term 1 contribution: 0.003528 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005787
+  Monotonicity violations: 27/79
+  Loss Term 3 contribution: 0.016075
+  Convexity violations: 39/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.008392, Std: 0.023716
+
+[Engine 8] T_n=71
+  HI range: [0.229761, 0.962418]
+  HI[0] (first): 0.229761
+  HI[70] (last): 0.962418
+  Loss Term 1 contribution: 0.001412 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004146
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.012896
+  Convexity violations: 35/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.010467, Std: 0.020707
+
+[Engine 9] T_n=84
+  HI range: [0.219919, 0.934452]
+  HI[0] (first): 0.228504
+  HI[83] (last): 0.934452
+  Loss Term 1 contribution: 0.004296 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006777
+  Monotonicity violations: 28/83
+  Loss Term 3 contribution: 0.016559
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008505, Std: 0.024887
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.017342 (×1.0)
+  Term 1 (Target HI=1): 0.085839 (×1.0)
+  Term 2 (Monotonicity): 0.047382 (×6.0)
+  Term 3 (Convexity): 0.130916 (×2.0)
+  Total Loss: 0.649302
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00004087, std=0.00126542, max_abs=0.00181305
+  b1: mean=0.00040927, std=0.00385757, max_abs=0.00478381
+  W2: mean=-0.00000228, std=0.00197045, max_abs=0.00222816
+  b2: mean=-0.00025331, std=0.00759017, max_abs=0.00784348
+  W3: mean=0.00007110, std=0.06015310, max_abs=0.06022420
+  b3: mean=-0.09709342, std=0.00000000, max_abs=0.09709342
+
+ADAM OPTIMIZER UPDATE (step 600):
+  W1: update_mean=-0.00000628, update_max_abs=0.00015568
+  b1: update_mean=0.00002652, update_max_abs=0.00045618
+
+Epoch 600/1000, Loss: 0.649302
+
+================================================================================
+EPOCH 700 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.188938, 0.826775]
+  HI[0] (first): 0.234687
+  HI[71] (last): 0.826775
+  Loss Term 1 contribution: 0.030007 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006081
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.016202
+  Convexity violations: 33/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008339, Std: 0.024230
+
+[Engine 2] T_n=73
+  HI range: [0.213862, 0.919377]
+  HI[0] (first): 0.228876
+  HI[72] (last): 0.919377
+  Loss Term 1 contribution: 0.006500 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004932
+  Monotonicity violations: 22/72
+  Loss Term 3 contribution: 0.012795
+  Convexity violations: 34/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009590, Std: 0.022260
+
+[Engine 3] T_n=67
+  HI range: [0.203300, 0.932079]
+  HI[0] (first): 0.220774
+  HI[66] (last): 0.932079
+  Loss Term 1 contribution: 0.004613 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004537
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.014542
+  Convexity violations: 35/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.010777, Std: 0.023767
+
+[Engine 4] T_n=60
+  HI range: [0.235588, 0.857994]
+  HI[0] (first): 0.247081
+  HI[59] (last): 0.857994
+  Loss Term 1 contribution: 0.020166 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003615
+  Monotonicity violations: 20/59
+  Loss Term 3 contribution: 0.011863
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010354, Std: 0.020291
+
+[Engine 5] T_n=93
+  HI range: [0.184761, 0.940876]
+  HI[0] (first): 0.222810
+  HI[92] (last): 0.940876
+  Loss Term 1 contribution: 0.003496 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006493
+  Monotonicity violations: 39/92
+  Loss Term 3 contribution: 0.015573
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007805, Std: 0.024608
+
+[Engine 6] T_n=63
+  HI range: [0.234044, 0.941960]
+  HI[0] (first): 0.258329
+  HI[62] (last): 0.941960
+  Loss Term 1 contribution: 0.003369 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003772
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.012161
+  Convexity violations: 32/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.011026, Std: 0.020827
+
+[Engine 7] T_n=80
+  HI range: [0.249226, 0.956458]
+  HI[0] (first): 0.273844
+  HI[79] (last): 0.956458
+  Loss Term 1 contribution: 0.001896 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005601
+  Monotonicity violations: 27/79
+  Loss Term 3 contribution: 0.015764
+  Convexity violations: 39/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.008641, Std: 0.023452
+
+[Engine 8] T_n=71
+  HI range: [0.227919, 0.981563]
+  HI[0] (first): 0.227919
+  HI[70] (last): 0.981563
+  Loss Term 1 contribution: 0.000340 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004018
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.012748
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.010766, Std: 0.020766
+
+[Engine 9] T_n=84
+  HI range: [0.218439, 0.948701]
+  HI[0] (first): 0.226698
+  HI[83] (last): 0.948701
+  Loss Term 1 contribution: 0.002632 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006533
+  Monotonicity violations: 28/83
+  Loss Term 3 contribution: 0.016157
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008699, Std: 0.024469
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.015553 (×1.0)
+  Term 1 (Target HI=1): 0.073018 (×1.0)
+  Term 2 (Monotonicity): 0.045582 (×6.0)
+  Term 3 (Convexity): 0.127805 (×2.0)
+  Total Loss: 0.617672
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00013878, std=0.00089374, max_abs=0.00164408
+  b1: mean=0.00055557, std=0.00294324, max_abs=0.00425929
+  W2: mean=-0.00000305, std=0.00094414, max_abs=0.00118633
+  b2: mean=-0.00022039, std=0.00721366, max_abs=0.00743405
+  W3: mean=0.00005554, std=0.04334224, max_abs=0.04339778
+  b3: mean=-0.07848845, std=0.00000000, max_abs=0.07848845
+
+ADAM OPTIMIZER UPDATE (step 700):
+  W1: update_mean=-0.00001442, update_max_abs=0.00016546
+  b1: update_mean=0.00004606, update_max_abs=0.00043313
+
+================================================================================
+EPOCH 800 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.189466, 0.827956]
+  HI[0] (first): 0.233570
+  HI[71] (last): 0.827956
+  Loss Term 1 contribution: 0.029599 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005862
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.015784
+  Convexity violations: 33/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008372, Std: 0.023899
+
+[Engine 2] T_n=73
+  HI range: [0.213430, 0.926743]
+  HI[0] (first): 0.227991
+  HI[72] (last): 0.926743
+  Loss Term 1 contribution: 0.005367 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004772
+  Monotonicity violations: 23/72
+  Loss Term 3 contribution: 0.012444
+  Convexity violations: 34/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009705, Std: 0.021903
+
+[Engine 3] T_n=67
+  HI range: [0.202972, 0.940572]
+  HI[0] (first): 0.219534
+  HI[66] (last): 0.940572
+  Loss Term 1 contribution: 0.003532 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004381
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.014283
+  Convexity violations: 35/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.010925, Std: 0.023644
+
+[Engine 4] T_n=60
+  HI range: [0.234395, 0.860978]
+  HI[0] (first): 0.245732
+  HI[59] (last): 0.860978
+  Loss Term 1 contribution: 0.019327 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003517
+  Monotonicity violations: 21/59
+  Loss Term 3 contribution: 0.011654
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010428, Std: 0.020244
+
+[Engine 5] T_n=93
+  HI range: [0.185578, 0.948107]
+  HI[0] (first): 0.221959
+  HI[92] (last): 0.948107
+  Loss Term 1 contribution: 0.002693 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006306
+  Monotonicity violations: 39/92
+  Loss Term 3 contribution: 0.015229
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007893, Std: 0.024233
+
+[Engine 6] T_n=63
+  HI range: [0.232768, 0.952244]
+  HI[0] (first): 0.256143
+  HI[62] (last): 0.952244
+  Loss Term 1 contribution: 0.002281 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003637
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.012030
+  Convexity violations: 33/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.011227, Std: 0.020719
+
+[Engine 7] T_n=80
+  HI range: [0.248086, 0.966876]
+  HI[0] (first): 0.271569
+  HI[79] (last): 0.966876
+  Loss Term 1 contribution: 0.001097 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005455
+  Monotonicity violations: 27/79
+  Loss Term 3 contribution: 0.015477
+  Convexity violations: 39/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.008801, Std: 0.023260
+
+[Engine 8] T_n=71
+  HI range: [0.226657, 0.992156]
+  HI[0] (first): 0.226657
+  HI[70] (last): 0.992156
+  Loss Term 1 contribution: 0.000062 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003915
+  Monotonicity violations: 17/70
+  Loss Term 3 contribution: 0.012597
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.010936, Std: 0.020775
+
+[Engine 9] T_n=84
+  HI range: [0.217216, 0.956627]
+  HI[0] (first): 0.225441
+  HI[83] (last): 0.956627
+  Loss Term 1 contribution: 0.001881 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006341
+  Monotonicity violations: 28/83
+  Loss Term 3 contribution: 0.015794
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008809, Std: 0.024137
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.014498 (×1.0)
+  Term 1 (Target HI=1): 0.065838 (×1.0)
+  Term 2 (Monotonicity): 0.044186 (×6.0)
+  Term 3 (Convexity): 0.125292 (×2.0)
+  Total Loss: 0.596036
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00030161, std=0.00090999, max_abs=0.00165500
+  b1: mean=0.00088878, std=0.00264104, max_abs=0.00473604
+  W2: mean=-0.00000475, std=0.00031785, max_abs=0.00058339
+  b2: mean=-0.00020623, std=0.00678277, max_abs=0.00698901
+  W3: mean=0.00004873, std=0.03304975, max_abs=0.03309848
+  b3: mean=-0.06647672, std=0.00000000, max_abs=0.06647672
+
+ADAM OPTIMIZER UPDATE (step 800):
+  W1: update_mean=-0.00003054, update_max_abs=0.00017180
+  b1: update_mean=0.00008646, update_max_abs=0.00050943
+
+Epoch 800/1000, Loss: 0.596036
+
+================================================================================
+EPOCH 900 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.190178, 0.830237]
+  HI[0] (first): 0.232651
+  HI[71] (last): 0.830237
+  Loss Term 1 contribution: 0.028819 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005670
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.015431
+  Convexity violations: 33/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008417, Std: 0.023659
+
+[Engine 2] T_n=73
+  HI range: [0.213221, 0.932712]
+  HI[0] (first): 0.227219
+  HI[72] (last): 0.932712
+  Loss Term 1 contribution: 0.004528 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004633
+  Monotonicity violations: 23/72
+  Loss Term 3 contribution: 0.012130
+  Convexity violations: 33/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009799, Std: 0.021609
+
+[Engine 3] T_n=67
+  HI range: [0.202677, 0.947329]
+  HI[0] (first): 0.218519
+  HI[66] (last): 0.947329
+  Loss Term 1 contribution: 0.002774 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004246
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.014081
+  Convexity violations: 35/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.011043, Std: 0.023579
+
+[Engine 4] T_n=60
+  HI range: [0.233406, 0.864405]
+  HI[0] (first): 0.244647
+  HI[59] (last): 0.864405
+  Loss Term 1 contribution: 0.018386 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003435
+  Monotonicity violations: 21/59
+  Loss Term 3 contribution: 0.011471
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010504, Std: 0.020243
+
+[Engine 5] T_n=93
+  HI range: [0.186598, 0.952070]
+  HI[0] (first): 0.221276
+  HI[92] (last): 0.952070
+  Loss Term 1 contribution: 0.002297 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006141
+  Monotonicity violations: 39/92
+  Loss Term 3 contribution: 0.014926
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007943, Std: 0.023918
+
+[Engine 6] T_n=63
+  HI range: [0.231699, 0.960743]
+  HI[0] (first): 0.254153
+  HI[62] (last): 0.960743
+  Loss Term 1 contribution: 0.001541 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003502
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.011893
+  Convexity violations: 34/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.011397, Std: 0.020621
+
+[Engine 7] T_n=80
+  HI range: [0.247137, 0.974154]
+  HI[0] (first): 0.269553
+  HI[79] (last): 0.974154
+  Loss Term 1 contribution: 0.000668 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005325
+  Monotonicity violations: 27/79
+  Loss Term 3 contribution: 0.015210
+  Convexity violations: 40/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.008919, Std: 0.023092
+
+[Engine 8] T_n=71
+  HI range: [0.225496, 0.996088]
+  HI[0] (first): 0.225496
+  HI[70] (last): 0.996088
+  Loss Term 1 contribution: 0.000015 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003805
+  Monotonicity violations: 17/70
+  Loss Term 3 contribution: 0.012371
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.011008, Std: 0.020668
+
+[Engine 9] T_n=84
+  HI range: [0.216125, 0.960782]
+  HI[0] (first): 0.224250
+  HI[83] (last): 0.960782
+  Loss Term 1 contribution: 0.001538 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006188
+  Monotonicity violations: 28/83
+  Loss Term 3 contribution: 0.015505
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008874, Std: 0.023893
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.013604 (×1.0)
+  Term 1 (Target HI=1): 0.060567 (×1.0)
+  Term 2 (Monotonicity): 0.042946 (×6.0)
+  Term 3 (Convexity): 0.123018 (×2.0)
+  Total Loss: 0.577882
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00064344, std=0.00114561, max_abs=0.00259164
+  b1: mean=0.00162403, std=0.00300891, max_abs=0.00662207
+  W2: mean=-0.00000871, std=0.00030865, max_abs=0.00041390
+  b2: mean=-0.00022244, std=0.00649929, max_abs=0.00672173
+  W3: mean=0.00005212, std=0.02649060, max_abs=0.02654272
+  b3: mean=-0.05860387, std=0.00000000, max_abs=0.05860387
+
+ADAM OPTIMIZER UPDATE (step 900):
+  W1: update_mean=-0.00006807, update_max_abs=0.00023790
+  b1: update_mean=0.00017503, update_max_abs=0.00073551
+
+================================================================================
+EPOCH 1000 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.191861, 0.835174]
+  HI[0] (first): 0.231777
+  HI[71] (last): 0.835174
+  Loss Term 1 contribution: 0.027168 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005422
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.015026
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008499, Std: 0.023448
+
+[Engine 2] T_n=73
+  HI range: [0.213436, 0.939467]
+  HI[0] (first): 0.226630
+  HI[72] (last): 0.939467
+  Loss Term 1 contribution: 0.003664 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004438
+  Monotonicity violations: 23/72
+  Loss Term 3 contribution: 0.011728
+  Convexity violations: 31/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009901, Std: 0.021240
+
+[Engine 3] T_n=67
+  HI range: [0.203086, 0.953967]
+  HI[0] (first): 0.217793
+  HI[66] (last): 0.953967
+  Loss Term 1 contribution: 0.002119 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004047
+  Monotonicity violations: 22/66
+  Loss Term 3 contribution: 0.013840
+  Convexity violations: 35/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.011154, Std: 0.023501
+
+[Engine 4] T_n=60
+  HI range: [0.232444, 0.870331]
+  HI[0] (first): 0.243374
+  HI[59] (last): 0.870331
+  Loss Term 1 contribution: 0.016814 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003322
+  Monotonicity violations: 20/59
+  Loss Term 3 contribution: 0.011209
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010626, Std: 0.020291
+
+[Engine 5] T_n=93
+  HI range: [0.188706, 0.953359]
+  HI[0] (first): 0.220860
+  HI[92] (last): 0.953359
+  Loss Term 1 contribution: 0.002175 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005907
+  Monotonicity violations: 39/92
+  Loss Term 3 contribution: 0.014522
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007962, Std: 0.023457
+
+[Engine 6] T_n=63
+  HI range: [0.230686, 0.968890]
+  HI[0] (first): 0.251813
+  HI[62] (last): 0.968890
+  Loss Term 1 contribution: 0.000968 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003333
+  Monotonicity violations: 18/62
+  Loss Term 3 contribution: 0.011572
+  Convexity violations: 34/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.011566, Std: 0.020399
+
+[Engine 7] T_n=80
+  HI range: [0.245972, 0.978729]
+  HI[0] (first): 0.266895
+  HI[79] (last): 0.978729
+  Loss Term 1 contribution: 0.000452 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005163
+  Monotonicity violations: 27/79
+  Loss Term 3 contribution: 0.014916
+  Convexity violations: 39/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.009011, Std: 0.022813
+
+[Engine 8] T_n=71
+  HI range: [0.224516, 0.992380]
+  HI[0] (first): 0.224516
+  HI[70] (last): 0.992380
+  Loss Term 1 contribution: 0.000058 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003641
+  Monotonicity violations: 17/70
+  Loss Term 3 contribution: 0.011975
+  Convexity violations: 35/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.010969, Std: 0.020303
+
+[Engine 9] T_n=84
+  HI range: [0.215373, 0.961246]
+  HI[0] (first): 0.223271
+  HI[83] (last): 0.961246
+  Loss Term 1 contribution: 0.001502 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006017
+  Monotonicity violations: 28/83
+  Loss Term 3 contribution: 0.015240
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008891, Std: 0.023638
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.012654 (×1.0)
+  Term 1 (Target HI=1): 0.054921 (×1.0)
+  Term 2 (Monotonicity): 0.041289 (×6.0)
+  Term 3 (Convexity): 0.120029 (×2.0)
+  Total Loss: 0.555367
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00134108, std=0.00177173, max_abs=0.00460885
+  b1: mean=0.00325052, std=0.00488455, max_abs=0.01162697
+  W2: mean=-0.00001834, std=0.00084253, max_abs=0.00134601
+  b2: mean=-0.00029313, std=0.00625589, max_abs=0.00654902
+  W3: mean=0.00007704, std=0.02283622, max_abs=0.02291326
+  b3: mean=-0.05322880, std=0.00000000, max_abs=0.05322880
+
+ADAM OPTIMIZER UPDATE (step 1000):
+  W1: update_mean=-0.00015140, update_max_abs=0.00045170
+  b1: update_mean=0.00036119, update_max_abs=0.00126296
+
+Epoch 1000/1000, Loss: 0.555367
+  MLP final loss: 0.555367
+  HI monotonicity rate  : 0.6657  (목표: 높을수록 좋음)
+  HI smoothness (|ΔHI|) : 0.018907 (목표: 낮을수록 좋음)
+
+  총 실행 시간: 22.2s
+
+======================================================================
+  PIPELINE: Median Window (W=5)  (window=5)
+======================================================================
+
+=== Normal Range summary (A_dev index) ===
+Total normal ranges : 9
+  Engine 1 : [0, 156352] (len=156353)
+  Engine 2 : [308489, 526119] (len=217631)
+  Engine 3 : [955653, 1167122] (len=211470)
+  Engine 4 : [1545490, 1752373] (len=206884)
+  Engine 5 : [2084577, 2236339] (len=151763)
+  Engine 6 : [2485720, 2754276] (len=268557)
+  Engine 7 : [3432229, 3656713] (len=224485)
+  Engine 8 : [4132089, 4383309] (len=251221)
+  Engine 9 : [5207095, 5368001] (len=160907)
+
+=== Abnormal Range summary (A_dev index) ===
+Total abnormal ranges : 9
+  Engine 1 : [156353, 308488] (len=152136)
+  Engine 2 : [526120, 955652] (len=429533)
+  Engine 3 : [1167123, 1545489] (len=378367)
+  Engine 4 : [1752374, 2084576] (len=332203)
+  Engine 5 : [2236340, 2485719] (len=249380)
+  Engine 6 : [2754277, 3432228] (len=677952)
+  Engine 7 : [3656714, 4132088] (len=475375)
+  Engine 8 : [4383310, 5207094] (len=823785)
+  Engine 9 : [5368002, 5571276] (len=203275)
+
+=== DEV All Range summary (A_dev index) ===
+Total dev ranges : 9
+  Engine 1 : [0, 308488] (len=308489)
+  Engine 2 : [308489, 955652] (len=647164)
+  Engine 3 : [955653, 1545489] (len=589837)
+  Engine 4 : [1545490, 2084576] (len=539087)
+  Engine 5 : [2084577, 2485719] (len=401143)
+  Engine 6 : [2485720, 3432228] (len=946509)
+  Engine 7 : [3432229, 4132088] (len=699860)
+  Engine 8 : [4132089, 5207094] (len=1075006)
+  Engine 9 : [5207095, 5571276] (len=364182)
+
+=== Test Abnormal Range summary (A_test index) ===
+Total test abnormal ranges : 6
+  Engine 10 : [249848, 951108] (len=701261)
+  Engine 11 : [1212316, 1775600] (len=563285)
+  Engine 12 : [1931041, 2181009] (len=249969)
+  Engine 13 : [2432683, 3287901] (len=855219)
+  Engine 14 : [3447483, 3633385] (len=185903)
+  Engine 15 : [3850316, 4251559] (len=401244)
+
+=== TEST All Range summary (A_test index) ===
+Total test ranges : 6
+  Engine 10 : [0, 951108] (len=951109)
+  Engine 11 : [951109, 1775600] (len=824492)
+  Engine 12 : [1775601, 2181009] (len=405409)
+  Engine 13 : [2181010, 3287901] (len=1106892)
+  Engine 14 : [3287902, 3633385] (len=345484)
+  Engine 15 : [3633386, 4251559] (len=618174)
+
+=== DEV sampling (normal state, from A_dev) ===
+Target engines : [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9)]
+Samples per range (K) : 20
+  Engine 1 | range [0,156352] | range_len=156353 | sampled=20
+  Engine 2 | range [308489,526119] | range_len=217631 | sampled=20
+  Engine 3 | range [955653,1167122] | range_len=211470 | sampled=20
+  Engine 4 | range [1545490,1752373] | range_len=206884 | sampled=20
+  Engine 5 | range [2084577,2236339] | range_len=151763 | sampled=20
+  Engine 6 | range [2485720,2754276] | range_len=268557 | sampled=20
+  Engine 7 | range [3432229,3656713] | range_len=224485 | sampled=20
+  Engine 8 | range [4132089,4383309] | range_len=251221 | sampled=20
+  Engine 9 | range [5207095,5368001] | range_len=160907 | sampled=20
+
+DEV sampled count by engine:
+  Engine 1 : 20
+  Engine 2 : 20
+  Engine 3 : 20
+  Engine 4 : 20
+  Engine 5 : 20
+  Engine 6 : 20
+  Engine 7 : 20
+  Engine 8 : 20
+  Engine 9 : 20
+
+Total DEV sampled indices: 180
+
+=== DEV sampling (abnormal state, from A_dev) ===
+Samples per cycle (N) : 10
+
+Total DEV sampled indices: 6630
+
+=== TEST sampling (abnormal state, from A_test) ===
+Samples per cycle (N) : 10
+
+Total TEST sampled indices: 4380
+
+[Data prep] window=5
+  Training data size    : 180
+  Outlier rate (>3σ)    : 0.0056
+  Mean IQR (sensors)    : 87.0399
+
+[GPR training]
+  GPR Iter 10/100 - Loss: 0.8604
+  GPR Iter 20/100 - Loss: 0.3596
+  GPR Iter 30/100 - Loss: -0.1513
+  GPR Iter 40/100 - Loss: -0.6633
+  GPR Iter 50/100 - Loss: -1.1598
+  GPR Iter 60/100 - Loss: -1.6348
+  GPR Iter 70/100 - Loss: -2.0598
+  GPR Iter 80/100 - Loss: -2.4017
+  GPR Iter 90/100 - Loss: -2.6306
+  GPR Iter 100/100 - Loss: -2.7592
+  GPR final loss: -2.7592
+  Residual STD (avg over sensors): 1.8173
+  Residual MAE (avg over sensors): 1.3663
+T48: mean=6.0876, std=8.3156
+T50: mean=4.8327, std=6.7150
+Wf: mean=0.0103, std=0.0132
+
+[MLP training] epochs=1000
+Debug epochs: [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+Number of engines: 9
+  Engine 1: 72 cycles
+  Engine 2: 73 cycles
+  Engine 3: 67 cycles
+  Engine 4: 60 cycles
+  Engine 5: 93 cycles
+  Engine 6: 63 cycles
+  Engine 7: 80 cycles
+  Engine 8: 71 cycles
+  Engine 9: 84 cycles
+
+================================================================================
+EPOCH 100 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.092722, 0.223947]
+  HI[0] (first): 0.101078
+  HI[71] (last): 0.222764
+  Loss Term 1 contribution: 0.604096 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.002211
+  Monotonicity violations: 32/71
+  Loss Term 3 contribution: 0.005347
+  Convexity violations: 33/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.001714, Std: 0.007381
+
+[Engine 2] T_n=73
+  HI range: [0.095828, 0.250264]
+  HI[0] (first): 0.100475
+  HI[72] (last): 0.246649
+  Loss Term 1 contribution: 0.567538 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001870
+  Monotonicity violations: 26/72
+  Loss Term 3 contribution: 0.004589
+  Convexity violations: 35/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.002030, Std: 0.006720
+
+[Engine 3] T_n=67
+  HI range: [0.098449, 0.251345]
+  HI[0] (first): 0.108112
+  HI[66] (last): 0.251345
+  Loss Term 1 contribution: 0.560484 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.002165
+  Monotonicity violations: 25/66
+  Loss Term 3 contribution: 0.005195
+  Convexity violations: 29/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.002170, Std: 0.007864
+
+[Engine 4] T_n=60
+  HI range: [0.099353, 0.229552]
+  HI[0] (first): 0.103258
+  HI[59] (last): 0.229552
+  Loss Term 1 contribution: 0.593590 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001164
+  Monotonicity violations: 18/59
+  Loss Term 3 contribution: 0.003052
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.002141, Std: 0.005225
+
+[Engine 5] T_n=93
+  HI range: [0.092575, 0.259446]
+  HI[0] (first): 0.103025
+  HI[92] (last): 0.259446
+  Loss Term 1 contribution: 0.548420 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.002012
+  Monotonicity violations: 33/92
+  Loss Term 3 contribution: 0.004317
+  Convexity violations: 44/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.001700, Std: 0.006646
+
+[Engine 6] T_n=63
+  HI range: [0.102352, 0.250151]
+  HI[0] (first): 0.109351
+  HI[62] (last): 0.250151
+  Loss Term 1 contribution: 0.562274 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001405
+  Monotonicity violations: 23/62
+  Loss Term 3 contribution: 0.004028
+  Convexity violations: 30/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.002271, Std: 0.006143
+
+[Engine 7] T_n=80
+  HI range: [0.100694, 0.258297]
+  HI[0] (first): 0.108581
+  HI[79] (last): 0.258297
+  Loss Term 1 contribution: 0.550124 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001807
+  Monotonicity violations: 28/79
+  Loss Term 3 contribution: 0.004521
+  Convexity violations: 33/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.001895, Std: 0.006474
+
+[Engine 8] T_n=71
+  HI range: [0.100737, 0.262883]
+  HI[0] (first): 0.102039
+  HI[70] (last): 0.262883
+  Loss Term 1 contribution: 0.543342 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.001229
+  Monotonicity violations: 22/70
+  Loss Term 3 contribution: 0.003429
+  Convexity violations: 34/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.002298, Std: 0.005456
+
+[Engine 9] T_n=84
+  HI range: [0.101370, 0.260545]
+  HI[0] (first): 0.102706
+  HI[83] (last): 0.260545
+  Loss Term 1 contribution: 0.546794 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.002142
+  Monotonicity violations: 29/83
+  Loss Term 3 contribution: 0.005025
+  Convexity violations: 38/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.001902, Std: 0.007477
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.000000 (×1.0)
+  Term 1 (Target HI=1): 5.076661 (×1.0)
+  Term 2 (Monotonicity): 0.016005 (×6.0)
+  Term 3 (Convexity): 0.039503 (×2.0)
+  Total Loss: 5.251697
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00068295, std=0.02711744, max_abs=0.03637974
+  b1: mean=-0.00043090, std=0.01570629, max_abs=0.01636016
+  W2: mean=-0.00001289, std=0.11101629, max_abs=0.11612501
+  b2: mean=-0.00547423, std=0.16152178, max_abs=0.16699601
+  W3: mean=0.00830455, std=0.72072728, max_abs=0.72903184
+  b3: mean=-1.50185972, std=0.00000000, max_abs=1.50185972
+
+ADAM OPTIMIZER UPDATE (step 100):
+  W1: update_mean=0.00002073, update_max_abs=0.00134202
+  b1: update_mean=0.00002047, update_max_abs=0.00145484
+
+================================================================================
+EPOCH 200 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.207211, 0.580409]
+  HI[0] (first): 0.242290
+  HI[71] (last): 0.580409
+  Loss Term 1 contribution: 0.176057 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005893
+  Monotonicity violations: 29/71
+  Loss Term 3 contribution: 0.014183
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.004762, Std: 0.019769
+
+[Engine 2] T_n=73
+  HI range: [0.223791, 0.607567]
+  HI[0] (first): 0.240302
+  HI[72] (last): 0.606890
+  Loss Term 1 contribution: 0.154536 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004771
+  Monotonicity violations: 27/72
+  Loss Term 3 contribution: 0.011543
+  Convexity violations: 36/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.005092, Std: 0.018023
+
+[Engine 3] T_n=67
+  HI range: [0.223574, 0.610589]
+  HI[0] (first): 0.246716
+  HI[66] (last): 0.610589
+  Loss Term 1 contribution: 0.151641 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004982
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.012866
+  Convexity violations: 34/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.005513, Std: 0.019459
+
+[Engine 4] T_n=60
+  HI range: [0.244099, 0.589213]
+  HI[0] (first): 0.251822
+  HI[59] (last): 0.589213
+  Loss Term 1 contribution: 0.168746 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003050
+  Monotonicity violations: 18/59
+  Loss Term 3 contribution: 0.008987
+  Convexity violations: 26/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.005718, Std: 0.013741
+
+[Engine 5] T_n=93
+  HI range: [0.202131, 0.615941]
+  HI[0] (first): 0.240824
+  HI[92] (last): 0.615941
+  Loss Term 1 contribution: 0.147501 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005736
+  Monotonicity violations: 33/92
+  Loss Term 3 contribution: 0.012255
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.004077, Std: 0.019350
+
+[Engine 6] T_n=63
+  HI range: [0.250744, 0.611220]
+  HI[0] (first): 0.268965
+  HI[62] (last): 0.611220
+  Loss Term 1 contribution: 0.151150 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003059
+  Monotonicity violations: 20/62
+  Loss Term 3 contribution: 0.008391
+  Convexity violations: 31/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.005520, Std: 0.015088
+
+[Engine 7] T_n=80
+  HI range: [0.250650, 0.616762]
+  HI[0] (first): 0.274687
+  HI[79] (last): 0.616762
+  Loss Term 1 contribution: 0.146872 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004393
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.011196
+  Convexity violations: 40/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.004330, Std: 0.016712
+
+[Engine 8] T_n=71
+  HI range: [0.240661, 0.621032]
+  HI[0] (first): 0.240798
+  HI[70] (last): 0.621032
+  Loss Term 1 contribution: 0.143617 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003030
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.008477
+  Convexity violations: 34/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.005432, Std: 0.014188
+
+[Engine 9] T_n=84
+  HI range: [0.239764, 0.617282]
+  HI[0] (first): 0.242150
+  HI[83] (last): 0.617282
+  Loss Term 1 contribution: 0.146473 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005709
+  Monotonicity violations: 26/83
+  Loss Term 3 contribution: 0.012836
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.004520, Std: 0.019587
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.023723 (×1.0)
+  Term 1 (Target HI=1): 1.386592 (×1.0)
+  Term 2 (Monotonicity): 0.040623 (×6.0)
+  Term 3 (Convexity): 0.100734 (×2.0)
+  Total Loss: 1.855522
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=0.00004575, std=0.01384933, max_abs=0.02395828
+  b1: mean=0.00003379, std=0.00382316, max_abs=0.00393674
+  W2: mean=-0.00000342, std=0.04683246, max_abs=0.04892268
+  b2: mean=-0.00211626, std=0.06544724, max_abs=0.06756350
+  W3: mean=0.00224384, std=0.51959316, max_abs=0.52183700
+  b3: mean=-0.68491285, std=0.00000000, max_abs=0.68491285
+
+ADAM OPTIMIZER UPDATE (step 200):
+  W1: update_mean=-0.00000481, update_max_abs=0.00139084
+  b1: update_mean=0.00001475, update_max_abs=0.00065944
+
+Epoch 200/1000, Loss: 1.855522
+
+================================================================================
+EPOCH 300 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.209762, 0.761309]
+  HI[0] (first): 0.269382
+  HI[71] (last): 0.761309
+  Loss Term 1 contribution: 0.056973 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007501
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.017906
+  Convexity violations: 33/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.006929, Std: 0.025851
+
+[Engine 2] T_n=73
+  HI range: [0.244007, 0.790860]
+  HI[0] (first): 0.266792
+  HI[72] (last): 0.790860
+  Loss Term 1 contribution: 0.043739 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006066
+  Monotonicity violations: 21/72
+  Loss Term 3 contribution: 0.014631
+  Convexity violations: 35/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.007279, Std: 0.024219
+
+[Engine 3] T_n=67
+  HI range: [0.234316, 0.794029]
+  HI[0] (first): 0.255420
+  HI[66] (last): 0.794029
+  Loss Term 1 contribution: 0.042424 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005668
+  Monotonicity violations: 25/66
+  Loss Term 3 contribution: 0.015836
+  Convexity violations: 34/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.008161, Std: 0.024149
+
+[Engine 4] T_n=60
+  HI range: [0.274993, 0.771769]
+  HI[0] (first): 0.284356
+  HI[59] (last): 0.771769
+  Loss Term 1 contribution: 0.052089 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004186
+  Monotonicity violations: 20/59
+  Loss Term 3 contribution: 0.012822
+  Convexity violations: 28/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.008261, Std: 0.019661
+
+[Engine 5] T_n=93
+  HI range: [0.204267, 0.796769]
+  HI[0] (first): 0.259081
+  HI[92] (last): 0.796769
+  Loss Term 1 contribution: 0.041303 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007855
+  Monotonicity violations: 38/92
+  Loss Term 3 contribution: 0.017309
+  Convexity violations: 46/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.005844, Std: 0.027276
+
+[Engine 6] T_n=63
+  HI range: [0.273905, 0.796527]
+  HI[0] (first): 0.304320
+  HI[62] (last): 0.796527
+  Loss Term 1 contribution: 0.041401 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004445
+  Monotonicity violations: 18/62
+  Loss Term 3 contribution: 0.012168
+  Convexity violations: 30/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.007939, Std: 0.021285
+
+[Engine 7] T_n=80
+  HI range: [0.290590, 0.800462]
+  HI[0] (first): 0.320567
+  HI[79] (last): 0.800462
+  Loss Term 1 contribution: 0.039816 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005940
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.015382
+  Convexity violations: 37/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.006075, Std: 0.022975
+
+[Engine 8] T_n=71
+  HI range: [0.262585, 0.805446]
+  HI[0] (first): 0.262585
+  HI[70] (last): 0.805446
+  Loss Term 1 contribution: 0.037851 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004390
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.012402
+  Convexity violations: 34/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.007755, Std: 0.019925
+
+[Engine 9] T_n=84
+  HI range: [0.248167, 0.798690]
+  HI[0] (first): 0.263513
+  HI[83] (last): 0.798690
+  Loss Term 1 contribution: 0.040526 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007631
+  Monotonicity violations: 27/83
+  Loss Term 3 contribution: 0.017011
+  Convexity violations: 41/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.006448, Std: 0.026083
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.056323 (×1.0)
+  Term 1 (Target HI=1): 0.396123 (×1.0)
+  Term 2 (Monotonicity): 0.053681 (×6.0)
+  Term 3 (Convexity): 0.135467 (×2.0)
+  Total Loss: 1.045464
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00001620, std=0.00345149, max_abs=0.00483669
+  b1: mean=0.00033222, std=0.01377222, max_abs=0.01423024
+  W2: mean=-0.00000249, std=0.01390312, max_abs=0.01485770
+  b2: mean=-0.00052312, std=0.00560300, max_abs=0.00612612
+  W3: mean=0.00039544, std=0.23998882, max_abs=0.24038426
+  b3: mean=-0.26624959, std=0.00000000, max_abs=0.26624959
+
+ADAM OPTIMIZER UPDATE (step 300):
+  W1: update_mean=-0.00000605, update_max_abs=0.00033432
+  b1: update_mean=-0.00000448, update_max_abs=0.00115993
+
+================================================================================
+EPOCH 400 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.188859, 0.818037]
+  HI[0] (first): 0.248954
+  HI[71] (last): 0.818037
+  Loss Term 1 contribution: 0.033110 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007361
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.018144
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008015, Std: 0.026485
+
+[Engine 2] T_n=73
+  HI range: [0.224563, 0.864253]
+  HI[0] (first): 0.246513
+  HI[72] (last): 0.864253
+  Loss Term 1 contribution: 0.018427 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005959
+  Monotonicity violations: 21/72
+  Loss Term 3 contribution: 0.014824
+  Convexity violations: 36/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.008580, Std: 0.024748
+
+[Engine 3] T_n=67
+  HI range: [0.213071, 0.868983]
+  HI[0] (first): 0.230643
+  HI[66] (last): 0.868983
+  Loss Term 1 contribution: 0.017166 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005452
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.016249
+  Convexity violations: 33/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.009672, Std: 0.024896
+
+[Engine 4] T_n=60
+  HI range: [0.252951, 0.834190]
+  HI[0] (first): 0.263787
+  HI[59] (last): 0.834190
+  Loss Term 1 contribution: 0.027493 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004302
+  Monotonicity violations: 19/59
+  Loss Term 3 contribution: 0.013865
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.009668, Std: 0.021323
+
+[Engine 5] T_n=93
+  HI range: [0.183921, 0.871848]
+  HI[0] (first): 0.237013
+  HI[92] (last): 0.871848
+  Loss Term 1 contribution: 0.016423 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.008005
+  Monotonicity violations: 42/92
+  Loss Term 3 contribution: 0.018050
+  Convexity violations: 47/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.006900, Std: 0.028255
+
+[Engine 6] T_n=63
+  HI range: [0.251566, 0.873949]
+  HI[0] (first): 0.282425
+  HI[62] (last): 0.873949
+  Loss Term 1 contribution: 0.015889 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004632
+  Monotonicity violations: 18/62
+  Loss Term 3 contribution: 0.013449
+  Convexity violations: 33/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.009541, Std: 0.022602
+
+[Engine 7] T_n=80
+  HI range: [0.271804, 0.879550]
+  HI[0] (first): 0.300254
+  HI[79] (last): 0.879550
+  Loss Term 1 contribution: 0.014508 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006239
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.016552
+  Convexity violations: 38/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.007333, Std: 0.024360
+
+[Engine 8] T_n=71
+  HI range: [0.241373, 0.888546]
+  HI[0] (first): 0.241373
+  HI[70] (last): 0.888546
+  Loss Term 1 contribution: 0.012422 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004700
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.013776
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.009245, Std: 0.021362
+
+[Engine 9] T_n=84
+  HI range: [0.224306, 0.875285]
+  HI[0] (first): 0.242091
+  HI[83] (last): 0.875285
+  Loss Term 1 contribution: 0.015554 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007691
+  Monotonicity violations: 27/83
+  Loss Term 3 contribution: 0.017689
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.007629, Std: 0.027045
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.031266 (×1.0)
+  Term 1 (Target HI=1): 0.170992 (×1.0)
+  Term 2 (Monotonicity): 0.054342 (×6.0)
+  Term 3 (Convexity): 0.142598 (×2.0)
+  Total Loss: 0.813506
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=0.00008750, std=0.00492857, max_abs=0.00686216
+  b1: mean=0.00037923, std=0.01012035, max_abs=0.01078118
+  W2: mean=-0.00000197, std=0.00474507, max_abs=0.00519435
+  b2: mean=-0.00031731, std=0.00422601, max_abs=0.00454332
+  W3: mean=0.00011962, std=0.12937422, max_abs=0.12949384
+  b3: mean=-0.16273472, std=0.00000000, max_abs=0.16273472
+
+ADAM OPTIMIZER UPDATE (step 400):
+  W1: update_mean=-0.00000425, update_max_abs=0.00042382
+  b1: update_mean=0.00000671, update_max_abs=0.00089111
+
+Epoch 400/1000, Loss: 0.813506
+
+================================================================================
+EPOCH 500 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.185564, 0.824848]
+  HI[0] (first): 0.239266
+  HI[71] (last): 0.824848
+  Loss Term 1 contribution: 0.030678 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006771
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.017095
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008248, Std: 0.025422
+
+[Engine 2] T_n=73
+  HI range: [0.217286, 0.892079]
+  HI[0] (first): 0.237078
+  HI[72] (last): 0.892079
+  Loss Term 1 contribution: 0.011647 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005446
+  Monotonicity violations: 21/72
+  Loss Term 3 contribution: 0.013920
+  Convexity violations: 36/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009097, Std: 0.023393
+
+[Engine 3] T_n=67
+  HI range: [0.207522, 0.899509]
+  HI[0] (first): 0.223849
+  HI[66] (last): 0.899509
+  Loss Term 1 contribution: 0.010098 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005026
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.015688
+  Convexity violations: 33/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.010237, Std: 0.024382
+
+[Engine 4] T_n=60
+  HI range: [0.243139, 0.847471]
+  HI[0] (first): 0.252448
+  HI[59] (last): 0.847471
+  Loss Term 1 contribution: 0.023265 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003927
+  Monotonicity violations: 19/59
+  Loss Term 3 contribution: 0.013088
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010085, Std: 0.020894
+
+[Engine 5] T_n=93
+  HI range: [0.180990, 0.905095]
+  HI[0] (first): 0.228944
+  HI[92] (last): 0.905095
+  Loss Term 1 contribution: 0.009007 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007335
+  Monotonicity violations: 42/92
+  Loss Term 3 contribution: 0.017045
+  Convexity violations: 47/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007349, Std: 0.026680
+
+[Engine 6] T_n=63
+  HI range: [0.241994, 0.906843]
+  HI[0] (first): 0.269700
+  HI[62] (last): 0.906843
+  Loss Term 1 contribution: 0.008678 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004198
+  Monotonicity violations: 18/62
+  Loss Term 3 contribution: 0.012730
+  Convexity violations: 33/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.010276, Std: 0.021612
+
+[Engine 7] T_n=80
+  HI range: [0.259319, 0.916450]
+  HI[0] (first): 0.285286
+  HI[79] (last): 0.916450
+  Loss Term 1 contribution: 0.006981 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005812
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.016015
+  Convexity violations: 37/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.007989, Std: 0.023505
+
+[Engine 8] T_n=71
+  HI range: [0.232829, 0.931870]
+  HI[0] (first): 0.232829
+  HI[70] (last): 0.931870
+  Loss Term 1 contribution: 0.004642 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004401
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.013453
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.009986, Std: 0.020978
+
+[Engine 9] T_n=84
+  HI range: [0.218082, 0.910485]
+  HI[0] (first): 0.233587
+  HI[83] (last): 0.910485
+  Loss Term 1 contribution: 0.008013 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.007143
+  Monotonicity violations: 27/83
+  Loss Term 3 contribution: 0.016909
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008155, Std: 0.025858
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.021412 (×1.0)
+  Term 1 (Target HI=1): 0.113009 (×1.0)
+  Term 2 (Monotonicity): 0.050058 (×6.0)
+  Term 3 (Convexity): 0.135942 (×2.0)
+  Total Loss: 0.706655
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=0.00005342, std=0.00248665, max_abs=0.00358086
+  b1: mean=0.00037077, std=0.00591205, max_abs=0.00667037
+  W2: mean=-0.00000207, std=0.00342648, max_abs=0.00374749
+  b2: mean=-0.00029558, std=0.00720069, max_abs=0.00749627
+  W3: mean=0.00009619, std=0.08743920, max_abs=0.08753539
+  b3: mean=-0.12496946, std=0.00000000, max_abs=0.12496946
+
+ADAM OPTIMIZER UPDATE (step 500):
+  W1: update_mean=-0.00000122, update_max_abs=0.00026147
+  b1: update_mean=0.00001627, update_max_abs=0.00059524
+
+================================================================================
+EPOCH 600 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.184805, 0.826765]
+  HI[0] (first): 0.235045
+  HI[71] (last): 0.826765
+  Loss Term 1 contribution: 0.030010 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006407
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.016425
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008334, Std: 0.024828
+
+[Engine 2] T_n=73
+  HI range: [0.214461, 0.909311]
+  HI[0] (first): 0.233007
+  HI[72] (last): 0.909311
+  Loss Term 1 contribution: 0.008224 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005135
+  Monotonicity violations: 21/72
+  Loss Term 3 contribution: 0.013356
+  Convexity violations: 36/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009393, Std: 0.022678
+
+[Engine 3] T_n=67
+  HI range: [0.205483, 0.918829]
+  HI[0] (first): 0.220865
+  HI[66] (last): 0.918829
+  Loss Term 1 contribution: 0.006589 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004756
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.015272
+  Convexity violations: 33/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.010575, Std: 0.024130
+
+[Engine 4] T_n=60
+  HI range: [0.238727, 0.853867]
+  HI[0] (first): 0.247320
+  HI[59] (last): 0.853867
+  Loss Term 1 contribution: 0.021355 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003708
+  Monotonicity violations: 19/59
+  Loss Term 3 contribution: 0.012604
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010280, Std: 0.020700
+
+[Engine 5] T_n=93
+  HI range: [0.180477, 0.926532]
+  HI[0] (first): 0.225481
+  HI[92] (last): 0.926532
+  Loss Term 1 contribution: 0.005398 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006943
+  Monotonicity violations: 42/92
+  Loss Term 3 contribution: 0.016426
+  Convexity violations: 47/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007620, Std: 0.025834
+
+[Engine 6] T_n=63
+  HI range: [0.237686, 0.928108]
+  HI[0] (first): 0.263658
+  HI[62] (last): 0.928108
+  Loss Term 1 contribution: 0.005168 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003960
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.012351
+  Convexity violations: 33/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.010717, Std: 0.021222
+
+[Engine 7] T_n=80
+  HI range: [0.253691, 0.940965]
+  HI[0] (first): 0.278123
+  HI[79] (last): 0.940965
+  Loss Term 1 contribution: 0.003485 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005559
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.015671
+  Convexity violations: 37/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.008390, Std: 0.023139
+
+[Engine 8] T_n=71
+  HI range: [0.229155, 0.962012]
+  HI[0] (first): 0.229155
+  HI[70] (last): 0.962012
+  Loss Term 1 contribution: 0.001443 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004228
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.013287
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.010469, Std: 0.020986
+
+[Engine 9] T_n=84
+  HI range: [0.215473, 0.933540]
+  HI[0] (first): 0.229909
+  HI[83] (last): 0.933540
+  Loss Term 1 contribution: 0.004417 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006795
+  Monotonicity violations: 26/83
+  Loss Term 3 contribution: 0.016383
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008477, Std: 0.025203
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.017542 (×1.0)
+  Term 1 (Target HI=1): 0.086089 (×1.0)
+  Term 2 (Monotonicity): 0.047491 (×6.0)
+  Term 3 (Convexity): 0.131775 (×2.0)
+  Total Loss: 0.652127
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00003849, std=0.00129396, max_abs=0.00175352
+  b1: mean=0.00040384, std=0.00383774, max_abs=0.00475557
+  W2: mean=-0.00000224, std=0.00195826, max_abs=0.00221218
+  b2: mean=-0.00025419, std=0.00762891, max_abs=0.00788310
+  W3: mean=0.00007091, std=0.06015346, max_abs=0.06022437
+  b3: mean=-0.09722384, std=0.00000000, max_abs=0.09722384
+
+ADAM OPTIMIZER UPDATE (step 600):
+  W1: update_mean=-0.00000612, update_max_abs=0.00014799
+  b1: update_mean=0.00002611, update_max_abs=0.00045373
+
+Epoch 600/1000, Loss: 0.652127
+
+================================================================================
+EPOCH 700 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.185234, 0.827206]
+  HI[0] (first): 0.233207
+  HI[71] (last): 0.827206
+  Loss Term 1 contribution: 0.029858 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006138
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.015916
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008366, Std: 0.024390
+
+[Engine 2] T_n=73
+  HI range: [0.213575, 0.920049]
+  HI[0] (first): 0.231253
+  HI[72] (last): 0.920049
+  Loss Term 1 contribution: 0.006392 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004915
+  Monotonicity violations: 21/72
+  Loss Term 3 contribution: 0.012933
+  Convexity violations: 36/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009567, Std: 0.022201
+
+[Engine 3] T_n=67
+  HI range: [0.204850, 0.931057]
+  HI[0] (first): 0.219413
+  HI[66] (last): 0.931057
+  Loss Term 1 contribution: 0.004753 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004559
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.014930
+  Convexity violations: 33/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.010782, Std: 0.023950
+
+[Engine 4] T_n=60
+  HI range: [0.236662, 0.857216]
+  HI[0] (first): 0.244991
+  HI[59] (last): 0.857216
+  Loss Term 1 contribution: 0.020387 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003564
+  Monotonicity violations: 19/59
+  Loss Term 3 contribution: 0.012283
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010377, Std: 0.020589
+
+[Engine 5] T_n=93
+  HI range: [0.181150, 0.939443]
+  HI[0] (first): 0.223976
+  HI[92] (last): 0.939443
+  Loss Term 1 contribution: 0.003667 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006679
+  Monotonicity violations: 42/92
+  Loss Term 3 contribution: 0.015983
+  Convexity violations: 47/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007777, Std: 0.025287
+
+[Engine 6] T_n=63
+  HI range: [0.235637, 0.942124]
+  HI[0] (first): 0.260438
+  HI[62] (last): 0.942124
+  Loss Term 1 contribution: 0.003350 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003790
+  Monotonicity violations: 19/62
+  Loss Term 3 contribution: 0.012124
+  Convexity violations: 33/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.010995, Std: 0.021015
+
+[Engine 7] T_n=80
+  HI range: [0.251149, 0.956881]
+  HI[0] (first): 0.274419
+  HI[79] (last): 0.956881
+  Loss Term 1 contribution: 0.001859 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005382
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.015393
+  Convexity violations: 37/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.008639, Std: 0.022929
+
+[Engine 8] T_n=71
+  HI range: [0.227456, 0.981387]
+  HI[0] (first): 0.227456
+  HI[70] (last): 0.981387
+  Loss Term 1 contribution: 0.000346 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004098
+  Monotonicity violations: 16/70
+  Loss Term 3 contribution: 0.013140
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.010770, Std: 0.021029
+
+[Engine 9] T_n=84
+  HI range: [0.214268, 0.947657]
+  HI[0] (first): 0.228134
+  HI[83] (last): 0.947657
+  Loss Term 1 contribution: 0.002740 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006543
+  Monotonicity violations: 27/83
+  Loss Term 3 contribution: 0.015963
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008669, Std: 0.024752
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.015792 (×1.0)
+  Term 1 (Target HI=1): 0.073353 (×1.0)
+  Term 2 (Monotonicity): 0.045669 (×6.0)
+  Term 3 (Convexity): 0.128666 (×2.0)
+  Total Loss: 0.620491
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00013634, std=0.00086056, max_abs=0.00149546
+  b1: mean=0.00054706, std=0.00293951, max_abs=0.00424084
+  W2: mean=-0.00000300, std=0.00095793, max_abs=0.00120190
+  b2: mean=-0.00022077, std=0.00722283, max_abs=0.00744360
+  W3: mean=0.00005561, std=0.04343867, max_abs=0.04349428
+  b3: mean=-0.07859790, std=0.00000000, max_abs=0.07859790
+
+ADAM OPTIMIZER UPDATE (step 700):
+  W1: update_mean=-0.00001386, update_max_abs=0.00014945
+  b1: update_mean=0.00004526, update_max_abs=0.00043192
+
+================================================================================
+EPOCH 800 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.185850, 0.828288]
+  HI[0] (first): 0.232097
+  HI[71] (last): 0.828288
+  Loss Term 1 contribution: 0.029485 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005923
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.015510
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008397, Std: 0.024062
+
+[Engine 2] T_n=73
+  HI range: [0.213174, 0.927520]
+  HI[0] (first): 0.230181
+  HI[72] (last): 0.927520
+  Loss Term 1 contribution: 0.005253 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004749
+  Monotonicity violations: 21/72
+  Loss Term 3 contribution: 0.012599
+  Convexity violations: 36/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009685, Std: 0.021857
+
+[Engine 3] T_n=67
+  HI range: [0.204368, 0.939564]
+  HI[0] (first): 0.218228
+  HI[66] (last): 0.939564
+  Loss Term 1 contribution: 0.003653 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004408
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.014666
+  Convexity violations: 33/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.010929, Std: 0.023842
+
+[Engine 4] T_n=60
+  HI range: [0.235331, 0.860074]
+  HI[0] (first): 0.243677
+  HI[59] (last): 0.860074
+  Loss Term 1 contribution: 0.019579 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003463
+  Monotonicity violations: 19/59
+  Loss Term 3 contribution: 0.012075
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010447, Std: 0.020557
+
+[Engine 5] T_n=93
+  HI range: [0.182037, 0.946803]
+  HI[0] (first): 0.222973
+  HI[92] (last): 0.946803
+  Loss Term 1 contribution: 0.002830 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006487
+  Monotonicity violations: 42/92
+  Loss Term 3 contribution: 0.015651
+  Convexity violations: 47/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007868, Std: 0.024909
+
+[Engine 6] T_n=63
+  HI range: [0.234262, 0.952454]
+  HI[0] (first): 0.258139
+  HI[62] (last): 0.952454
+  Loss Term 1 contribution: 0.002261 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003648
+  Monotonicity violations: 17/62
+  Loss Term 3 contribution: 0.011980
+  Convexity violations: 33/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.011199, Std: 0.020892
+
+[Engine 7] T_n=80
+  HI range: [0.249743, 0.967540]
+  HI[0] (first): 0.272045
+  HI[79] (last): 0.967540
+  Loss Term 1 contribution: 0.001054 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005247
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.015156
+  Convexity violations: 37/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.008804, Std: 0.022794
+
+[Engine 8] T_n=71
+  HI range: [0.226184, 0.992280]
+  HI[0] (first): 0.226184
+  HI[70] (last): 0.992280
+  Loss Term 1 contribution: 0.000060 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003983
+  Monotonicity violations: 17/70
+  Loss Term 3 contribution: 0.012972
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.010944, Std: 0.021014
+
+[Engine 9] T_n=84
+  HI range: [0.213222, 0.955775]
+  HI[0] (first): 0.226712
+  HI[83] (last): 0.955775
+  Loss Term 1 contribution: 0.001956 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006356
+  Monotonicity violations: 27/83
+  Loss Term 3 contribution: 0.015619
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008784, Std: 0.024428
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.014679 (×1.0)
+  Term 1 (Target HI=1): 0.066130 (×1.0)
+  Term 2 (Monotonicity): 0.044264 (×6.0)
+  Term 3 (Convexity): 0.126227 (×2.0)
+  Total Loss: 0.598844
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00029648, std=0.00089589, max_abs=0.00161509
+  b1: mean=0.00087091, std=0.00261063, max_abs=0.00467140
+  W2: mean=-0.00000471, std=0.00030140, max_abs=0.00057370
+  b2: mean=-0.00020613, std=0.00682229, max_abs=0.00702842
+  W3: mean=0.00004905, std=0.03300429, max_abs=0.03305333
+  b3: mean=-0.06654770, std=0.00000000, max_abs=0.06654770
+
+ADAM OPTIMIZER UPDATE (step 800):
+  W1: update_mean=-0.00002970, update_max_abs=0.00018585
+  b1: update_mean=0.00008484, update_max_abs=0.00050279
+
+Epoch 800/1000, Loss: 0.598844
+
+================================================================================
+EPOCH 900 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.186841, 0.830327]
+  HI[0] (first): 0.231298
+  HI[71] (last): 0.830327
+  Loss Term 1 contribution: 0.028789 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005731
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.015152
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008437, Std: 0.023802
+
+[Engine 2] T_n=73
+  HI range: [0.213021, 0.933423]
+  HI[0] (first): 0.229396
+  HI[72] (last): 0.933423
+  Loss Term 1 contribution: 0.004433 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004608
+  Monotonicity violations: 21/72
+  Loss Term 3 contribution: 0.012311
+  Convexity violations: 36/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009778, Std: 0.021567
+
+[Engine 3] T_n=67
+  HI range: [0.204106, 0.946237]
+  HI[0] (first): 0.217441
+  HI[66] (last): 0.946237
+  Loss Term 1 contribution: 0.002891 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004283
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.014476
+  Convexity violations: 33/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.011042, Std: 0.023800
+
+[Engine 4] T_n=60
+  HI range: [0.234393, 0.863213]
+  HI[0] (first): 0.242776
+  HI[59] (last): 0.863213
+  Loss Term 1 contribution: 0.018711 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003374
+  Monotonicity violations: 20/59
+  Loss Term 3 contribution: 0.011895
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010516, Std: 0.020568
+
+[Engine 5] T_n=93
+  HI range: [0.183319, 0.950868]
+  HI[0] (first): 0.222309
+  HI[92] (last): 0.950868
+  Loss Term 1 contribution: 0.002414 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006310
+  Monotonicity violations: 42/92
+  Loss Term 3 contribution: 0.015356
+  Convexity violations: 48/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007919, Std: 0.024578
+
+[Engine 6] T_n=63
+  HI range: [0.233269, 0.960848]
+  HI[0] (first): 0.256199
+  HI[62] (last): 0.960848
+  Loss Term 1 contribution: 0.001533 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003503
+  Monotonicity violations: 17/62
+  Loss Term 3 contribution: 0.011805
+  Convexity violations: 31/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.011365, Std: 0.020768
+
+[Engine 7] T_n=80
+  HI range: [0.248671, 0.974948]
+  HI[0] (first): 0.270096
+  HI[79] (last): 0.974948
+  Loss Term 1 contribution: 0.000628 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005118
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.014923
+  Convexity violations: 37/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.008922, Std: 0.022653
+
+[Engine 8] T_n=71
+  HI range: [0.225133, 0.996308]
+  HI[0] (first): 0.225133
+  HI[70] (last): 0.996308
+  Loss Term 1 contribution: 0.000014 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003858
+  Monotonicity violations: 17/70
+  Loss Term 3 contribution: 0.012723
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.011017, Std: 0.020870
+
+[Engine 9] T_n=84
+  HI range: [0.212487, 0.960085]
+  HI[0] (first): 0.225476
+  HI[83] (last): 0.960085
+  Loss Term 1 contribution: 0.001593 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006207
+  Monotonicity violations: 27/83
+  Loss Term 3 contribution: 0.015337
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008851, Std: 0.024173
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.013828 (×1.0)
+  Term 1 (Target HI=1): 0.061004 (×1.0)
+  Term 2 (Monotonicity): 0.042990 (×6.0)
+  Term 3 (Convexity): 0.123980 (×2.0)
+  Total Loss: 0.580735
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00062969, std=0.00117827, max_abs=0.00262306
+  b1: mean=0.00159431, std=0.00298527, max_abs=0.00654915
+  W2: mean=-0.00000867, std=0.00031430, max_abs=0.00043111
+  b2: mean=-0.00022119, std=0.00649981, max_abs=0.00672100
+  W3: mean=0.00005241, std=0.02648451, max_abs=0.02653693
+  b3: mean=-0.05858213, std=0.00000000, max_abs=0.05858213
+
+ADAM OPTIMIZER UPDATE (step 900):
+  W1: update_mean=-0.00006634, update_max_abs=0.00023525
+  b1: update_mean=0.00017204, update_max_abs=0.00072834
+
+================================================================================
+EPOCH 1000 - LOSS COMPUTATION
+================================================================================
+
+[Engine 1] T_n=72
+  HI range: [0.188700, 0.835571]
+  HI[0] (first): 0.230521
+  HI[71] (last): 0.835571
+  Loss Term 1 contribution: 0.027037 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.005478
+  Monotonicity violations: 27/71
+  Loss Term 3 contribution: 0.014708
+  Convexity violations: 32/70
+  Gradient (dHI/dt) stats:
+    Mean: 0.008522, Std: 0.023545
+
+[Engine 2] T_n=73
+  HI range: [0.213304, 0.940316]
+  HI[0] (first): 0.228672
+  HI[72] (last): 0.940316
+  Loss Term 1 contribution: 0.003562 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004424
+  Monotonicity violations: 20/72
+  Loss Term 3 contribution: 0.011934
+  Convexity violations: 36/71
+  Gradient (dHI/dt) stats:
+    Mean: 0.009884, Std: 0.021210
+
+[Engine 3] T_n=67
+  HI range: [0.204295, 0.953053]
+  HI[0] (first): 0.216695
+  HI[66] (last): 0.953053
+  Loss Term 1 contribution: 0.002204 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004102
+  Monotonicity violations: 23/66
+  Loss Term 3 contribution: 0.014279
+  Convexity violations: 33/65
+  Gradient (dHI/dt) stats:
+    Mean: 0.011157, Std: 0.023782
+
+[Engine 4] T_n=60
+  HI range: [0.233352, 0.869298]
+  HI[0] (first): 0.241707
+  HI[59] (last): 0.869298
+  Loss Term 1 contribution: 0.017083 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003264
+  Monotonicity violations: 20/59
+  Loss Term 3 contribution: 0.011690
+  Convexity violations: 29/58
+  Gradient (dHI/dt) stats:
+    Mean: 0.010637, Std: 0.020666
+
+[Engine 5] T_n=93
+  HI range: [0.185606, 0.952062]
+  HI[0] (first): 0.221737
+  HI[92] (last): 0.952062
+  Loss Term 1 contribution: 0.002298 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006069
+  Monotonicity violations: 41/92
+  Loss Term 3 contribution: 0.014974
+  Convexity violations: 48/91
+  Gradient (dHI/dt) stats:
+    Mean: 0.007938, Std: 0.024117
+
+[Engine 6] T_n=63
+  HI range: [0.232174, 0.969166]
+  HI[0] (first): 0.253802
+  HI[62] (last): 0.969166
+  Loss Term 1 contribution: 0.000951 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003321
+  Monotonicity violations: 17/62
+  Loss Term 3 contribution: 0.011518
+  Convexity violations: 31/61
+  Gradient (dHI/dt) stats:
+    Mean: 0.011538, Std: 0.020559
+
+[Engine 7] T_n=80
+  HI range: [0.247401, 0.979482]
+  HI[0] (first): 0.267535
+  HI[79] (last): 0.979482
+  Loss Term 1 contribution: 0.000421 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.004958
+  Monotonicity violations: 26/79
+  Loss Term 3 contribution: 0.014642
+  Convexity violations: 37/78
+  Gradient (dHI/dt) stats:
+    Mean: 0.009012, Std: 0.022391
+
+[Engine 8] T_n=71
+  HI range: [0.224144, 0.992106]
+  HI[0] (first): 0.224144
+  HI[70] (last): 0.992106
+  Loss Term 1 contribution: 0.000062 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.003677
+  Monotonicity violations: 17/70
+  Loss Term 3 contribution: 0.012310
+  Convexity violations: 36/69
+  Gradient (dHI/dt) stats:
+    Mean: 0.010971, Std: 0.020451
+
+[Engine 9] T_n=84
+  HI range: [0.211899, 0.960464]
+  HI[0] (first): 0.224275
+  HI[83] (last): 0.960464
+  Loss Term 1 contribution: 0.001563 (target: h_n(T_n)=1)
+  Loss Term 2 contribution: 0.006039
+  Monotonicity violations: 27/83
+  Loss Term 3 contribution: 0.015057
+  Convexity violations: 39/82
+  Gradient (dHI/dt) stats:
+    Mean: 0.008870, Std: 0.023892
+
+================================================================================
+LOSS BREAKDOWN:
+  Term 0 (Initial HI <= 0.2): 0.012872 (×1.0)
+  Term 1 (Target HI=1): 0.055182 (×1.0)
+  Term 2 (Monotonicity): 0.041331 (×6.0)
+  Term 3 (Convexity): 0.121113 (×2.0)
+  Total Loss: 0.558267
+================================================================================
+
+PARAMETER GRADIENTS (averaged over 9 engines):
+  W1: mean=-0.00131548, std=0.00197898, max_abs=0.00490873
+  b1: mean=0.00322144, std=0.00487924, max_abs=0.01159081
+  W2: mean=-0.00001870, std=0.00088470, max_abs=0.00140438
+  b2: mean=-0.00029191, std=0.00623763, max_abs=0.00652953
+  W3: mean=0.00007890, std=0.02280409, max_abs=0.02288299
+  b3: mean=-0.05319919, std=0.00000000, max_abs=0.05319919
+
+ADAM OPTIMIZER UPDATE (step 1000):
+  W1: update_mean=-0.00014914, update_max_abs=0.00048270
+  b1: update_mean=0.00035909, update_max_abs=0.00126460
+
+Epoch 1000/1000, Loss: 0.558267
+  MLP final loss: 0.558267
+  HI monotonicity rate  : 0.6672  (목표: 높을수록 좋음)
+  HI smoothness (|ΔHI|) : 0.018911 (목표: 낮을수록 좋음)
+
+  총 실행 시간: 21.1s
+
+======================================================================
+  비교 결과 요약
+======================================================================
+지표                                      Baseline     Median W=5         변화 판정
+----------------------------------------------------------------------
+학습데이터 Outlier rate                       0.00556        0.00556     +0.00%  ─ 동일
+학습데이터 Mean IQR                          87.11536       87.03992     -0.09%  ▲ 개선
+GPR 최종 학습 Loss                          -2.77254       -2.75922     +0.48%  ▼ 저하
+GPR 잔차 STD (평균)                          1.81752        1.81731     -0.01%  ▲ 개선
+GPR 잔차 MAE (평균)                          1.36713        1.36626     -0.06%  ▲ 개선
+MLP 최종 Loss                              0.55537        0.55827     +0.52%  ▼ 저하
+HI Monotonicity rate                     0.66575        0.66723     +0.22%  ▲ 개선
+HI Smoothness |ΔHI|                      0.01891        0.01891     +0.02%  ▼ 저하
+
+======================================================================
+판정 기준:
+  Outlier rate  ↓ : 중앙값 대체로 이상값 비율 감소
+  Mean IQR      ↓ : 학습 데이터 분포 안정화
+  GPR Loss      ↓ : GPR 모델 더 잘 수렴
+  잔차 STD/MAE  ↓ : GPR 예측이 더 정확
+  MLP Loss      ↓ : HI 학습 더 잘됨
+  Monotonicity  ↑ : HI 곡선이 단조 증가에 더 가까움
+  Smoothness    ↓ : HI 곡선이 더 부드러움
+
+Loss curve 저장: /Users/a1/Desktop/Research-project/research/NCMAPSS/comparison_loss_curve.png
+  HI plot 저장: /Users/a1/Desktop/Research-project/research/NCMAPSS/hi_baseline.png
+  HI plot 저장: /Users/a1/Desktop/Research-project/research/NCMAPSS/hi_median_w5.png

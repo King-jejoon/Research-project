@@ -1,0 +1,39 @@
+TRAIN-DATA DETCOV CLEANING SWEEP  drops=[0.0, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4]  seeds=[0, 1, 2]
+  equal count (8192) & range (cycle<5);  eval on fixed common sets;  no test-time filtering
+  pool cycle<5: 326008 rows | healthy gen rows: 1523263
+seed0: stage-1 GP + candidate detcov done (224s)  noise=0.0001  detcov pct[5,50,95]=[11.87  12.092 12.155]
+  seed0 drop=  0%: held-in zRMSE=1.0004 (T48 1.482)  healthy-gen zRMSE=1.0036 (T48 9.345)  noise=0.0001 (18s)
+  seed0 drop=  5%: held-in zRMSE=1.0004 (T48 1.431)  healthy-gen zRMSE=0.3070 (T48 2.566)  noise=0.0001 (222s)
+  seed0 drop= 10%: held-in zRMSE=1.0293 (T48 1.455)  healthy-gen zRMSE=0.3315 (T48 2.818)  noise=0.0001 (213s)
+  seed0 drop= 15%: held-in zRMSE=1.1154 (T48 1.515)  healthy-gen zRMSE=0.3303 (T48 2.824)  noise=0.0001 (204s)
+  seed0 drop= 20%: held-in zRMSE=1.1923 (T48 1.574)  healthy-gen zRMSE=0.3535 (T48 2.918)  noise=0.0001 (200s)
+  seed0 drop= 30%: held-in zRMSE=1.3219 (T48 1.685)  healthy-gen zRMSE=0.3526 (T48 2.923)  noise=0.0001 (184s)
+  seed0 drop= 40%: held-in zRMSE=1.5502 (T48 1.856)  healthy-gen zRMSE=0.3632 (T48 3.049)  noise=0.0001 (179s)
+seed1: stage-1 GP + candidate detcov done (228s)  noise=0.0001  detcov pct[5,50,95]=[11.916 12.124 12.179]
+  seed1 drop=  0%: held-in zRMSE=1.0000 (T48 1.274)  healthy-gen zRMSE=1.0843 (T48 2.872)  noise=0.0001 (17s)
+  seed1 drop=  5%: held-in zRMSE=1.1408 (T48 1.410)  healthy-gen zRMSE=1.0060 (T48 2.657)  noise=0.0001 (231s)
+  seed1 drop= 10%: held-in zRMSE=1.1336 (T48 1.371)  healthy-gen zRMSE=1.1209 (T48 2.947)  noise=0.0001 (214s)
+  seed1 drop= 15%: held-in zRMSE=1.1647 (T48 1.361)  healthy-gen zRMSE=1.1332 (T48 2.870)  noise=0.0001 (203s)
+  seed1 drop= 20%: held-in zRMSE=1.8525 (T48 2.205)  healthy-gen zRMSE=1.4623 (T48 3.841)  noise=0.0001 (194s)
+  seed1 drop= 30%: held-in zRMSE=1.5795 (T48 1.694)  healthy-gen zRMSE=1.2502 (T48 3.224)  noise=0.0001 (180s)
+  seed1 drop= 40%: held-in zRMSE=1.6933 (T48 1.870)  healthy-gen zRMSE=1.2761 (T48 3.267)  noise=0.0001 (168s)
+seed2: stage-1 GP + candidate detcov done (222s)  noise=0.0001  detcov pct[5,50,95]=[11.846 12.096 12.16 ]
+  seed2 drop=  0%: held-in zRMSE=1.0002 (T48 1.217)  healthy-gen zRMSE=1.0913 (T48 2.542)  noise=0.0001 (16s)
+  seed2 drop=  5%: held-in zRMSE=1.0538 (T48 1.206)  healthy-gen zRMSE=1.0409 (T48 2.313)  noise=0.0001 (210s)
+  seed2 drop= 10%: held-in zRMSE=1.3017 (T48 1.384)  healthy-gen zRMSE=1.2340 (T48 2.765)  noise=0.0001 (199s)
+  seed2 drop= 15%: held-in zRMSE=1.2902 (T48 1.396)  healthy-gen zRMSE=1.3405 (T48 3.068)  noise=0.0001 (202s)
+  seed2 drop= 20%: held-in zRMSE=2.0501 (T48 1.703)  healthy-gen zRMSE=1.3884 (T48 3.028)  noise=0.0001 (206s)
+  seed2 drop= 30%: held-in zRMSE=2.1493 (T48 1.843)  healthy-gen zRMSE=1.6480 (T48 3.409)  noise=0.0001 (201s)
+  seed2 drop= 40%: held-in zRMSE=1.7587 (T48 1.750)  healthy-gen zRMSE=1.7077 (T48 3.761)  noise=0.0001 (176s)
+
+  drop |  held-in zRMSE (cyc<5) |  healthy-gen zRMSE |  T48 in | T48 gen |  noise
+------------------------------------------------------------------------------------
+    0% |     1.0002 ± 0.0002   |   1.0597 ± 0.0398 |   1.324 |   4.920 | 0.0001
+    5% |     1.0650 ± 0.0578   |   0.7847 ± 0.3381 |   1.349 |   2.512 | 0.0001
+   10% |     1.1549 ± 0.1122   |   0.8955 ± 0.4015 |   1.403 |   2.843 | 0.0001
+   15% |     1.1901 ± 0.0736   |   0.9347 ± 0.4356 |   1.424 |   2.921 | 0.0001
+   20% |     1.6983 ± 0.3668   |   1.0681 ± 0.5062 |   1.828 |   3.262 | 0.0001
+   30% |     1.6836 ± 0.3457   |   1.0836 ± 0.5418 |   1.741 |   3.185 | 0.0001
+   40% |     1.6674 ± 0.0871   |   1.1156 ± 0.5605 |   1.825 |   3.359 | 0.0001
+
+wall total = 71.9 min   -> /Users/a1/Desktop/Research-project/research/NCMAPSS/experiments/traindata_detcov_sweep.npz

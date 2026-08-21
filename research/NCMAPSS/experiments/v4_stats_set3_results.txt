@@ -1,0 +1,9 @@
+V4 STATS — set3 ['T48', 'T50', 'Wf'], rbf rank1, cycle<=3 stratified 27k
+seed0: fitted (677s, retries=0)
+seed0: stats cached (842s total)
+seed1: fitted (685s, retries=0)
+seed1: stats cached (843s total)
+seed2: fitted (679s, retries=0)
+seed2: stats cached (840s total)
+
+wall=42.1 min

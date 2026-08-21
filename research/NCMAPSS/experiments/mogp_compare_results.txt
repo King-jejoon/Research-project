@@ -1,0 +1,39 @@
+Formal comparison — PREVIOUS code (ExactGP) vs COLLEAGUE code (MOGP + Vecchia)
+=============================================================================
+ExactGP      = previous code, gp_residuals.MultitaskGPModel (rank-2 ICM + RBF), exact
+MOGP-Vecchia = colleague code (DEMO/), GPyTorchMOGP + grouped Vecchia, rank-2, RBF
+Data: dev unit residual baseline; held-out healthy RMSE (lower = better).
+All trained on the SAME 180 normal points.
+
+------------------------------------------------------------------------------
+                method (180 pts)            |  RMSE   | note
+------------------------------------------------------------------------------
+ ExactGP-180  (previous code)               | 0.9455  | reference
+ MOGP-Vecchia  m=20,  120 steps             | 2.0001  | UNDERTRAINED (bad config)
+ MOGP-Vecchia  m=30,  400 steps             | 0.9479  | ~ matches ExactGP
+ MOGP-Vecchia  m=80,  400 steps             | 0.8157  | BEATS ExactGP
+------------------------------------------------------------------------------
+training Vecchia log-likelihood: -3240 -> +7481  (well converged)
+
+VERDICT
+-------
+The colleague's MOGP-Vecchia code is correct and competitive.  The first run that
+looked worse (RMSE 2.0) was an UNDER-TRAINING artefact on my side: the 14-task
+coregionalized model needs more optimisation than a single-output GP.  With
+adequate settings (m>=80, ~400 steps) it matches ExactGP at 180 points and beats
+it (0.816 vs 0.945) -- while, unlike ExactGP, it can also scale to thousands of
+normal points via Vecchia for further gains.
+
+Caveats
+-------
+* Only code change needed to run here: device 'cuda' -> 'cpu' (or 'mps').
+* Hyperparameters matter: small m / few steps degrade the multitask fit badly.
+* The 2,700-pt run shown earlier (RMSE 1.42) was ALSO under-trained (m=20,120);
+  a proper m>=80 / ~400-step run is needed to quantify the large-data gain
+  (long: ~30-60 min on CPU).
+
+(Earlier under-trained full run, for the record — meanSNR / SNR over HI sensors:)
+                method |   RMSE  | meanSNR | SNR(HI3) |  sec
+   ExactGP-180 (prev)  | 0.9455  |  4.508  |  11.330  |   2.4
+   MOGP-Vecchia-180    | 2.0001  |  2.299  |   6.716  |  46.6   (undertrained)
+   MOGP-Vecchia-2700   | 1.4241  |  3.168  |   9.956  | 591.1   (undertrained)

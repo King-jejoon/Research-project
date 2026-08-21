@@ -1,0 +1,2 @@
+CONNECTED (predicted-normal + MOGP-Vecchia) RUL RMSE = 8.18 cycles
+reference existing-HI RUL RMSE = 9.67 cycles

@@ -1,0 +1,25 @@
+V5B ARMOR/COLD/BENCH — re-frozen l1=12, l2=0.25, dev only
+
+A. armor grid, MOGP conditional row
+  trim25+med3 : RUL 7.22 ± 0.08  shape 3/3
+  trim25+none : RUL 7.37 ± 0.07  shape 3/3
+    mean+med3 : RUL 7.44 ± 0.14  shape 3/3
+    mean+none : RUL 7.53 ± 0.12  shape 3/3
+
+B. cold-side [T30, Nc, Wf], l12 recipe
+     mogp cond: RUL 7.40 ± 0.10  NASA 27.7  shape 0/3
+  mogp ungated: RUL 7.48 ± 0.07  NASA 28.0  shape 0/3
+          llke: RUL 7.13 ± 0.07  NASA 27.7  shape 0/3
+       bspline: RUL 7.42 ± 0.06  NASA 28.7  shape 0/3
+            lr: RUL 194.13 ± 32.45  NASA 630905370690.1  shape 0/3
+          cabn: RUL 194.13 ± 32.45  NASA 630905370690.1  shape 0/3
+
+C. benchmark dev LOO ranking, l12 downstream (5 channels)
+     mogp cond: RUL 7.22 ± 0.08  NASA 27.3  shape 3/3
+  mogp ungated: RUL 7.15 ± 0.10  NASA 27.4  shape 3/3
+          llke: RUL 7.58 ± 0.10  NASA 29.1  shape 3/3
+       bspline: RUL 7.44 ± 0.06  NASA 29.1  shape 3/3
+            lr: RUL 7.72 ± 0.05  NASA 30.5  shape 3/3
+          cabn: RUL 7.72 ± 0.05  NASA 30.5  shape 3/3
+
+wall=2.8 min

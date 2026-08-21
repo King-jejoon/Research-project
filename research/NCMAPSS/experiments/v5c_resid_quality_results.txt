@@ -1,0 +1,15 @@
+V5C RESIDUAL QUALITY — official cycle<=3 GP vs proposed healthy-range GP, paired points.  Test part = FOURTEENTH DS03 opening, pre-registered (metrics frozen from the dev diagnostic).
+
+[dev] 27 unit-seed cases (yardstick: official healthy sigma per channel, per seed)
+  healthy floor RMS : official 1.214  v5c 0.550  ratio 0.47  p=1.5e-08  v5c lower in 27/27
+  end-of-life signal: official 19.659  v5c 18.900  ratio 0.96
+  SNR signal/floor  : official 16.76  v5c 37.15  p=1.5e-08  v5c better in 27/27
+  per-unit SNR gain (v5c/official, mean over seeds): u1 1.51x  u2 2.26x  u3 1.27x  u4 2.91x  u5 1.59x  u6 4.16x  u7 2.26x  u8 2.99x  u9 1.92x
+
+[test] 18 unit-seed cases (yardstick: official healthy sigma per channel, per seed)
+  healthy floor RMS : official 1.288  v5c 0.604  ratio 0.46  p=7.6e-06  v5c lower in 18/18
+  end-of-life signal: official 19.026  v5c 18.215  ratio 0.96
+  SNR signal/floor  : official 15.07  v5c 34.10  p=7.6e-06  v5c better in 18/18
+  per-unit SNR gain (v5c/official, mean over seeds): u10 1.36x  u11 2.53x  u12 1.82x  u13 3.05x  u14 2.14x  u15 2.45x
+
+wall=0.0 min

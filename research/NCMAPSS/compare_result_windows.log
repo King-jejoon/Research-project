@@ -1,0 +1,202 @@
+데이터 로딩 중...
+W shape: (9822837, 4)
+X_s shape: (9822837, 14)
+X_v shape: (9822837, 14)
+T shape: (9822837, 10)
+A shape: (9822837, 4)
+
+=== Normal Range summary (A_dev index) ===
+Total normal ranges : 9
+  Engine 1 : [0, 156352] (len=156353)
+  Engine 2 : [308489, 526119] (len=217631)
+  Engine 3 : [955653, 1167122] (len=211470)
+  Engine 4 : [1545490, 1752373] (len=206884)
+  Engine 5 : [2084577, 2236339] (len=151763)
+  Engine 6 : [2485720, 2754276] (len=268557)
+  Engine 7 : [3432229, 3656713] (len=224485)
+  Engine 8 : [4132089, 4383309] (len=251221)
+  Engine 9 : [5207095, 5368001] (len=160907)
+
+=== Abnormal Range summary (A_dev index) ===
+Total abnormal ranges : 9
+  Engine 1 : [156353, 308488] (len=152136)
+  Engine 2 : [526120, 955652] (len=429533)
+  Engine 3 : [1167123, 1545489] (len=378367)
+  Engine 4 : [1752374, 2084576] (len=332203)
+  Engine 5 : [2236340, 2485719] (len=249380)
+  Engine 6 : [2754277, 3432228] (len=677952)
+  Engine 7 : [3656714, 4132088] (len=475375)
+  Engine 8 : [4383310, 5207094] (len=823785)
+  Engine 9 : [5368002, 5571276] (len=203275)
+
+=== DEV All Range summary (A_dev index) ===
+Total dev ranges : 9
+  Engine 1 : [0, 308488] (len=308489)
+  Engine 2 : [308489, 955652] (len=647164)
+  Engine 3 : [955653, 1545489] (len=589837)
+  Engine 4 : [1545490, 2084576] (len=539087)
+  Engine 5 : [2084577, 2485719] (len=401143)
+  Engine 6 : [2485720, 3432228] (len=946509)
+  Engine 7 : [3432229, 4132088] (len=699860)
+  Engine 8 : [4132089, 5207094] (len=1075006)
+  Engine 9 : [5207095, 5571276] (len=364182)
+
+=== Test Abnormal Range summary (A_test index) ===
+Total test abnormal ranges : 6
+  Engine 10 : [249848, 951108] (len=701261)
+  Engine 11 : [1212316, 1775600] (len=563285)
+  Engine 12 : [1931041, 2181009] (len=249969)
+  Engine 13 : [2432683, 3287901] (len=855219)
+  Engine 14 : [3447483, 3633385] (len=185903)
+  Engine 15 : [3850316, 4251559] (len=401244)
+
+=== TEST All Range summary (A_test index) ===
+Total test ranges : 6
+  Engine 10 : [0, 951108] (len=951109)
+  Engine 11 : [951109, 1775600] (len=824492)
+  Engine 12 : [1775601, 2181009] (len=405409)
+  Engine 13 : [2181010, 3287901] (len=1106892)
+  Engine 14 : [3287902, 3633385] (len=345484)
+  Engine 15 : [3633386, 4251559] (len=618174)
+
+=== DEV sampling (normal state, from A_dev) ===
+Target engines : [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(9)]
+Samples per range (K) : 20
+  Engine 1 | range [0,156352] | range_len=156353 | sampled=20
+  Engine 2 | range [308489,526119] | range_len=217631 | sampled=20
+  Engine 3 | range [955653,1167122] | range_len=211470 | sampled=20
+  Engine 4 | range [1545490,1752373] | range_len=206884 | sampled=20
+  Engine 5 | range [2084577,2236339] | range_len=151763 | sampled=20
+  Engine 6 | range [2485720,2754276] | range_len=268557 | sampled=20
+  Engine 7 | range [3432229,3656713] | range_len=224485 | sampled=20
+  Engine 8 | range [4132089,4383309] | range_len=251221 | sampled=20
+  Engine 9 | range [5207095,5368001] | range_len=160907 | sampled=20
+
+DEV sampled count by engine:
+  Engine 1 : 20
+  Engine 2 : 20
+  Engine 3 : 20
+  Engine 4 : 20
+  Engine 5 : 20
+  Engine 6 : 20
+  Engine 7 : 20
+  Engine 8 : 20
+  Engine 9 : 20
+
+Total DEV sampled indices: 180
+
+=== DEV sampling (abnormal state, from A_dev) ===
+Samples per cycle (N) : 10
+
+Total DEV sampled indices: 6630
+
+=== TEST sampling (abnormal state, from A_test) ===
+Samples per cycle (N) : 10
+
+Total TEST sampled indices: 4380
+
+[Baseline] GPR 학습 중...
+    Iter 10/100  loss=0.8604
+    Iter 20/100  loss=0.3596
+    Iter 30/100  loss=-0.1514
+    Iter 40/100  loss=-0.6635
+    Iter 50/100  loss=-1.1605
+    Iter 60/100  loss=-1.6362
+    Iter 70/100  loss=-2.0632
+    Iter 80/100  loss=-2.4085
+    Iter 90/100  loss=-2.6404
+    Iter 100/100  loss=-2.7725
+
+[Proposed ±20] 대표 인덱스 탐색 중...
+  180개 중 60개 대체 (33.3%)
+[Proposed ±20] GPR 학습 중...
+    Iter 10/100  loss=0.8604
+    Iter 20/100  loss=0.3595
+    Iter 30/100  loss=-0.1514
+    Iter 40/100  loss=-0.6635
+    Iter 50/100  loss=-1.1603
+    Iter 60/100  loss=-1.6356
+    Iter 70/100  loss=-2.0624
+    Iter 80/100  loss=-2.4065
+    Iter 90/100  loss=-2.6375
+    Iter 100/100  loss=-2.7687
+
+[Proposed ±100] 대표 인덱스 탐색 중...
+  180개 중 124개 대체 (68.9%)
+[Proposed ±100] GPR 학습 중...
+    Iter 10/100  loss=0.8595
+    Iter 20/100  loss=0.3591
+    Iter 30/100  loss=-0.1517
+    Iter 40/100  loss=-0.6635
+    Iter 50/100  loss=-1.1600
+    Iter 60/100  loss=-1.6350
+    Iter 70/100  loss=-2.0597
+    Iter 80/100  loss=-2.4008
+    Iter 90/100  loss=-2.6281
+    Iter 100/100  loss=-2.7552
+
+[Proposed ±500] 대표 인덱스 탐색 중...
+  180개 중 153개 대체 (85.0%)
+[Proposed ±500] GPR 학습 중...
+    Iter 10/100  loss=0.8593
+    Iter 20/100  loss=0.3586
+    Iter 30/100  loss=-0.1519
+    Iter 40/100  loss=-0.6633
+    Iter 50/100  loss=-1.1577
+    Iter 60/100  loss=-1.6309
+    Iter 70/100  loss=-2.0519
+    Iter 80/100  loss=-2.3862
+    Iter 90/100  loss=-2.6044
+    Iter 100/100  loss=-2.7261
+
+[Proposed ±1000] 대표 인덱스 탐색 중...
+  180개 중 166개 대체 (92.2%)
+[Proposed ±1000] GPR 학습 중...
+    Iter 10/100  loss=0.8608
+    Iter 20/100  loss=0.3591
+    Iter 30/100  loss=-0.1517
+    Iter 40/100  loss=-0.6639
+    Iter 50/100  loss=-1.1567
+    Iter 60/100  loss=-1.6268
+    Iter 70/100  loss=-2.0438
+    Iter 80/100  loss=-2.3673
+    Iter 90/100  loss=-2.5757
+    Iter 100/100  loss=-2.6872
+
+[Proposed ±2000] 대표 인덱스 탐색 중...
+  180개 중 173개 대체 (96.1%)
+[Proposed ±2000] GPR 학습 중...
+    Iter 10/100  loss=0.8646
+    Iter 20/100  loss=0.3611
+    Iter 30/100  loss=-0.1499
+    Iter 40/100  loss=-0.6608
+    Iter 50/100  loss=-1.1470
+    Iter 60/100  loss=-1.5979
+    Iter 70/100  loss=-1.9859
+    Iter 80/100  loss=-2.2697
+    Iter 90/100  loss=-2.4501
+    Iter 100/100  loss=-2.5511
+
+========================================================================================
+  GPR RMSE 비교 (dev abnormal 구간)  ▲=개선 ▼=저하
+========================================================================================
+센서        Baseline       ±20      ±100      ±500     ±1000     ±2000
+----------------------------------------------------------------------------------------
+T24        0.3216    0.3220▼   0.3194▲   0.3113▲   0.3344▼   0.4043▼
+T30        1.1342    1.1346▼   1.1530▼   1.1254▲   1.1917▼   1.6802▼
+T48       10.4413   10.4224▲  10.5195▼  10.5462▼  10.6418▼  10.6266▼
+T50        8.3786    8.3658▲   8.4524▼   8.4651▼   8.4547▼   8.5531▼
+P15        0.0089    0.0090▼   0.0089▼   0.0124▼   0.0142▼   0.0218▼
+P2         0.0076    0.0077▼   0.0077▼   0.0083▼   0.0162▼   0.0381▼
+P21        0.0089    0.0095▼   0.0095▼   0.0109▼   0.0179▼   0.0212▼
+P24        0.0248    0.0250▼   0.0251▼   0.0310▼   0.0410▼   0.0790▼
+Ps30       0.7065    0.7069▼   0.6982▲   0.8049▼   1.2695▼   2.4137▼
+P40        0.7813    0.7812▲   0.7712▲   0.8596▼   1.2915▼   2.4438▼
+P50        0.0127    0.0129▼   0.0139▼   0.0182▼   0.0241▼   0.0394▼
+Nf         1.2316    1.2313▲   1.2425▼   1.2837▼   1.5141▼   2.9275▼
+Nc         7.1246    7.1345▼   7.1203▲   7.0893▲   7.0176▲   8.4156▼
+Wf         0.0186    0.0187▼   0.0192▼   0.0222▼   0.0309▼   0.0497▼
+----------------------------------------------------------------------------------------
+[전체]       4.0883    4.0842(▲0.10%)     4.1132(▼0.61%)     4.1191(▼0.75%)     4.1497(▼1.50%)     4.4743(▼9.44%)  
+========================================================================================
+  RMSE 비교 그래프 저장: /Users/a1/Desktop/Research-project/research/NCMAPSS/gpr_rmse_comparison.png

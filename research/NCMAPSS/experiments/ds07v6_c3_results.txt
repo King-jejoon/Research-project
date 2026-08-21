@@ -1,0 +1,12 @@
+DS07 V6 C3 — stage-1 sparse-window MOGP, frozen internals (rbf rank1 m=18, 5 sensors), dev only
+  u1: 67 cycles, mean 2.56 h/cycle, hs-onset 24
+  u2: 85 cycles, mean 4.10 h/cycle, hs-onset 19
+  u3: 78 cycles, mean 2.41 h/cycle, hs-onset 26
+  u4: 79 cycles, mean 1.25 h/cycle, hs-onset 36
+  u5: 85 cycles, mean 1.25 h/cycle, hs-onset 36
+  u6: 74 cycles, mean 4.00 h/cycle, hs-onset 19
+seed0: stats cached
+seed1: stats cached
+seed2: stats cached
+
+wall=0.0 min

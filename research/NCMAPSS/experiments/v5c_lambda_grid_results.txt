@@ -1,0 +1,44 @@
+V5C LAMBDA GRID — stage-2 healthy-range tables (ungated), composite without Shift, protocol = exp_v5_lambda_grid
+  l1= 2.0 l2=0.25: Mon=  -20.60 Curv=  3.82 Range=0.763 Shift=0.0327 LOO RUL=7.39±0.04 shape 3/3
+  l1= 2.0 l2= 0.5: Mon=  -19.89 Curv=  3.83 Range=0.759 Shift=0.0322 LOO RUL=7.40±0.04 shape 3/3
+  l1= 2.0 l2= 1.0: Mon=  -18.95 Curv=  3.85 Range=0.752 Shift=0.0315 LOO RUL=7.42±0.04 shape 3/3
+  l1= 2.0 l2= 2.0: Mon=  -17.97 Curv=  3.85 Range=0.740 Shift=0.0306 LOO RUL=7.44±0.05 shape 3/3
+  l1= 2.0 l2= 4.0: Mon=  -16.90 Curv=  3.83 Range=0.719 Shift=0.0294 LOO RUL=7.49±0.05 shape 3/3
+  l1= 4.0 l2=0.25: Mon=  -18.82 Curv=  3.86 Range=0.754 Shift=0.0316 LOO RUL=7.43±0.04 shape 3/3
+  l1= 4.0 l2= 0.5: Mon=  -18.52 Curv=  3.86 Range=0.751 Shift=0.0313 LOO RUL=7.44±0.04 shape 3/3
+  l1= 4.0 l2= 1.0: Mon=  -18.05 Curv=  3.87 Range=0.745 Shift=0.0309 LOO RUL=7.45±0.05 shape 3/3
+  l1= 4.0 l2= 2.0: Mon=  -17.38 Curv=  3.87 Range=0.735 Shift=0.0302 LOO RUL=7.47±0.05 shape 3/3
+  l1= 4.0 l2= 4.0: Mon=  -16.50 Curv=  3.83 Range=0.713 Shift=0.0291 LOO RUL=7.65±0.20 shape 3/3
+  l1= 6.0 l2=0.25: Mon=  -17.86 Curv=  3.87 Range=0.748 Shift=0.0309 LOO RUL=7.46±0.05 shape 3/3
+  l1= 6.0 l2= 0.5: Mon=  -17.70 Curv=  3.88 Range=0.745 Shift=0.0307 LOO RUL=7.47±0.05 shape 3/3
+  l1= 6.0 l2= 1.0: Mon=  -17.41 Curv=  3.89 Range=0.740 Shift=0.0304 LOO RUL=7.48±0.05 shape 3/3
+  l1= 6.0 l2= 2.0: Mon=  -16.91 Curv=  3.88 Range=0.729 Shift=0.0299 LOO RUL=7.50±0.05 shape 3/3
+  l1= 6.0 l2= 4.0: Mon=  -16.18 Curv=  3.83 Range=0.708 Shift=0.0288 LOO RUL=7.77±0.21 shape 3/3
+  l1= 8.0 l2=0.25: Mon=  -17.28 Curv=  3.91 Range=0.742 Shift=0.0305 LOO RUL=7.49±0.05 shape 3/3
+  l1= 8.0 l2= 0.5: Mon=  -17.16 Curv=  3.91 Range=0.740 Shift=0.0303 LOO RUL=7.49±0.05 shape 3/3
+  l1= 8.0 l2= 1.0: Mon=  -16.92 Curv=  3.91 Range=0.734 Shift=0.0301 LOO RUL=7.50±0.05 shape 3/3
+  l1= 8.0 l2= 2.0: Mon=  -16.54 Curv=  3.88 Range=0.724 Shift=0.0295 LOO RUL=7.52±0.05 shape 3/3
+  l1= 8.0 l2= 4.0: Mon=  -15.86 Curv=  3.83 Range=0.703 Shift=0.0285 LOO RUL=7.76±0.19 shape 2/3
+  l1=12.0 l2=0.25: Mon=  -16.55 Curv=  3.94 Range=0.732 Shift=0.0298 LOO RUL=7.53±0.05 shape 3/3
+  l1=12.0 l2= 0.5: Mon=  -16.47 Curv=  3.94 Range=0.730 Shift=0.0297 LOO RUL=7.54±0.05 shape 3/3
+  l1=12.0 l2= 1.0: Mon=  -16.30 Curv=  3.93 Range=0.725 Shift=0.0295 LOO RUL=7.81±0.23 shape 3/3
+  l1=12.0 l2= 2.0: Mon=  -15.96 Curv=  3.90 Range=0.714 Shift=0.0290 LOO RUL=7.78±0.20 shape 3/3
+  l1=12.0 l2= 4.0: Mon=  -15.36 Curv=  3.84 Range=0.692 Shift=0.0280 LOO RUL=7.86±0.05 shape 1/3
+  l1=16.0 l2=0.25: Mon=  -16.00 Curv=  3.95 Range=0.722 Shift=0.0293 LOO RUL=7.80±0.20 shape 3/3
+  l1=16.0 l2= 0.5: Mon=  -15.91 Curv=  3.94 Range=0.720 Shift=0.0292 LOO RUL=7.79±0.20 shape 3/3
+  l1=16.0 l2= 1.0: Mon=  -15.74 Curv=  3.93 Range=0.714 Shift=0.0290 LOO RUL=7.78±0.18 shape 3/3
+  l1=16.0 l2= 2.0: Mon=  -15.47 Curv=  3.90 Range=0.704 Shift=0.0285 LOO RUL=7.90±0.05 shape 2/3
+  l1=16.0 l2= 4.0: Mon=  -14.93 Curv=  3.82 Range=0.682 Shift=0.0275 LOO RUL=7.80±0.04 shape 0/3
+
+shape-passing combos (26): [(2.0, 0.25), (2.0, 0.5), (2.0, 1.0), (2.0, 2.0), (2.0, 4.0), (4.0, 0.25), (4.0, 0.5), (4.0, 1.0), (4.0, 2.0), (4.0, 4.0), (6.0, 0.25), (6.0, 0.5), (6.0, 1.0), (6.0, 2.0), (6.0, 4.0), (8.0, 0.25), (8.0, 0.5), (8.0, 1.0), (8.0, 2.0), (12.0, 0.25), (12.0, 0.5), (12.0, 1.0), (12.0, 2.0), (16.0, 0.25), (16.0, 0.5), (16.0, 1.0)]
+composite ranking (Mon+Curv+Range, no Shift), top 6:
+  (16.0, 0.25): comp=0.737  LOO RUL=7.80
+  (12.0, 0.25): comp=0.727  LOO RUL=7.53
+  (12.0, 0.5): comp=0.715  LOO RUL=7.54
+  (16.0, 0.5): comp=0.702  LOO RUL=7.79
+  (12.0, 1.0): comp=0.675  LOO RUL=7.81
+  (8.0, 0.5): comp=0.652  LOO RUL=7.49
+SELECTED: lambda1=16.0, lambda2=0.25  (LOO RUL 7.80±0.20; grid best 7.39)
+WARNING: winner differs from the frozen recipe (12.0, 0.25) — chain re-freeze decision required, none taken here.
+
+wall=6.0 min

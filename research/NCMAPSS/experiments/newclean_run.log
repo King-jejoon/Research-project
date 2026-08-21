@@ -1,0 +1,10 @@
+PHASE 1b — final model rebuilt with raw-data cleaning (score > 5.0 removed)
+  pool=326008  removed by score>5.0: 3.74%  (no stage-1 GP needed)
+seed0: final model built from 15803 clean candidates (284s)  noise=0.00013
+seed0: unit stats saved (447s total)
+seed1: final model built from 15768 clean candidates (293s)  noise=0.00013
+seed1: unit stats saved (452s total)
+seed2: final model built from 15772 clean candidates (299s)  noise=0.00013
+seed2: unit stats saved (455s total)
+
+wall=22.6 min

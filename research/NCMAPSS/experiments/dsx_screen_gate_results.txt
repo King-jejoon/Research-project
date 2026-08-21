@@ -1,0 +1,100 @@
+
+================ DS04  window 10.0fh clip 4.0  detcov range [8.31, 20.28]  nbase {1: 5, 2: 5, 3: 5, 4: 5, 5: 5, 6: 5}  sparse[1, 2, 3, 4, 5, 6] dense[]
+(1) WIDE V SWEEP — ungated: all 34.13 sparse 34.13 dense nan
+    all   : best V= 19.98 (keeps 68.2% of points) RMSE=32.03 vs ungated 34.13; V values beating ungated: 15/120 (range 18.27..20.08)
+    sparse: best V= 19.98 (keeps 68.2% of points) RMSE=32.03 vs ungated 34.13; V values beating ungated: 15/120 (range 18.27..20.08)
+    overall RMSE along the axis (percentile of pooled detcov -> V -> RMSE all/sparse/dense):
+      P   0: V=  8.31   34.13 /  34.13 /    nan
+      P  10: V= 19.48   33.98 /  33.98 /    nan
+      P  25: V= 19.88   32.40 /  32.40 /    nan
+      P  50: V= 20.08   33.76 /  33.76 /    nan
+      P  75: V= 20.18   35.66 /  35.66 /    nan
+      P  90: V= 20.18   35.66 /  35.66 /    nan
+      P  95: V= 20.18   35.66 /  35.66 /    nan
+      P  98: V= 20.28   34.13 /  34.13 /    nan
+      P  99: V= 20.28   34.13 /  34.13 /    nan
+      P99.5: V= 20.28   34.13 /  34.13 /    nan
+(2) MECHANISM at the frozen rule (per unit, mean over seeds):
+      unit  nbase  group   kept%   sigma0 gated/ungated   drop-SNR ungated -> gated   onset err ungated -> gated
+      u1       5  sparse  69.4     0.64x                 1.1 ->    1.0           +36.0 ->  +36.0
+      u2       5  sparse  66.1     0.57x                 3.5 ->    4.5           +12.0 ->   +6.0
+      u3       5  sparse  68.8     0.67x                 1.1 ->    0.8           +66.0 ->  +61.0
+      u4       5  sparse  67.6     0.71x                 0.3 ->    0.2           +28.0 ->  +27.0
+      u5       5  sparse  68.7     0.62x                 5.6 ->   10.5            +7.0 ->   -4.0
+      u6       5  sparse  66.7     0.50x                 1.4 ->    2.5           +19.0 ->  +15.0
+
+================ DS05  window 25.0fh clip 4.0  detcov range [9.00, 20.67]  nbase {1: 10, 2: 7, 3: 11, 4: 20, 5: 20, 6: 6}  sparse[1, 2, 3, 6] dense[4, 5]
+(1) WIDE V SWEEP — ungated: all 9.38 sparse 9.54 dense 9.06
+    all   : best V= 20.38 (keeps 55.9% of points) RMSE=8.18 vs ungated 9.38; V values beating ungated: 3/120 (range 20.18..20.38)
+    sparse: best V= 20.38 (keeps 55.9% of points) RMSE=9.17 vs ungated 9.54; V values beating ungated: 2/120 (range 20.28..20.38)
+    dense : best V= 20.28 (keeps 70.2% of points) RMSE=5.70 vs ungated 9.06; V values beating ungated: 3/120 (range 20.18..20.38)
+    overall RMSE along the axis (percentile of pooled detcov -> V -> RMSE all/sparse/dense):
+      P   0: V=  9.00    9.38 /   9.54 /   9.06
+      P  10: V= 19.79    9.52 /   9.75 /   9.06
+      P  25: V= 20.18    8.53 /   9.60 /   5.83
+      P  50: V= 20.38    8.18 /   9.17 /   5.70
+      P  75: V= 20.48   19.52 /  17.81 /  22.56
+      P  90: V= 20.58   25.83 /  21.82 /  32.39
+      P  95: V= 20.58   25.83 /  21.82 /  32.39
+      P  98: V= 20.58   25.83 /  21.82 /  32.39
+      P  99: V= 20.58   25.83 /  21.82 /  32.39
+      P99.5: V= 20.58   25.83 /  21.82 /  32.39
+(2) MECHANISM at the frozen rule (per unit, mean over seeds):
+      unit  nbase  group   kept%   sigma0 gated/ungated   drop-SNR ungated -> gated   onset err ungated -> gated
+      u1      10  sparse  88.7     0.90x                -0.2 ->   -0.1           +10.0 ->  +10.0
+      u2       7  sparse  86.4     0.83x                 1.3 ->    1.4           +10.0 ->  +10.0
+      u3      11  sparse  88.1     0.91x                 0.5 ->    0.6           +10.0 ->  +10.0
+      u4      20  dense   71.0     0.81x                 1.9 ->    2.5            +8.0 ->   +4.0
+      u5      20  dense   72.1     0.66x                 1.5 ->    2.4           +10.0 ->   +1.0
+      u6       6  sparse  85.8     0.78x                 2.1 ->    2.7            +8.0 ->   +6.0
+
+================ DS06  window 15.0fh clip 4.0  detcov range [9.15, 20.66]  nbase {1: 6, 2: 5, 3: 7, 4: 13, 5: 12, 6: 5}  sparse[1, 2, 3, 6] dense[4, 5]
+(1) WIDE V SWEEP — ungated: all 10.82 sparse 11.51 dense 9.30
+    all   : best V= 20.18 (keeps 78.2% of points) RMSE=9.65 vs ungated 10.82; V values beating ungated: 2/120 (range 20.18..20.28)
+    sparse: best V=  9.15 (keeps 100.0% of points) RMSE=11.51 vs ungated 11.51; V values beating ungated: 0/120
+    dense : best V= 20.18 (keeps 78.2% of points) RMSE=3.81 vs ungated 9.30; V values beating ungated: 3/120 (range 20.18..20.37)
+    overall RMSE along the axis (percentile of pooled detcov -> V -> RMSE all/sparse/dense):
+      P   0: V=  9.15   10.82 /  11.51 /   9.30
+      P  10: V= 19.79   10.82 /  11.51 /   9.30
+      P  25: V= 20.28    9.76 /  11.51 /   4.53
+      P  50: V= 20.37   11.19 /  13.32 /   4.53
+      P  75: V= 20.47   15.38 /  16.63 /  12.51
+      P  90: V= 20.57   26.42 /  24.55 /  29.81
+      P  95: V= 20.57   26.42 /  24.55 /  29.81
+      P  98: V= 20.57   26.42 /  24.55 /  29.81
+      P  99: V= 20.57   26.42 /  24.55 /  29.81
+      P99.5: V= 20.57   26.42 /  24.55 /  29.81
+(2) MECHANISM at the frozen rule (per unit, mean over seeds):
+      unit  nbase  group   kept%   sigma0 gated/ungated   drop-SNR ungated -> gated   onset err ungated -> gated
+      u1       6  sparse  97.8     0.99x                 0.2 ->    0.2           +11.0 ->  +11.0
+      u2       5  sparse  96.9     0.91x                 1.3 ->    1.4           +12.0 ->  +12.0
+      u3       7  sparse  97.3     0.96x                 0.3 ->    0.3           +12.0 ->  +12.0
+      u4      13  dense   56.6     0.96x                 2.7 ->    3.1            +2.0 ->   +2.0
+      u5      12  dense   57.1     0.74x                 1.6 ->    2.3           +13.0 ->   +4.0
+      u6       5  sparse  96.9     0.99x                 6.2 ->    6.1           -11.0 ->  -11.0
+
+================ DS08C  window 50.0fh clip 4.0  detcov range [6.09, 20.44]  nbase {1: 12, 2: 13, 3: 13, 4: 12, 5: 12, 6: 21}  sparse[] dense[1, 2, 3, 4, 5, 6]
+(1) WIDE V SWEEP — ungated: all 6.84 sparse nan dense 6.84
+    all   : best V=  6.09 (keeps 100.0% of points) RMSE=6.84 vs ungated 6.84; V values beating ungated: 0/120
+    dense : best V=  6.09 (keeps 100.0% of points) RMSE=6.84 vs ungated 6.84; V values beating ungated: 0/120
+    overall RMSE along the axis (percentile of pooled detcov -> V -> RMSE all/sparse/dense):
+      P   0: V=  6.09    6.84 /    nan /   6.84
+      P  10: V= 19.48    6.84 /    nan /   6.84
+      P  25: V= 19.96    7.38 /    nan /   7.38
+      P  50: V= 20.20   13.31 /    nan /  13.31
+      P  75: V= 20.32   16.98 /    nan /  16.98
+      P  90: V= 20.32   16.98 /    nan /  16.98
+      P  95: V= 20.32   16.98 /    nan /  16.98
+      P  98: V= 20.44    6.84 /    nan /   6.84
+      P  99: V= 20.44    6.84 /    nan /   6.84
+      P99.5: V= 20.44    6.84 /    nan /   6.84
+(2) MECHANISM at the frozen rule (per unit, mean over seeds):
+      unit  nbase  group   kept%   sigma0 gated/ungated   drop-SNR ungated -> gated   onset err ungated -> gated
+      u1      12  dense   98.3     0.98x                 3.2 ->    3.2            +0.0 ->   +0.0
+      u2      13  dense   97.9     0.97x                 2.7 ->    2.8            +6.0 ->   +6.0
+      u3      13  dense   97.3     0.93x                 0.3 ->    0.3           +12.0 ->  +12.0
+      u4      12  dense   98.0     0.80x                 0.6 ->    0.8            +8.0 ->   +8.0
+      u5      12  dense   98.0     0.99x                 4.3 ->    4.3            +1.0 ->   +1.0
+      u6      21  dense   98.5     1.01x                 1.8 ->    1.9            +6.0 ->   +6.0
+
+done

@@ -1,0 +1,9 @@
+A2 STATS — set7 ['T24', 'T30', 'T48', 'T50', 'Ps30', 'Nc', 'Wf'], rbf rank1, cycle<3 stratified 18k
+seed0: fitted (742s, retries=0)
+seed0: stats cached (1074s total)
+seed1: fitted (765s, retries=0)
+seed1: stats cached (977s total)
+seed2: fitted (619s, retries=0)
+seed2: stats cached (820s total)
+
+wall=47.9 min

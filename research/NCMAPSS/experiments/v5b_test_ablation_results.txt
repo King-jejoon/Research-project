@@ -1,0 +1,24 @@
+V5B TEST ABLATION — ELEVENTH DS03 opening, pre-registered. All variants dev-trained (l1=12 conditional unless stated); test = prediction input only.
+
+(a) HI loss-term variants on test (conditional tables)
+                      base: test   7.52 ± 0.09  NASA     19.2  trunc 11.05 / 8.75 / 4.67 / 2.47
+                     no_l0: test  18.89 ± 0.98  NASA     90.5  trunc 23.26 / 19.77 / 16.74 / 14.81
+                    no_end: test  40.71 ± 0.50  NASA   1739.8  trunc 38.38 / 41.13 / 39.28 / 43.85
+                   no_flat: test   7.81 ± 0.16  NASA     19.7  trunc 10.77 / 9.57 / 5.00 / 3.35
+  SANITY: base must be 7.52 ± 0.09
+
+(b) raw sensor means on test (NPER=200, rng u*7+sd)
+          raw sensor means: test   8.31 ± 0.35  NASA     22.6  trunc 10.48 / 10.03 / 7.86 / 2.19
+
+(c) armor grid on test: {trim25, mean} x {med3, none}
+      mogp_cond: trim25+med3 7.52±0.09 | trim25+none 7.43±0.14 | mean+med3 7.61±0.34 | mean+none 7.60±0.34
+   mogp_ungated: trim25+med3 7.47±0.06 | trim25+none 7.54±0.27 | mean+med3 7.46±0.28 | mean+none 7.44±0.25
+           llke: trim25+med3 7.67±0.07 | trim25+none 7.52±0.12 | mean+med3 7.61±0.08 | mean+none 7.47±0.09
+        bspline: trim25+med3 7.32±0.11 | trim25+none 7.27±0.10 | mean+med3 7.63±0.09 | mean+none 7.87±0.21
+             lr: trim25+med3 7.31±0.10 | trim25+none 7.35±0.10 | mean+med3 7.54±0.08 | mean+none 7.51±0.04
+           cabn: trim25+med3 7.31±0.10 | trim25+none 7.35±0.10 | mean+med3 7.54±0.08 | mean+none 7.51±0.04
+  SANITY: mogp_cond trim25+med3 = 7.52, mogp_ungated = 7.47
+
+(-) healthy-range window: EXCLUDED (GP never saved; test residuals require ~1.5 h refit).  Gate removal: already on test (8th/10th openings): onset 8.54 vs 9.01; RUL 7.52 vs 7.47 p=0.40.
+
+wall=5.0 min

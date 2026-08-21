@@ -1,0 +1,31 @@
+=== SENSOR-7 STUDY  ['T24', 'T30', 'T48', 'T50', 'Ps30', 'Nc', 'Wf']  (14:08) ===
+  CV seed0       rbf: zRMSE=0.0126 (483s)
+  CV seed0  matern52: zRMSE=0.0128 (508s)
+  CV seed0  matern32: zRMSE=0.0133 (502s)
+  CV seed0  matern12: zRMSE=0.0162 (499s)
+  CV seed1       rbf: zRMSE=0.0093 (461s)
+  CV seed1 matern52: FAILED _LinAlgError
+  CV seed1  matern52: zRMSE=nan (409s)
+  CV seed1  matern32: zRMSE=0.0108 (479s)
+  CV seed1  matern12: zRMSE=0.0141 (479s)
+  CV seed2       rbf: zRMSE=0.0094 (492s)
+  CV seed2  matern52: zRMSE=0.0098 (512s)
+  CV seed2  matern32: zRMSE=0.0109 (503s)
+  CV seed2  matern12: zRMSE=0.0136 (512s)
+[A] kernel ranking: rbf=0.0104  matern52=0.0113  matern32=0.0116  matern12=0.0146  -> WINNER rbf
+[B] seed0: final model (959s)
+[C] seed0: unit stats cached (1342s total)
+[B] seed1: final model (906s)
+[C] seed1: unit stats cached (1183s total)
+[B] seed2: final model (921s)
+[C] seed2: unit stats cached (1189s total)
+[D] sensor-7 TOP 5:
+  RMSE=10.23  stat=q75 q=10 warm=12 lam=0.2 kk=4.0 consec=2 detrend=True
+  RMSE=10.26  stat=q75 q=15 warm=12 lam=0.2 kk=4.0 consec=2 detrend=True
+  RMSE=10.27  stat=q75 q=20 warm=12 lam=0.3 kk=4.0 consec=2 detrend=True
+  RMSE=10.28  stat=q75 q=5 warm=15 lam=0.1 kk=4.0 consec=1 detrend=False
+  RMSE=10.28  stat=q75 q=5 warm=15 lam=0.1 kk=4.0 consec=2 detrend=False
+  seed0: u1-12 u2-1 u3+2 u4+1 u5-18 u6+15 u7+11 u8+8 u9-7
+  seed1: u1-12 u2-4 u3+1 u4-2 u5-18 u6+12 u7-2 u8+9 u9-7
+  seed2: u1-16 u2-10 u3+2 u4-9 u5-18 u6+13 u7-7 u8+8 u9-9
+[DONE] sensor-7: best onset RMSE = 10.23  (3-sensor reference: 10.17)   wall=159.3 min

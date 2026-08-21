@@ -1,0 +1,18 @@
+DS03-012 OFFICIAL PIPELINE  (confirmed 2026-07-17)
+  GP {'kernel': 'rbf', 'rank': 2, 'm': 18, 'npts': 8192, 'steps': 120, 'mcond': 15, 'lr': 0.1} | NPER=200 | no filter (plain cycle mean) | HI {'epochs': 1000, 'lambda0': 1.0, 'lambda1': 8.0, 'lambda2': 2.0, 'init_threshold': 0.2, 'flat_w': 800.0, 'flat_m': 0.004, 'alpha': 0.001}
+  seed0: dev-CV beta = 30
+  seed0: RUL RMSE 7.09  score 17.4  (6s)
+  seed1: dev-CV beta = 30
+  seed1: RUL RMSE 7.33  score 18.0  (9s)
+  seed2: dev-CV beta = 30
+  seed2: RUL RMSE 7.27  score 18.0  (12s)
+
+DETECTION (monitoring): acc 81.6%  |delay| 13.7 cyc
+truncation | RMSE mean | score mean
+      20% |     10.67 |        8.4
+      40% |      7.91 |        5.2
+      60% |      4.82 |        2.9
+      80% |      3.02 |        1.4
+
+OFFICIAL: RUL RMSE = 7.23 +/- 0.10   NASA score = 17.8 +/- 0.3
+(expected: 7.23 +/- 0.10 / 17.8)   wall 12s

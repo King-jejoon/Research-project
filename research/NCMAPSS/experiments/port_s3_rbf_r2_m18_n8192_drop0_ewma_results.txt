@@ -1,0 +1,22 @@
+DS03-012 PORT of colleague workflow  tag=s3_rbf_r2_m18_n8192  drop=0.0  detect=ewma
+  sensors=['T48', 'T50', 'Wf']  kernel=rbf rank=2 m=18 npts=8192 steps=120 mcond=15  train=cycle<5
+  seed0: stats ready (249s)
+  seed0: det acc=84.5%  trans=[48, 18, 13, 12, 13, 37, 21, 14, 28]  RUL RMSE=8.91  score=29.2  (252s)
+  seed1: stats ready (296s)
+  seed1: det acc=81.7%  trans=[19, 20, 13, 12, 18, 44, 18, 12, 51]  RUL RMSE=9.25  score=31.7  (551s)
+  seed2: stats ready (305s)
+  seed2: det acc=82.3%  trans=[21, 42, 27, 12, 19, 36, 44, 23, 29]  RUL RMSE=8.41  score=26.1  (859s)
+
+============================================================================
+DETECTION (ewma, fixed LL): acc = 82.8%  mean |delay| = 12.5 cyc
+============================================================================
+ data used |         RMSE s0/s1/s2 | RMSE mean | score mean
+----------------------------------------------------------------------------
+      20% |  10.90  10.74  10.23 |     10.62 |        8.5
+      40% |   6.20   6.38   6.38 |      6.32 |        3.7
+      60% |   9.50  10.40   8.36 |      9.42 |        9.2
+      80% |   8.36   8.81   8.24 |      8.47 |        7.6
+----------------------------------------------------------------------------
+   OVERALL |   8.91   9.25   8.41 |      8.85 |       29.0
+OVERALL RUL RMSE = 8.85 +/- 0.34   NASA score = 29.0 +/- 2.3  (n=24 preds/seed)
+wall time = 859s

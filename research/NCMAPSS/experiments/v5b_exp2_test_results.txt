@@ -1,0 +1,22 @@
+V5B EXP2 TEST — healthy-range ablation on test (11th-opening addendum, pre-registered scope)
+seed0: train_idx reproduces the recorded run (27000 rows)
+seed0: fitted (1854s, retries=0)
+seed0: model saved
+seed0: test stats written (2057s total)
+seed1: train_idx reproduces the recorded run (27000 rows)
+seed1: fitted (2220s, retries=0)
+seed1: model saved
+seed1: test stats written (2405s total)
+seed2: train_idx reproduces the recorded run (27000 rows)
+seed2: fitted (1852s, retries=0)
+seed2: model saved
+seed2: test stats written (2060s total)
+seed0: dev LOO=7.64 beta=30 test=7.17 NASA=17.8
+seed1: dev LOO=7.59 beta=30 test=7.24 NASA=18.0
+seed2: dev LOO=7.59 beta=30 test=7.37 NASA=18.1
+
+SANITY: dev LOO = 7.61 ± 0.02 (expected 7.61 ± 0.02)
+healthy-range TEST RUL = 7.26 ± 0.08  NASA 18.0 ± 0.1
+test per-trunc = 10.94 / 7.82 / 4.86 / 2.55
+
+wall=108.9 min

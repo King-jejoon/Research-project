@@ -1,0 +1,6 @@
+COLLEAGUE DEMO REPRO  DS02-006  unit=10  seed=0  m=100/200  steps=200 lr=0.01  probe=True
+[data] dev rows=5263447  W_var=[np.str_('alt'), np.str_('Mach'), np.str_('TRA'), np.str_('T2')]  outputs=[np.str_('T30'), np.str_('T48'), np.str_('T50'), np.str_('Nc'), np.str_('Wf')]  (0s)
+[data] train (8192, 4) from cycle<5 pool, inputs=[Mach,TRA,T2,unit-id] (notebook iloc quirk)
+[probe] structure+2 steps = 37s  -> est per step 18.5s, 200 steps ~ 62 min
+[probe] n_groups=80  group size max=1999  union size (first 200) max=1999
+[probe] 1 cycle (120 pts, mcond=200) = 2s -> 82 cycles ~ 3 min

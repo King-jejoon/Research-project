@@ -1,0 +1,21 @@
+[Stage 1] detecting normal/abnormal per dev unit (no hs labels) ...
+   unit 1: predicted transition cycle = 19  (normal pts 77994)
+   unit 2: predicted transition cycle = 11  (normal pts 94814)
+   unit 3: predicted transition cycle = 12  (normal pts 94133)
+   unit 4: predicted transition cycle = 12  (normal pts 97567)
+   unit 5: predicted transition cycle = 18  (normal pts 68615)
+   unit 6: predicted transition cycle = 14  (normal pts 204956)
+   unit 7: predicted transition cycle = 16  (normal pts 133910)
+   unit 8: predicted transition cycle = 11  (normal pts 156815)
+   unit 9: predicted transition cycle = 11  (normal pts 46835)
+[Stage 1] predicted-normal training pool = 5000 pts
+[Stage 2] training MOGP-Vecchia on predicted-normal ...
+[Stage 3] residuals for all dev+test cycles ...
+[Stage 4] training neural HI ...
+[Stage 5] RUL ...
+========================================================
+CONNECTED pipeline (predicted-normal + MOGP-Vecchia)
+  truncation RUL RMSE = 8.18 cycles  (mean true RUL 26.0)
+  reference (existing HI)         = 9.67 cycles
+  total wall time = 174s
+========================================================

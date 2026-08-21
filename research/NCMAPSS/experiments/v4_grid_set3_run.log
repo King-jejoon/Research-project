@@ -1,0 +1,84 @@
+V4 STAGE 2 GRID — set3 ['T48', 'T50', 'Wf']  kernels x ranks [1, 2, 3]  (cycle<=3, 27k train)
+  splits fixed: train=27000, eval=8192 per seed; shared by every config within a seed
+
+FULL GRID — kernels x ranks
+        rbf r1 seed0: zRMSE=0.01956  (686s)
+        rbf r1 seed1: zRMSE=0.01396  (691s)
+        rbf r1 seed2: zRMSE=0.01653  (670s)
+  -> rbf r1: mean=0.01668 ± 0.00229  (fails 0/3)
+        rbf r2 seed0: zRMSE=0.07488  (687s)
+        rbf r2 seed1: zRMSE=0.01423  (700s)
+        rbf r2 seed2: zRMSE=0.01658  (687s)
+  -> rbf r2: mean=0.03523 ± 0.02805  (fails 0/3)
+        rbf r3 seed0: zRMSE=0.07078  (706s)
+        rbf r3 seed1: zRMSE=0.01436  (716s)
+        rbf r3 seed2: zRMSE=0.01654  (687s)
+  -> rbf r3: mean=0.03389 ± 0.02610  (fails 0/3)
+   matern52 r1 seed0: CHOLESKY FAIL  (650s)
+   matern52 r1 seed1: zRMSE=0.01604  (719s)
+   matern52 r1 seed2: CHOLESKY FAIL  (687s)
+  -> matern52 r1: mean=0.01604 ± 0.00000  (fails 2/3)
+   matern52 r2 seed0: CHOLESKY FAIL  (698s)
+   matern52 r2 seed1: CHOLESKY FAIL  (717s)
+   matern52 r2 seed2: zRMSE=0.02027  (738s)
+  -> matern52 r2: mean=0.02027 ± 0.00000  (fails 2/3)
+   matern52 r3 seed0: CHOLESKY FAIL  (683s)
+   matern52 r3 seed1: CHOLESKY FAIL  (723s)
+   matern52 r3 seed2: CHOLESKY FAIL  (638s)
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/_methods.py:223: RuntimeWarning: Degrees of freedom <= 0 for slice
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/_methods.py:181: RuntimeWarning: invalid value encountered in divide
+  arrmean = um.true_divide(arrmean, div, out=arrmean,
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/_methods.py:215: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+  -> matern52 r3: mean=nan ± nan  (fails 3/3)
+   matern32 r1 seed0: zRMSE=0.01860  (694s)
+   matern32 r1 seed1: zRMSE=0.01503  (704s)
+   matern32 r1 seed2: zRMSE=0.01851  (692s)
+  -> matern32 r1: mean=0.01738 ± 0.00166  (fails 0/3)
+   matern32 r2 seed0: zRMSE=0.01851  (716s)
+   matern32 r2 seed1: zRMSE=0.01506  (723s)
+   matern32 r2 seed2: zRMSE=0.01860  (711s)
+  -> matern32 r2: mean=0.01739 ± 0.00165  (fails 0/3)
+   matern32 r3 seed0: zRMSE=0.01851  (719s)
+   matern32 r3 seed1: zRMSE=0.01499  (727s)
+   matern32 r3 seed2: zRMSE=0.01848  (713s)
+  -> matern32 r3: mean=0.01733 ± 0.00165  (fails 0/3)
+   matern12 r1 seed0: zRMSE=0.02151  (697s)
+   matern12 r1 seed1: zRMSE=0.01457  (704s)
+   matern12 r1 seed2: zRMSE=0.01754  (690s)
+  -> matern12 r1: mean=0.01787 ± 0.00284  (fails 0/3)
+   matern12 r2 seed0: zRMSE=0.02172  (709s)
+   matern12 r2 seed1: zRMSE=0.01458  (722s)
+   matern12 r2 seed2: zRMSE=0.01766  (706s)
+  -> matern12 r2: mean=0.01799 ± 0.00292  (fails 0/3)
+   matern12 r3 seed0: zRMSE=0.02213  (713s)
+   matern12 r3 seed1: zRMSE=0.01459  (721s)
+   matern12 r3 seed2: zRMSE=0.01764  (704s)
+  -> matern12 r3: mean=0.01812 ± 0.00310  (fails 0/3)
+
+summary (mean zRMSE, fails in parentheses):
+     kernel |           rank 1 |           rank 2 |           rank 3
+        rbf | 0.01668±0.00229     | 0.03523±0.02805     | 0.03389±0.02610    
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/_methods.py:223: RuntimeWarning: Degrees of freedom <= 0 for slice
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/_methods.py:181: RuntimeWarning: invalid value encountered in divide
+  arrmean = um.true_divide(arrmean, div, out=arrmean,
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/numpy/_core/_methods.py:215: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+   matern52 | 0.01604±0.00000(2F) | 0.02027±0.00000(2F) |      nan±nan(3F)
+   matern32 | 0.01738±0.00166     | 0.01739±0.00165     | 0.01733±0.00165    
+   matern12 | 0.01787±0.00284     | 0.01799±0.00292     | 0.01812±0.00310    
+
+best by mean: matern52 r1 (0.01604); within-sd candidates: [('matern52', 1)]
+SELECTED (simplicity rule): kernel=matern52, rank=1
+
+wall=420.9 min

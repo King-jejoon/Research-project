@@ -1,0 +1,30 @@
+COLD-SIDE CHANNEL DISCRIMINATOR — HI on [T30, Nc, Wf] only, frozen recipe, dev LOO (test untouched)
+  mogp gated seed0: shape=FAIL (start 0.30 end 0.87) beta=35 LOO RMSE=7.62 NASA=29.3
+  mogp gated seed1: shape=FAIL (start 0.25 end 0.91) beta=35 LOO RMSE=7.74 NASA=28.9
+  mogp gated seed2: shape=FAIL (start 0.29 end 0.88) beta=35 LOO RMSE=7.70 NASA=29.5
+  mogp ungated seed0: shape=FAIL (start 0.27 end 0.89) beta=35 LOO RMSE=7.55 NASA=28.5
+  mogp ungated seed1: shape=FAIL (start 0.24 end 0.92) beta=35 LOO RMSE=7.67 NASA=28.7
+  mogp ungated seed2: shape=FAIL (start 0.25 end 0.90) beta=35 LOO RMSE=7.61 NASA=28.5
+  llke seed0: shape=FAIL (start 0.24 end 0.92) beta=30 LOO RMSE=7.16 NASA=27.9
+  llke seed1: shape=FAIL (start 0.23 end 0.93) beta=30 LOO RMSE=7.11 NASA=26.8
+  llke seed2: shape=OK (start 0.23 end 0.93) beta=30 LOO RMSE=7.06 NASA=26.7
+  bspline seed0: shape=FAIL (start 0.27 end 0.89) beta=35 LOO RMSE=7.28 NASA=27.5
+  bspline seed1: shape=FAIL (start 0.27 end 0.89) beta=35 LOO RMSE=7.30 NASA=28.6
+  bspline seed2: shape=FAIL (start 0.27 end 0.89) beta=35 LOO RMSE=7.45 NASA=28.7
+  lr seed0: shape=FAIL (start 0.61 end 0.62) beta=50 LOO RMSE=33.16 NASA=1215.3
+  lr seed1: shape=FAIL (start 0.61 end 0.62) beta=50 LOO RMSE=30.76 NASA=967.4
+  lr seed2: shape=FAIL (start 0.61 end 0.62) beta=50 LOO RMSE=30.39 NASA=1006.4
+  cabn seed0: shape=FAIL (start 0.61 end 0.62) beta=50 LOO RMSE=33.16 NASA=1215.3
+  cabn seed1: shape=FAIL (start 0.61 end 0.62) beta=50 LOO RMSE=30.76 NASA=967.4
+  cabn seed2: shape=FAIL (start 0.61 end 0.62) beta=50 LOO RMSE=30.39 NASA=1006.4
+
+SUMMARY — dev LOO truncation RUL, cold channels only
+          model |      RUL RMSE |     NASA | shape
+     mogp gated |   7.69 ± 0.05 |     29.2 | 0/3
+   mogp ungated |   7.61 ± 0.05 |     28.5 | 0/3
+           llke |   7.11 ± 0.04 |     27.1 | 1/3
+        bspline |   7.34 ± 0.07 |     28.2 | 0/3
+             lr |  31.44 ± 1.23 |   1063.0 | 0/3
+           cabn |  31.44 ± 1.23 |   1063.0 | 0/3
+
+wall=1.1 min

@@ -1,0 +1,4 @@
+V3 STAGE A1 — kernel x rank CV  (cycle<3, 1000/(unit,cycle) = 18k train)
+  splits fixed: train=18000, eval=8192 per seed; shared by every config within a seed
+
+P1 — kernels at rank 1

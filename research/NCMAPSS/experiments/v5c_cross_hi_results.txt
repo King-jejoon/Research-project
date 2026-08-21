@@ -1,0 +1,18 @@
+V5C CROSS-HI — SIXTEENTH DS03 test opening, pre-registered: stage-2 residuals through the frozen stage-1 health index
+seed0: HI#1 own dev LOO=7.28 beta=30
+seed1: HI#1 own dev LOO=7.14 beta=30
+seed2: HI#1 own dev LOO=7.03 beta=30
+SANITY HI#1 dev = 7.15 (expected 7.15 ± 0.10)
+seed0: MIXED dev LOO=7.69 shape=OK beta=35
+seed1: MIXED dev LOO=7.88 shape=FAIL beta=35
+seed2: MIXED dev LOO=8.00 shape=OK beta=35
+MIXED dev = 7.86 ± 0.13  shape 2/3
+seed0: MIXED test=7.75 NASA=18.2
+seed1: MIXED test=8.09 NASA=18.8
+seed2: MIXED test=8.23 NASA=19.2
+
+MIXED STACK test RUL = 8.03 ± 0.20  NASA 18.7 ± 0.4
+test per-trunc = 11.39 / 9.57 / 5.21 / 3.04
+paired |err| (72 preds): vs full stage-2 chain 7.18 p=0.849 | vs full HI#1 chain 7.47 p=0.902
+
+wall=0.2 min

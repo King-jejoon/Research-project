@@ -1,0 +1,22 @@
+DETECTOR SENSITIVITY  (onset RMSE, cycles; 9 dev units x 3 seeds = 27 cases/config)
+  cycle windows [8, 12, 20] | flight-hour windows [30, 50, 80] | clip [10, 12, 14, 16] sigma
+
+=== A) CYCLE-COUNT windows ===
+  clip |     8cyc |    12cyc |    20cyc
+---------------------------------------
+  10 s |     9.35 |     8.84 |     7.61
+  12 s |     9.47 |     8.69 |     8.42
+  14 s |     9.13 |     8.50 |     8.70
+  16 s |     8.77 |     8.35 |     9.07
+  best: window=20cyc clip=10s  onset RMSE=7.61  delay=+1.59
+
+=== B) FLIGHT-HOUR windows ===
+  clip |    30flt-h |    50flt-h |    80flt-h
+---------------------------------------------
+  10 s |     4.58 |     9.74 |    20.62
+  12 s |     5.09 |    10.87 |    22.15
+  14 s |     5.73 |    11.54 |    23.15
+  16 s |     6.69 |    12.67 |    23.62
+  best: window=30flt-h clip=10s  onset RMSE=4.58  delay=+1.59
+
+wall=0.0 min

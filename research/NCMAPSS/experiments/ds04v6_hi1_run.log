@@ -1,0 +1,46 @@
+DS04 V6 HI1 — lambda grid on stage-1 ungated cycle<=3 tables (DS03 protocol; first selection for this dataset)
+  l1= 2.0 l2=0.25: Mon= -102.85 Curv=  4.97 Range=0.539 Shift=0.0563 LOO RUL=9.70±0.00 shape 0/1
+  l1= 2.0 l2= 0.5: Mon=  -97.90 Curv=  5.04 Range=0.531 Shift=0.0551 LOO RUL=9.73±0.00 shape 0/1
+  l1= 2.0 l2= 1.0: Mon=  -91.26 Curv=  5.05 Range=0.515 Shift=0.0531 LOO RUL=9.79±0.00 shape 0/1
+  l1= 2.0 l2= 2.0: Mon=  -82.68 Curv=  4.97 Range=0.487 Shift=0.0498 LOO RUL=10.67±0.00 shape 0/1
+  l1= 2.0 l2= 4.0: Mon=  -69.98 Curv=  4.55 Range=0.429 Shift=0.0438 LOO RUL=10.45±0.00 shape 0/1
+  l1= 4.0 l2=0.25: Mon=  -89.57 Curv=  5.03 Range=0.511 Shift=0.0527 LOO RUL=9.79±0.00 shape 0/1
+  l1= 4.0 l2= 0.5: Mon=  -87.10 Curv=  5.00 Range=0.503 Shift=0.0518 LOO RUL=9.82±0.00 shape 0/1
+  l1= 4.0 l2= 1.0: Mon=  -82.76 Curv=  4.94 Range=0.489 Shift=0.0501 LOO RUL=10.66±0.00 shape 0/1
+  l1= 4.0 l2= 2.0: Mon=  -75.84 Curv=  4.77 Range=0.460 Shift=0.0470 LOO RUL=10.56±0.00 shape 0/1
+  l1= 4.0 l2= 4.0: Mon=  -63.46 Curv=  4.25 Range=0.399 Shift=0.0407 LOO RUL=10.38±0.00 shape 0/1
+  l1= 6.0 l2=0.25: Mon=  -81.08 Curv=  4.90 Range=0.484 Shift=0.0496 LOO RUL=10.63±0.00 shape 0/1
+  l1= 6.0 l2= 0.5: Mon=  -79.20 Curv=  4.86 Range=0.477 Shift=0.0488 LOO RUL=10.61±0.00 shape 0/1
+  l1= 6.0 l2= 1.0: Mon=  -75.93 Curv=  4.77 Range=0.463 Shift=0.0473 LOO RUL=10.57±0.00 shape 0/1
+  l1= 6.0 l2= 2.0: Mon=  -69.90 Curv=  4.55 Range=0.434 Shift=0.0443 LOO RUL=10.48±0.00 shape 0/1
+  l1= 6.0 l2= 4.0: Mon=  -57.05 Curv=  3.97 Range=0.368 Shift=0.0375 LOO RUL=10.33±0.00 shape 0/1
+  l1= 8.0 l2=0.25: Mon=  -74.37 Curv=  4.72 Range=0.458 Shift=0.0468 LOO RUL=10.55±0.00 shape 0/1
+  l1= 8.0 l2= 0.5: Mon=  -72.94 Curv=  4.67 Range=0.451 Shift=0.0461 LOO RUL=10.53±0.00 shape 0/1
+  l1= 8.0 l2= 1.0: Mon=  -70.07 Curv=  4.56 Range=0.437 Shift=0.0446 LOO RUL=10.49±0.00 shape 0/1
+  l1= 8.0 l2= 2.0: Mon=  -63.68 Curv=  4.26 Range=0.404 Shift=0.0412 LOO RUL=10.39±0.00 shape 0/1
+  l1= 8.0 l2= 4.0: Mon=  -51.16 Curv=  3.68 Range=0.338 Shift=0.0344 LOO RUL=10.79±0.00 shape 0/1
+  l1=12.0 l2=0.25: Mon=  -62.56 Curv=  4.23 Range=0.400 Shift=0.0408 LOO RUL=10.36±0.00 shape 0/1
+  l1=12.0 l2= 0.5: Mon=  -61.05 Curv=  4.15 Range=0.392 Shift=0.0400 LOO RUL=10.35±0.00 shape 0/1
+  l1=12.0 l2= 1.0: Mon=  -58.01 Curv=  4.01 Range=0.376 Shift=0.0383 LOO RUL=10.33±0.00 shape 0/1
+  l1=12.0 l2= 2.0: Mon=  -51.91 Curv=  3.72 Range=0.343 Shift=0.0349 LOO RUL=10.81±0.00 shape 0/1
+  l1=12.0 l2= 4.0: Mon=  -40.64 Curv=  3.14 Range=0.280 Shift=0.0284 LOO RUL=10.62±0.00 shape 0/1
+  l1=16.0 l2=0.25: Mon=  -51.18 Curv=  3.70 Range=0.340 Shift=0.0346 LOO RUL=10.79±0.00 shape 0/1
+  l1=16.0 l2= 0.5: Mon=  -49.66 Curv=  3.63 Range=0.332 Shift=0.0338 LOO RUL=10.75±0.00 shape 0/1
+  l1=16.0 l2= 1.0: Mon=  -46.60 Curv=  3.47 Range=0.315 Shift=0.0321 LOO RUL=10.69±0.00 shape 0/1
+  l1=16.0 l2= 2.0: Mon=  -41.31 Curv=  3.17 Range=0.285 Shift=0.0289 LOO RUL=10.63±0.00 shape 0/1
+  l1=16.0 l2= 4.0: Mon=  -31.94 Curv=  2.64 Range=0.228 Shift=0.0231 LOO RUL=10.85±0.00 shape 0/1
+
+stage-1 grid: shape-passing combos (0): []
+stage-1 grid: composite ranking top 6:
+  (4.0, 0.5): comp=0.696  LOO RUL=9.82
+  (2.0, 1.0): comp=0.696  LOO RUL=9.79
+  (4.0, 0.25): comp=0.696  LOO RUL=9.79
+  (2.0, 2.0): comp=0.695  LOO RUL=10.67
+  (4.0, 1.0): comp=0.693  LOO RUL=10.66
+  (6.0, 0.25): comp=0.690  LOO RUL=10.63
+SELECTED: lambda1=4.0, lambda2=0.5 (comp 0.696, LOO RUL 9.82±0.00)
+chain seed0: dev LOO=8.80 shape=FAIL beta=35
+
+HI #1 chain (cycle<=3 ungated, recipe (4.0, 0.5), med3): dev LOO = 8.80 ± 0.00  NASA 27.7 ± 0.0  shape 0/1  beta=[35]
+
+wall=1.6 min

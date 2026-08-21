@@ -1,0 +1,33 @@
+THRESHOLD SWEEP (fast)  drops=[0.0, 0.05, 0.1, 0.15, 0.25, 0.4]  seeds=[0, 1, 2]  NPER=20
+  seed0: precompute done (84s), sweeping drops ...
+  seed0 drop=0.00 (kept 100%): RUL RMSE = 9.96
+  seed0 drop=0.05 (kept 95%): RUL RMSE = 9.89
+  seed0 drop=0.10 (kept 90%): RUL RMSE = 9.86
+  seed0 drop=0.15 (kept 85%): RUL RMSE = 9.88
+  seed0 drop=0.25 (kept 75%): RUL RMSE = 11.08
+  seed0 drop=0.40 (kept 60%): RUL RMSE = 10.70
+  seed1: precompute done (195s), sweeping drops ...
+  seed1 drop=0.00 (kept 100%): RUL RMSE = 8.32
+  seed1 drop=0.05 (kept 95%): RUL RMSE = 8.17
+  seed1 drop=0.10 (kept 90%): RUL RMSE = 8.02
+  seed1 drop=0.15 (kept 85%): RUL RMSE = 8.18
+  seed1 drop=0.25 (kept 75%): RUL RMSE = 8.17
+  seed1 drop=0.40 (kept 60%): RUL RMSE = 8.69
+  seed2: precompute done (320s), sweeping drops ...
+  seed2 drop=0.00 (kept 100%): RUL RMSE = 9.49
+  seed2 drop=0.05 (kept 95%): RUL RMSE = 9.27
+  seed2 drop=0.10 (kept 90%): RUL RMSE = 9.61
+  seed2 drop=0.15 (kept 85%): RUL RMSE = 9.56
+  seed2 drop=0.25 (kept 75%): RUL RMSE = 9.46
+  seed2 drop=0.40 (kept 60%): RUL RMSE = 9.14
+====================================================
+  drop |  kept | mean RMSE |   std
+----------------------------------------------------
+  0.00 |  100% |      9.26 |  0.69
+  0.05 |   95% |      9.11 |  0.71
+  0.10 |   90% |      9.16 |  0.82
+  0.15 |   85% |      9.20 |  0.74
+  0.25 |   75% |      9.57 |  1.19
+  0.40 |   60% |      9.51 |  0.86
+====================================================
+wall time = 338s | reference old pipeline = 9.67

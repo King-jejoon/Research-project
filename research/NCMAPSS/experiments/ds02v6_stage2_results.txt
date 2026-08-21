@@ -1,0 +1,34 @@
+DS02 V6 STAGE2 — healthy-range chain, rule {'NB': 10, 'V_sparse': 19.61, 'V_dense': 19.61, 'wval': 10.0, 'wmode': 'fh', 'clip': 4.0}, stage-1 recipe (2.0, 1.0)
+seed0: conditional onsets {2: 22, 5: 30, 10: 16, 16: 24, 18: 16, 20: 24} (hs truth {2: 17, 5: 17, 10: 17, 16: 16, 18: 17, 20: 17})
+seed1: conditional onsets {2: 32, 5: 26, 10: 17, 16: 24, 18: 16, 20: 24} (hs truth {2: 17, 5: 17, 10: 17, 16: 16, 18: 17, 20: 17})
+seed2: conditional onsets {2: 32, 5: 26, 10: 19, 16: 9, 18: 16, 20: 24} (hs truth {2: 17, 5: 17, 10: 17, 16: 16, 18: 17, 20: 17})
+seed0: u2 window cyc<22 (21 cycles, pool 239619) -> 3000 sampled
+seed0: u5 window cyc<30 (29 cycles, pool 354690) -> 3000 sampled
+seed0: u10 window cyc<16 (15 cycles, pool 174722) -> 3000 sampled
+seed0: u16 window cyc<24 (23 cycles, pool 292020) -> 3000 sampled
+seed0: u18 window cyc<16 (15 cycles, pool 183458) -> 3000 sampled
+seed0: u20 window cyc<24 (23 cycles, pool 269651) -> 3000 sampled
+seed0: train total 18000 rows
+seed0: saved hr GP loaded (no refit)
+    [point_stats] chunk 2: jitter escalated to 0.0001 (Cholesky failure at default)
+    [point_stats] chunk 1: jitter escalated to 1e-05 (Cholesky failure at default)
+    [point_stats] chunk 4: jitter escalated to 0.0001 (Cholesky failure at default)
+    [point_stats] chunk 1: jitter escalated to 1e-05 (Cholesky failure at default)
+    [point_stats] chunk 2: jitter escalated to 0.0001 (Cholesky failure at default)
+seed0: hr stats written (191s total)
+seed1: u2 window cyc<32 (31 cycles, pool 349933) -> 3000 sampled
+seed1: u5 window cyc<26 (25 cycles, pool 300644) -> 3000 sampled
+seed1: u10 window cyc<17 (16 cycles, pool 188050) -> 3000 sampled
+seed1: u16 window cyc<24 (23 cycles, pool 292020) -> 3000 sampled
+seed1: u18 window cyc<16 (15 cycles, pool 183458) -> 3000 sampled
+seed1: u20 window cyc<24 (23 cycles, pool 269651) -> 3000 sampled
+seed1: train total 18000 rows
+seed1: fitted (1090s, retries=0)
+seed1: hr stats written (1251s total)
+seed2: u2 window cyc<32 (31 cycles, pool 349933) -> 3000 sampled
+seed2: u5 window cyc<26 (25 cycles, pool 300644) -> 3000 sampled
+seed2: u10 window cyc<19 (18 cycles, pool 207833) -> 3000 sampled
+seed2: u16 window cyc<9 (8 cycles, pool 108248) -> 3000 sampled
+seed2: u18 window cyc<16 (15 cycles, pool 183458) -> 3000 sampled
+seed2: u20 window cyc<24 (23 cycles, pool 269651) -> 3000 sampled
+seed2: train total 18000 rows

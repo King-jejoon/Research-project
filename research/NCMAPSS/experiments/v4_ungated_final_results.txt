@@ -1,0 +1,16 @@
+V4 UNGATED CHAIN (gate off, everything else frozen) — dev LOO + test re-summary from the official cached stats
+seed0 dev: shape=OK (start 0.21 end 0.95)  LOO RMSE=7.18  NASA=27.5  beta=30
+seed0 test: RMSE=7.48  NASA=19.4
+seed1 dev: shape=OK (start 0.21 end 0.95)  LOO RMSE=7.13  NASA=26.6  beta=30
+seed1 test: RMSE=7.53  NASA=18.9
+seed2 dev: shape=OK (start 0.21 end 0.95)  LOO RMSE=7.04  NASA=26.1  beta=30
+seed2 test: RMSE=7.40  NASA=18.4
+
+UNGATED chain summary (3 seeds):
+  dev LOO RUL  = 7.12 ± 0.06  NASA 26.7 ± 0.6  beta=[30, 30, 30]
+  dev per-trunc = 10.57 / 7.24 / 4.92 / 3.76
+  test RUL     = 7.47 ± 0.05  NASA 18.9 ± 0.4
+  test per-trunc = 11.18 / 8.45 / 4.58 / 2.43
+  paired |err| Wilcoxon ungated vs gated (72 preds): p=0.991
+
+wall=0.2 min

@@ -1,0 +1,12 @@
+STAGE 4 — HI re-calibration, NEW chain (ungated summaries)
+  variants x end_target, dev LOO truncation RUL; beta by nested LOO NASA
+     mean_ng tgt=1.00: RMSE 7.61 ± 0.09  NASA 30  beta [30, 30, 30]  shape 0/3
+     mean_ng tgt=1.03: RMSE 7.59 ± 0.08  NASA 30  beta [30, 30, 30]  shape 3/3
+   median_ng tgt=1.00: RMSE 7.40 ± 0.06  NASA 29  beta [30, 30, 30]  shape 0/3
+   median_ng tgt=1.03: RMSE 7.41 ± 0.04  NASA 28  beta [30, 30, 30]  shape 3/3
+     trim_ng tgt=1.00: RMSE 7.47 ± 0.09  NASA 29  beta [30, 30, 30]  shape 0/3
+     trim_ng tgt=1.03: RMSE 7.48 ± 0.06  NASA 29  beta [30, 30, 30]  shape 3/3
+
+SELECTED: median_ng, end_target=1.03  LOO RMSE=7.41 ± 0.04  NASA=28  beta=[30, 30, 30]
+
+wall=0.9 min

@@ -1,0 +1,25 @@
+V5B LADDER ON TEST — TWELFTH DS03 opening, pre-registered. Scoring constants frozen on dev; test = prediction input only. n = 6 units: descriptive.
+  seed0 llke: test refit+stats ok (327s, ll median dev 6.10e-07)
+  seed0 bspline: test refit+stats ok (3s, ll median dev 3.11e-07)
+  seed0 lr: test refit+stats ok (0s, ll median dev 2.38e-07)
+  seed0 cabn: test refit+stats ok (0s, ll median dev 2.33e-07)
+  seed1 llke: test refit+stats ok (322s, ll median dev 6.14e-07)
+  seed1 bspline: test refit+stats ok (3s, ll median dev 3.35e-07)
+  seed1 lr: test refit+stats ok (0s, ll median dev 2.50e-07)
+  seed1 cabn: test refit+stats ok (0s, ll median dev 2.40e-07)
+  seed2 llke: test refit+stats ok (321s, ll median dev 6.26e-07)
+  seed2 bspline: test refit+stats ok (3s, ll median dev 2.99e-07)
+  seed2 lr: test refit+stats ok (0s, ll median dev 2.32e-07)
+  seed2 cabn: test refit+stats ok (0s, ll median dev 2.29e-07)
+
+             model |    zrms |   fixed |      m2 |      ll
+    mogp cond gate |   10.73 |   13.62 |    7.37 |    8.54
+      mogp ungated |   11.29 |   15.61 |    8.02 |    9.01
+              llke |    6.24 |    7.46 |    6.50 |    6.87
+           bspline |   14.14 |    9.32 |   10.03 |   10.03
+                lr |   18.99 |    8.38 |    8.88 |    8.88
+              cabn |   18.99 |    8.38 |   10.66 |   10.66
+
+  sanity: the ll column must reproduce 8.54 / 9.01 / 6.87 / 10.03 / 8.88 / 10.66
+
+wall=16.4 min

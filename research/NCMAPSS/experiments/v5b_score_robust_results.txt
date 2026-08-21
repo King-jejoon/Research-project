@@ -1,0 +1,25 @@
+V5B SCORE ROBUSTNESS — onset benchmark rescored with the distribution-free deviation s = -Mahalanobis (dev only, 27 cases)
+  seed0 llke: refit+stats ok (538s, ll median dev 6.05e-07)
+  seed0 bspline: refit+stats ok (4s, ll median dev 3.23e-07)
+  seed0 lr: refit+stats ok (0s, ll median dev 2.43e-07)
+  seed0 cabn: refit+stats ok (0s, ll median dev 2.38e-07)
+  seed1 llke: refit+stats ok (539s, ll median dev 5.74e-07)
+  seed1 bspline: refit+stats ok (4s, ll median dev 3.47e-07)
+  seed1 lr: refit+stats ok (0s, ll median dev 2.55e-07)
+  seed1 cabn: refit+stats ok (0s, ll median dev 2.47e-07)
+  seed2 llke: refit+stats ok (498s, ll median dev 5.81e-07)
+  seed2 bspline: refit+stats ok (4s, ll median dev 3.12e-07)
+  seed2 lr: refit+stats ok (0s, ll median dev 2.39e-07)
+  seed2 cabn: refit+stats ok (0s, ll median dev 2.36e-07)
+
+             model |  ll score | -m2 score | p vs cond (-m2)
+    mogp cond gate |      5.21 |      5.25 |               —
+      mogp ungated |      6.78 |      5.34 |          0.7617
+              llke |      7.67 |      8.00 |          0.0010
+           bspline |      8.69 |      8.60 |          0.0008
+                lr |     10.02 |     10.02 |          0.0001
+              cabn |     10.54 |     10.54 |          0.0000
+
+  sanity: the ll column must reproduce 5.21 / 6.78 / 7.67 / 8.69 / 10.02 / 10.54
+
+wall=26.5 min

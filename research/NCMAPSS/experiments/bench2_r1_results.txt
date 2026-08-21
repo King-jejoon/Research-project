@@ -1,0 +1,81 @@
+BENCH2 R1: residual tables for the normal-model benchmark
+  sensors=['T30', 'T48', 'T50', 'Nc', 'Wf']  inputs=[alt,Mach,TRA,T2]  seeds=[0, 1, 2]  clean=5%  gate=q15  200 pts/cycle
+
+=== lr ===
+        lr {}                   held-out LL=   10.531  zRMSE=0.0874
+  -> lr selected {}  (LL 10.531, zRMSE 0.0874)
+  seed0: fitted (0.0s)
+  seed0: dev point stats done (0.5s)
+  seed0: test point stats done (0.4s)
+  seed0: saved bench2_lr_s0.npz  V*=17.783  kept=166/200 (1s elapsed)
+  seed1: fitted (0.0s)
+  seed1: dev point stats done (0.5s)
+  seed1: test point stats done (0.4s)
+  seed1: saved bench2_lr_s1.npz  V*=17.783  kept=166/200 (2s elapsed)
+  seed2: fitted (0.0s)
+  seed2: dev point stats done (0.5s)
+  seed2: test point stats done (0.4s)
+  seed2: saved bench2_lr_s2.npz  V*=17.857  kept=166/200 (3s elapsed)
+
+=== bspline ===
+   bspline {'n_knots': 3}       held-out LL=   14.095  zRMSE=0.0607
+   bspline {'n_knots': 5}       held-out LL=   14.145  zRMSE=0.0596
+   bspline {'n_knots': 8}       held-out LL=   14.271  zRMSE=0.0589
+   bspline {'n_knots': 12}      held-out LL=   14.301  zRMSE=0.0579
+   bspline {'n_knots': 20}      held-out LL=   14.330  zRMSE=0.0571
+   bspline {'n_knots': 30}      held-out LL=   14.333  zRMSE=0.0566
+  -> bspline selected {'n_knots': 30}  (LL 14.333, zRMSE 0.0566)
+  seed0: fitted (0.6s)
+  seed0: dev point stats done (4.6s)
+  seed0: test point stats done (3.1s)
+  seed0: saved bench2_bspline_s0.npz  V*=23.242  kept=164/200 (14s elapsed)
+  seed1: fitted (0.6s)
+  seed1: dev point stats done (4.6s)
+  seed1: test point stats done (3.1s)
+  seed1: saved bench2_bspline_s1.npz  V*=21.966  kept=164/200 (22s elapsed)
+  seed2: fitted (0.6s)
+  seed2: dev point stats done (4.6s)
+  seed2: test point stats done (3.1s)
+  seed2: saved bench2_bspline_s2.npz  V*=23.069  kept=164/200 (31s elapsed)
+
+=== llke ===
+      llke {'h': 0.05}          held-out LL=-1722.785  zRMSE=0.0493
+      llke {'h': 0.1}           held-out LL=    3.281  zRMSE=0.0139
+      llke {'h': 0.15}          held-out LL=   18.930  zRMSE=0.0110
+      llke {'h': 0.2}           held-out LL=   18.464  zRMSE=0.0112
+      llke {'h': 0.35}          held-out LL=   16.678  zRMSE=0.0128
+      llke {'h': 0.5}           held-out LL=   15.511  zRMSE=0.0155
+  -> llke selected {'h': 0.15}  (LL 18.930, zRMSE 0.0110)
+  seed0: fitted (22.1s)
+  seed0: dev point stats done (158.1s)
+  seed0: test point stats done (104.7s)
+  seed0: saved bench2_llke_s0.npz  V*=30.193  kept=167/200 (515s elapsed)
+  seed1: fitted (22.1s)
+  seed1: dev point stats done (159.2s)
+  seed1: test point stats done (105.6s)
+  seed1: saved bench2_llke_s1.npz  V*=29.505  kept=168/200 (802s elapsed)
+  seed2: fitted (21.6s)
+  seed2: dev point stats done (158.9s)
+  seed2: test point stats done (105.3s)
+  seed2: saved bench2_llke_s2.npz  V*=27.701  kept=168/200 (1088s elapsed)
+
+=== cabn ===
+      cabn {'lam1': 0.0}        held-out LL=   10.499  zRMSE=0.0874
+      cabn {'lam1': 0.001}      held-out LL=    8.426  zRMSE=0.0874
+      cabn {'lam1': 0.01}       held-out LL=    6.410  zRMSE=0.0874
+      cabn {'lam1': 0.05}       held-out LL=    6.410  zRMSE=0.0874
+  -> cabn selected {'lam1': 0.0}  (LL 10.499, zRMSE 0.0874)
+  seed0: fitted (0.1s)
+  seed0: dev point stats done (0.5s)
+  seed0: test point stats done (0.4s)
+  seed0: saved bench2_cabn_s0.npz  V*=17.733  kept=166/200 (1089s elapsed)
+  seed1: fitted (0.1s)
+  seed1: dev point stats done (0.6s)
+  seed1: test point stats done (0.4s)
+  seed1: saved bench2_cabn_s1.npz  V*=17.772  kept=166/200 (1091s elapsed)
+  seed2: fitted (0.1s)
+  seed2: dev point stats done (0.5s)
+  seed2: test point stats done (0.4s)
+  seed2: saved bench2_cabn_s2.npz  V*=17.756  kept=166/200 (1092s elapsed)
+
+BENCH2 R1 DONE  wall=18.2 min

@@ -1,0 +1,23 @@
+BENCHMARK — onset detection per normal model (detector frozen: q75 LL, 30 flight-h baseline, clip 10 sigma, mean-drop)
+seed0 llke: LL ready (922s)
+seed0 bspline: LL ready (7s)
+seed0 lr: LL ready (0s)
+seed0 cabn: LL ready (0s)
+seed1 llke: LL ready (852s)
+seed1 bspline: LL ready (7s)
+seed1 lr: LL ready (0s)
+seed1 cabn: LL ready (0s)
+seed2 llke: LL ready (857s)
+seed2 bspline: LL ready (7s)
+seed2 lr: LL ready (0s)
+seed2 cabn: LL ready (0s)
+
+                 model |  dev onset RMSE |  dev delay |  test onset RMSE |  test delay | test |d|<=3
+    mogp gated V*=20.2 |            5.65 |      +4.11 |            11.11 |       +8.22 | 33%
+          mogp ungated |            6.78 |      +6.00 |             9.01 |       +7.39 | 28%
+                  llke |            7.67 |      +6.11 |             6.87 |       +5.61 | 33%
+               bspline |            8.69 |      +7.44 |            10.03 |       +9.22 | 0%
+                    lr |           10.02 |      +8.85 |             8.88 |       +7.67 | 17%
+                  cabn |           10.54 |      +9.52 |            10.66 |       +8.89 | 17%
+
+wall=44.3 min

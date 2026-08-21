@@ -1,0 +1,17 @@
+HI COEFFICIENT SWEEP  (final config: 3sens/m32r1/NPER200/drop60)  seeds=[0, 1, 2]
+base: l_init=1.0  l_end=1.0(fixed ref)  l_mono=6.0  l_conv=2.0  init_thr=0.2
+residuals ready (0s)
+
+        config |        RMSE s0/s1/s2 |   mean |   std |  score
+--------------------------------------------------------------------
+     base(6,2) |   8.09   8.28   8.37 |   8.25 |  0.12 |   25.3
+ mono2+conv0.5 |   7.81   7.92   8.11 |   7.95 |  0.13 |   22.2
+ mono1+conv0.5 |   7.80   7.90   8.09 |   7.93 |  0.12 |   22.0
+mono2+conv0.25 |   7.78   7.93   8.10 |   7.94 |  0.13 |   22.0
+mono1+conv0.25 |   7.78   7.94   8.09 |   7.93 |  0.13 |   22.2
+mono0.5+conv0.25 |   7.79   7.96   8.03 |   7.93 |  0.10 |   22.4
+   combo+init4 |   7.82   7.93   8.11 |   7.96 |  0.12 |   22.2
+  combo+thr0.1 |   7.84   7.93   8.08 |   7.95 |  0.10 |   22.1
+     combo+all |   7.86   7.94   8.08 |   7.96 |  0.09 |   22.1
+
+wall time = 77s

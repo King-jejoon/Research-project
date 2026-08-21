@@ -1,0 +1,72 @@
+DS02 V6 DETSEL — detector re-selection, DS03 procedures, dev only
+  u2: mean 3.16 h/cycle, hs-onset 17, len 75
+  u5: mean 3.23 h/cycle, hs-onset 17, len 89
+  u10: mean 3.23 h/cycle, hs-onset 17, len 82
+  u16: mean 3.37 h/cycle, hs-onset 16, len 63
+  u18: mean 3.48 h/cycle, hs-onset 17, len 71
+  u20: mean 3.23 h/cycle, hs-onset 17, len 66
+
+(A) window x clip sweep, UNGATED curves
+A: minimum ('cyc', 3, 4) RMSE=8.63 (seed sd 0.54)
+A: tie band (6): ('cyc', 3, 4)=8.63, ('cyc', 4, 4)=8.63, ('cyc', 5, 4)=8.63, ('fh', 10, 4)=8.63, ('fh', 15, 4)=8.63, ('cyc', 6, 4)=9.16
+  deployed window = best fh in tie band: ('fh', 10, 4) RMSE=8.63
+
+(B) gate V absolute sweep at ('fh', 10, 4); per-unit nbase {2: 5, 5: 5, 10: 5, 16: 5, 18: 5, 20: 5}
+  single dev class — NB carries the DS03 structural value 10; groups sparse[2, 5, 10, 16, 18, 20] dense[] (one branch uncalibratable, shares the dev-derived V)
+  ungated reference at ('fh', 10, 4): RMSE=8.63
+  V=  17.58: all=  8.63  sparse=  8.63  dense=   nan
+  V=  18.58: all=  8.63  sparse=  8.63  dense=   nan
+  V=  19.00: all=  8.63  sparse=  8.63  dense=   nan
+  V=  19.22: all=  8.63  sparse=  8.63  dense=   nan
+  V=  19.34: all=  8.28  sparse=  8.28  dense=   nan
+  V=  19.42: all=  8.15  sparse=  8.15  dense=   nan
+  V=  19.48: all=  8.28  sparse=  8.28  dense=   nan
+  V=  19.52: all=  8.15  sparse=  8.15  dense=   nan
+  V=  19.55: all=  8.28  sparse=  8.28  dense=   nan
+  V=  19.57: all=  8.28  sparse=  8.28  dense=   nan
+  V=  19.60: all=  8.28  sparse=  8.28  dense=   nan
+  V=  19.61: all=  7.95  sparse=  7.95  dense=   nan
+  V=  19.63: all= 10.79  sparse= 10.79  dense=   nan
+  V=  19.65: all= 11.47  sparse= 11.47  dense=   nan
+  V=  19.67: all= 11.30  sparse= 11.30  dense=   nan
+  V=  19.69: all= 11.42  sparse= 11.42  dense=   nan
+  V=  19.72: all= 11.96  sparse= 11.96  dense=   nan
+  V=  19.80: all=  8.34  sparse=  8.34  dense=   nan
+  V=  19.87: all=  8.35  sparse=  8.35  dense=   nan
+  V=  19.93: all=  8.47  sparse=  8.47  dense=   nan
+  V=  19.98: all=  8.47  sparse=  8.47  dense=   nan
+  V=  20.01: all=  8.50  sparse=  8.50  dense=   nan
+  V=  20.04: all=  8.75  sparse=  8.75  dense=   nan
+  V=  20.07: all=  9.00  sparse=  9.00  dense=   nan
+  V=  20.09: all=  9.05  sparse=  9.05  dense=   nan
+  V=  20.11: all=  8.72  sparse=  8.72  dense=   nan
+  V=  20.12: all=  9.05  sparse=  9.05  dense=   nan
+  V=  20.14: all=  9.05  sparse=  9.05  dense=   nan
+  V=  20.15: all=  9.15  sparse=  9.15  dense=   nan
+  V=  20.16: all=  9.19  sparse=  9.19  dense=   nan
+  V=  20.17: all=  9.14  sparse=  9.14  dense=   nan
+  V=  20.18: all=  9.26  sparse=  9.26  dense=   nan
+  V=  20.19: all=  9.06  sparse=  9.06  dense=   nan
+  V=  20.20: all=  8.77  sparse=  8.77  dense=   nan
+  V=  20.21: all=  9.04  sparse=  9.04  dense=   nan
+  V=  20.23: all= 10.03  sparse= 10.03  dense=   nan
+  V=  20.24: all= 12.70  sparse= 12.70  dense=   nan
+  V=  20.25: all= 12.57  sparse= 12.57  dense=   nan
+  V=  20.27: all= 12.51  sparse= 12.51  dense=   nan
+  V=  20.33: all=  9.26  sparse=  9.26  dense=   nan
+  dense-branch V=19.61 (uncalibratable, shares sparse V); sparse-branch V=19.61 (RMSE 7.95)
+  FROZEN RULE: {'NB': 10, 'V_sparse': 19.61, 'V_dense': 19.61, 'wval': 10.0, 'wmode': 'fh', 'clip': 4.0}
+  dev onset RMSE: rule=7.95 vs ungated=8.63 (paired p=0.233, 18 cases)
+    u2: rule errors [5, 15, 15]
+    u5: rule errors [13, 9, 9]
+    u10: rule errors [-1, 0, 2]
+    u16: rule errors [8, 8, -7]
+    u18: rule errors [-1, -1, -1]
+    u20: rule errors [7, 7, 7]
+
+(C) confirmation window x clip sweep on CONDITIONAL curves
+C: minimum ('cyc', 3, 4) RMSE=7.95 (seed sd 0.66)
+C: tie band (5): ('cyc', 3, 4)=7.95, ('cyc', 4, 4)=7.95, ('cyc', 5, 4)=7.95, ('fh', 10, 4)=7.95, ('fh', 15, 4)=7.95
+  selection ('cyc', 3, 4) stays inside the conditional-curve tie band (min ('cyc', 3, 4))
+
+wall=0.1 min

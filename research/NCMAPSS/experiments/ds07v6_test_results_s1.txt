@@ -1,0 +1,12 @@
+DS07 V6 TEST — FIRST v6 test opening of this subset, pre-registered (onset gate check, HI#2/HI#1 RUL, benchmark)
+frozen: rule {'NB': 6, 'V_sparse': 20.27, 'V_dense': 20.34, 'wval': 10.0, 'wmode': 'fh', 'clip': 4.0}; HI#1 recipe (8.0, 0.25); HI#2 recipe (16.0, 0.25)
+SANITY c3 seed1: dev LOO 6.20 (frozen 6.20)
+SANITY hr seed1: dev LOO 6.34 (frozen 6.34)
+test units [7, 8, 9, 10]: u7(L78, 2.44 h/cyc, hs 24), u8(L83, 1.18 h/cyc, hs 37), u9(L96, 4.17 h/cyc, hs 19), u10(L87, 1.25 h/cyc, hs 37)
+seed1 c3: test stats written (165s)
+seed1 hr: test stats written (170s)
+  seed1 llke: residuals ready (461s)
+  seed1 bspline: residuals ready (5s)
+  seed1 lr: residuals ready (0s)
+  seed1 cabn: residuals ready (0s)
+STATS_ONLY — test stats + bench residuals built for seeds [1]; analysis left to the merge run

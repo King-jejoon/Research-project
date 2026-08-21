@@ -1,0 +1,11 @@
+V5B ZRMS ONSET — per-channel healthy-noise z-scoring (diagonal), RMS combination; identical procedure for every model.  Dev 27 cases.
+
+             model | zRMS RMSE |  p vs cond
+    mogp cond gate |      8.00 |          —
+      mogp ungated |      7.99 |     0.9802
+              llke |      6.97 |     0.3787
+           bspline |     11.90 |     0.0011
+                lr |     21.78 |     0.0000
+              cabn |     21.78 |     0.0000
+
+wall=0.0 min

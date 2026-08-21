@@ -1,0 +1,14 @@
+V5C TIMING — current 27k configuration, seed 0; NTHREADS=12, loadavg=(3.15, 3.58, 4.23)
+train rows: stage-1/competitors 27000, stage-2 27000
+inference grid: 87600 points, 6 test units
+
+        lr: train      0.01 s (IQR 0.01-0.01)  infer     0.02 s (IQR 0.02-0.02)
+   bspline: train      0.08 s (IQR 0.08-0.08)  infer     2.33 s (IQR 2.33-2.34)
+      llke: train      3.66 s (IQR 3.64-3.66)  infer   317.13 s (IQR 316.88-317.40)
+      cabn: train      0.04 s (IQR 0.04-0.04)  infer     0.02 s (IQR 0.02-0.02)
+      mogp: train    1017.5 s (single run, retries=0)
+      mogp: infer   153.85 s (IQR 153.82-156.50)
+  proposed: train    1690.0 s (single run, retries=0)
+  proposed: infer   148.47 s (IQR 146.64-151.47)
+
+loadavg end=(3.47, 4.35, 4.75)  wall=76.8 min

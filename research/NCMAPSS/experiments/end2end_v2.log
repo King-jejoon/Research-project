@@ -1,0 +1,22 @@
+[Stage 1] condition-likelihood detection ...
+   unit 1: LL-transition = 63
+   unit 2: LL-transition = 74
+   unit 3: LL-transition = 16
+   unit 4: LL-transition = 15
+   unit 5: LL-transition = 12
+   unit 6: LL-transition = 64
+   unit 7: LL-transition = 14
+   unit 8: LL-transition = 12
+   unit 9: LL-transition = 26
+[Stage 1] predicted-normal pool = 5000
+[Stage 2] MOGP-Vecchia on predicted-normal ...
+[Stage 3] residuals with detcov uncertainty filter ...
+[Stage 4] neural HI ...
+[Stage 5] RUL ...
+============================================================
+v2  (predicted-normal + MOGP-Vecchia + LL-detect + detcov-filter)
+  truncation RUL RMSE = 8.46 cycles   (mean true RUL 26.0)
+  v1 (no LL/filter)   = 8.18 cycles
+  reference (old HI)  = 9.67 cycles
+  wall time = 258s
+============================================================

@@ -1,0 +1,7 @@
+V5 SENS — window sensitivity on the conditional-gate curves (rule frozen: nbase<10 -> V=19.0 else 20.2; clip 10 sigma)
+
+pooled onset RMSE per window (27 dev cases):
+  3cy=20.01  4cy=17.91  5cy=14.66  6cy=10.31  8cy=10.47  12cy=8.66  20cy=10.21
+  10h=12.40  15h=9.42  20h=8.24  25h=6.02  30h=5.21  50h=11.95
+
+wall=0.1 s

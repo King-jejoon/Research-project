@@ -1,0 +1,4 @@
+=== SENSOR-7 STUDY  ['T50', 'T48', 'Wf', 'Nc', 'T30', 'P40', 'Ps30']  (17:10) ===
+  CV seed0       rbf: zRMSE=0.0125 (502s)
+  CV seed0  matern52: zRMSE=0.0126 (522s)
+  CV seed0  matern32: zRMSE=0.0130 (529s)

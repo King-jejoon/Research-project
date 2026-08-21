@@ -1,0 +1,43 @@
+V4 STAGE 6r — extended HI grid (V*=20.2 abs, trim25, composite without Shift)
+  l1= 2.0 l2=0.25: Mon=  -30.17 Curv=  3.71 Range=0.759 Shift=0.0317 LOO RUL=7.68±0.21 shape 3/3
+  l1= 2.0 l2= 0.5: Mon=  -29.43 Curv=  3.75 Range=0.753 Shift=0.0313 LOO RUL=7.63±0.18 shape 3/3
+  l1= 2.0 l2= 1.0: Mon=  -28.39 Curv=  3.79 Range=0.744 Shift=0.0306 LOO RUL=7.59±0.16 shape 3/3
+  l1= 2.0 l2= 2.0: Mon=  -26.71 Curv=  3.84 Range=0.727 Shift=0.0294 LOO RUL=7.67±0.32 shape 3/3
+  l1= 2.0 l2= 4.0: Mon=  -24.58 Curv=  3.83 Range=0.695 Shift=0.0276 LOO RUL=7.57±0.18 shape 2/3
+  l1= 4.0 l2=0.25: Mon=  -28.01 Curv=  3.87 Range=0.747 Shift=0.0305 LOO RUL=7.57±0.16 shape 3/3
+  l1= 4.0 l2= 0.5: Mon=  -27.55 Curv=  3.88 Range=0.742 Shift=0.0301 LOO RUL=7.72±0.38 shape 3/3
+  l1= 4.0 l2= 1.0: Mon=  -26.70 Curv=  3.91 Range=0.734 Shift=0.0296 LOO RUL=7.64±0.29 shape 3/3
+  l1= 4.0 l2= 2.0: Mon=  -25.47 Curv=  3.92 Range=0.718 Shift=0.0286 LOO RUL=7.57±0.21 shape 3/3
+  l1= 4.0 l2= 4.0: Mon=  -24.03 Curv=  3.87 Range=0.685 Shift=0.0271 LOO RUL=7.55±0.14 shape 0/3
+  l1= 6.0 l2=0.25: Mon=  -26.41 Curv=  3.99 Range=0.737 Shift=0.0295 LOO RUL=7.60±0.24 shape 3/3
+  l1= 6.0 l2= 0.5: Mon=  -26.12 Curv=  3.99 Range=0.732 Shift=0.0293 LOO RUL=7.58±0.23 shape 3/3
+  l1= 6.0 l2= 1.0: Mon=  -25.58 Curv=  3.98 Range=0.725 Shift=0.0288 LOO RUL=7.56±0.20 shape 3/3
+  l1= 6.0 l2= 2.0: Mon=  -24.74 Curv=  3.97 Range=0.709 Shift=0.0280 LOO RUL=7.54±0.16 shape 3/3
+  l1= 6.0 l2= 4.0: Mon=  -23.44 Curv=  3.88 Range=0.676 Shift=0.0266 LOO RUL=7.69±0.26 shape 0/3
+  l1= 8.0 l2=0.25: Mon=  -25.45 Curv=  4.05 Range=0.728 Shift=0.0289 LOO RUL=7.54±0.18 shape 3/3
+  l1= 8.0 l2= 0.5: Mon=  -25.25 Curv=  4.04 Range=0.724 Shift=0.0287 LOO RUL=7.54±0.18 shape 3/3
+  l1= 8.0 l2= 1.0: Mon=  -24.82 Curv=  4.04 Range=0.715 Shift=0.0283 LOO RUL=7.53±0.16 shape 3/3
+  l1= 8.0 l2= 2.0: Mon=  -24.16 Curv=  3.99 Range=0.700 Shift=0.0276 LOO RUL=7.53±0.13 shape 2/3
+  l1= 8.0 l2= 4.0: Mon=  -22.92 Curv=  3.87 Range=0.667 Shift=0.0262 LOO RUL=7.69±0.23 shape 0/3
+  l1=12.0 l2=0.25: Mon=  -24.18 Curv=  4.10 Range=0.709 Shift=0.0278 LOO RUL=7.65±0.23 shape 2/3
+  l1=12.0 l2= 0.5: Mon=  -24.03 Curv=  4.08 Range=0.707 Shift=0.0276 LOO RUL=7.65±0.23 shape 2/3
+  l1=12.0 l2= 1.0: Mon=  -23.66 Curv=  4.05 Range=0.698 Shift=0.0273 LOO RUL=7.65±0.22 shape 2/3
+  l1=12.0 l2= 2.0: Mon=  -23.08 Curv=  4.00 Range=0.683 Shift=0.0266 LOO RUL=7.65±0.20 shape 0/3
+  l1=12.0 l2= 4.0: Mon=  -20.60 Curv=  3.84 Range=0.648 Shift=0.0247 LOO RUL=7.83±0.21 shape 0/3
+  l1=16.0 l2=0.25: Mon=  -23.11 Curv=  4.08 Range=0.693 Shift=0.0269 LOO RUL=7.63±0.16 shape 2/3
+  l1=16.0 l2= 0.5: Mon=  -22.92 Curv=  4.06 Range=0.690 Shift=0.0267 LOO RUL=7.63±0.16 shape 1/3
+  l1=16.0 l2= 1.0: Mon=  -22.53 Curv=  4.03 Range=0.682 Shift=0.0264 LOO RUL=7.79±0.10 shape 0/3
+  l1=16.0 l2= 2.0: Mon=  -20.52 Curv=  3.94 Range=0.662 Shift=0.0251 LOO RUL=7.83±0.17 shape 0/3
+  l1=16.0 l2= 4.0: Mon=  -19.93 Curv=  3.76 Range=0.632 Shift=0.0240 LOO RUL=7.72±0.15 shape 0/3
+
+shape-passing combos (15): [(2.0, 0.25), (2.0, 0.5), (2.0, 1.0), (2.0, 2.0), (4.0, 0.25), (4.0, 0.5), (4.0, 1.0), (4.0, 2.0), (6.0, 0.25), (6.0, 0.5), (6.0, 1.0), (6.0, 2.0), (8.0, 0.25), (8.0, 0.5), (8.0, 1.0)]
+composite ranking (Mon+Curv+Range, no Shift), top 6:
+  (8.0, 0.25): comp=0.749  LOO RUL=7.54
+  (8.0, 0.5): comp=0.730  LOO RUL=7.54
+  (8.0, 1.0): comp=0.698  LOO RUL=7.53
+  (6.0, 0.25): comp=0.695  LOO RUL=7.60
+  (6.0, 0.5): comp=0.688  LOO RUL=7.58
+  (6.0, 1.0): comp=0.662  LOO RUL=7.56
+SELECTED: lambda1=8.0, lambda2=0.25  (LOO RUL 7.54±0.18; grid best 7.53)
+
+wall=4.9 min

@@ -1,0 +1,29 @@
+# data & heavy artefacts
+*.h5
+cache*.npz
+*.pt
+research/NCMAPSS/experiments/*.npz
+!research/NCMAPSS/experiments/*_test.npz
+!research/NCMAPSS/experiments/*_dev.npz
+!research/NCMAPSS/experiments/*detsel.npz
+!research/NCMAPSS/experiments/*hi1.npz
+!research/NCMAPSS/experiments/*stage2.npz
+!research/NCMAPSS/experiments/*lambda_grid.npz
+!research/NCMAPSS/experiments/*bench*.npz
+!research/NCMAPSS/experiments/*timing*.npz
+!research/NCMAPSS/experiments/*ablat*.npz
+!research/NCMAPSS/experiments/*resummary.npz
+!research/NCMAPSS/experiments/*quality*.npz
+!research/NCMAPSS/experiments/*sens*.npz
+# re-ignore heavy per-point arrays even when they match a kept pattern
+research/NCMAPSS/experiments/*stats*.npz
+research/NCMAPSS/experiments/*resid*.npz
+research/NCMAPSS/experiments.zip
+research/NCMAPSS/experiments_backup_*/
+saved_gp_model/
+# environments / tooling
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/

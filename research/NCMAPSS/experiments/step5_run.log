@@ -1,0 +1,30 @@
+STEP4+5  final model = rbf r1 + 5% train-clean;  threshold sweep on ABSOLUTE detcov axis (grid at quantile positions [0.5, 1, 2, 3, 5, 7.5, 10, 15, 20, 25, 30, 40])
+seed0: final model built (431s)
+seed0: unit stats cached (617s total)
+seed0: sweep done  (10.3 min cum)
+seed1: final model built (490s)
+seed1: unit stats cached (683s total)
+seed1: sweep done  (21.7 min cum)
+seed2: final model built (503s)
+seed2: unit stats cached (692s total)
+seed2: sweep done  (33.2 min cum)
+
+ q-pos         abs V (s0/s1/s2) |  kept% | onset RMSE | mean delay |  |d|<=3
+------------------------------------------------------------------------------------
+     0                no filter | 100.0 |      38.95 |     +38.52 |    0.0%
+   0.5       9.615/10.143/9.686 |  99.5 |      39.03 |     +38.59 |    0.0%
+     1     10.435/10.800/10.435 |  99.0 |      39.03 |     +38.59 |    0.0%
+     2     11.089/11.328/11.091 |  98.0 |      39.03 |     +38.59 |    0.0%
+     3     11.401/11.546/11.380 |  97.0 |      39.03 |     +38.59 |    0.0%
+     5     11.685/11.759/11.653 |  95.0 |      39.07 |     +38.63 |    0.0%
+   7.5     11.843/11.881/11.796 |  92.5 |      39.16 |     +38.70 |    0.0%
+    10     11.925/11.947/11.877 |  90.0 |      39.20 |     +38.74 |    0.0%
+    15     12.019/12.023/11.965 |  85.0 |      39.20 |     +38.74 |    0.0%
+    20     12.071/12.067/12.014 |  80.0 |      39.17 |     +38.70 |    0.0%
+    25     12.106/12.096/12.047 |  75.0 |      39.20 |     +38.74 |    0.0%
+    30     12.131/12.116/12.070 |  70.0 |      39.17 |     +38.70 |    0.0%
+    40     12.166/12.146/12.102 |  60.0 |      39.17 |     +38.70 |    0.0%
+
+BEST: quantile position 0%  onset RMSE=38.95 cycles
+  (V* transfers to test units as the absolute value, no re-percentiling)
+wall = 33.2 min

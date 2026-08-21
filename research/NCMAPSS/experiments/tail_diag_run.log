@@ -1,0 +1,27 @@
+PHASE 0 — residual-tail diagnosis (frozen 5-sensor RBF rank1 GP)
+  stage-1 GP fitted (278s)  noise=0.00013
+  eval pts=8192  |z| median=0.248 p95=0.985 p99=2.332 max=34.5
+  top 1% of points carry 81% of total squared error
+
+T1 spatial repeatability (k=10 neighbours in standardized W):
+   corr(|z|, neighbour mean |z|) = 0.9020   permutation null = +0.0038 +- 0.0089
+   -> high = the SAME operating point is consistently mispredicted (systematic); ~0 = i.i.d. measurement noise
+
+T2 transient association (eval points binned by rate, 5 equal bins):
+        feature | Q1 | Q2 | Q3 | Q4 | Q5 | ratio Q5/Q1
+     |d alt/dt| | 0.42 | 0.42 | 0.37 | 0.41 | 0.31 |   0.74x
+    |d Mach/dt| | 0.36 | 0.38 | 0.40 | 0.36 | 0.39 |   1.08x
+     |d TRA/dt| |  nan |  nan |  nan |  nan | 0.38 |    nanx
+      |d T2/dt| | 0.41 | 0.38 | 0.36 | 0.37 | 0.39 |   0.94x
+
+T3 position within flight (0=start, 1=end), mean |z| in 5 bins:
+   0.27 | 0.39 | 0.56 | 0.40 | 0.29
+
+T4 per-sensor share of total squared standardized error:
+     T30:  19.5%
+     T48:  21.0%
+     T50:  20.3%
+      Nc:  19.5%
+      Wf:  19.7%
+
+wall=4.9 min  -> /Users/a1/Desktop/Research-project/research/NCMAPSS/experiments/tail_diag.npz

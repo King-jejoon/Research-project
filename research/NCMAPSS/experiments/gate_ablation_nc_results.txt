@@ -1,0 +1,21 @@
+STAGE 2 — detcov gate ablation on the NEW chain (kNN-cleaned model)
+  V* (15th pct pooled dev detcov): [20.228, 20.119, 20.298]
+
+A. DETECTION (onset RMSE, cycles; 9 units x 3 seeds)
+   gate | q70   | q75   | q80   | q85   | q90  
+   True |  3.72 |  3.84 |  4.23 |  4.33 |  4.86
+  False |  4.25 |  4.16 |  4.35 |  3.87 |  4.28
+  paired at q75: gate 3.84 vs no-gate 4.16  (Wilcoxon p=0.322, gate better 4 worse 1 of 27)
+
+B. HI -> dev LOO truncation RUL (trim25 inputs, HI_CFG frozen, beta by nested dev-LOO NASA)
+  seed0   gated: LOO RMSE=7.65  NASA=30  beta=30
+  seed1   gated: LOO RMSE=7.47  NASA=29  beta=30
+  seed2   gated: LOO RMSE=7.47  NASA=28  beta=30
+  seed0 ungated: LOO RMSE=7.57  NASA=29  beta=30
+  seed1 ungated: LOO RMSE=7.44  NASA=28  beta=30
+  seed2 ungated: LOO RMSE=7.44  NASA=28  beta=30
+  gated  : RMSE 7.53 ± 0.09   NASA 29   beta [30, 30, 30]
+  ungated: RMSE 7.48 ± 0.06   NASA 29   beta [30, 30, 30]
+  paired |error| over 108 cases: Wilcoxon p=0.014  (gated better 48, worse 60)
+
+wall=0.3 min

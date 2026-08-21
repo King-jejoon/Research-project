@@ -1,0 +1,22 @@
+DS01-005 TRANSFER — confirmed DS03 pipeline, unchanged
+  GP {'kernel': 'matern32', 'rank': 1, 'm': 18, 'npts': 8192, 'steps': 120, 'mcond': 15, 'lr': 0.05} | NPER=200 | causal drop 85% | HI {'epochs': 1000, 'lambda0': 1.0, 'lambda1': 2.0, 'lambda2': 0.25, 'init_threshold': 0.2, 'flat_w': 300.0, 'flat_m': 0.002, 'alpha': 0.001}
+[cache] building cache_ds01.npz from h5 ...
+[cache] saved (413 MB)
+  dev: units [np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6)]  lifetimes [100, 75, 100, 95, 89, 94]
+  test: units [np.int64(7), np.int64(8), np.int64(9), np.int64(10)]  lifetimes [90, 89, 80, 82]
+  seed0: stats ready (497s)
+  seed0: RUL RMSE 17.71  score 122.0  (500s)
+  seed1: stats ready (1053s)
+  seed1: RUL RMSE 16.50  score 106.3  (1055s)
+  seed2: stats ready (1595s)
+  seed2: RUL RMSE 16.59  score 107.4  (1597s)
+
+DETECTION (monitoring): acc 74.3%  |delay| 22.7 cyc
+truncation | RMSE mean | score mean
+      20% |     11.53 |        8.9
+      40% |      9.96 |        6.7
+      60% |     27.08 |       84.6
+      80% |     13.42 |       11.8
+
+DS01-005: RUL RMSE = 16.93 +/- 0.55   NASA score = 111.9 +/- 7.1
+(DS03-012 reference: 8.05 +/- 0.11 / 23.5)   wall 1597s

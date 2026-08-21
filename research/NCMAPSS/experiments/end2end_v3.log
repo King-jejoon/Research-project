@@ -1,0 +1,25 @@
+[ref] fitting reference MOGP-Vecchia on dev run-in ...
+[Stage 0] raw detcov (uncertainty) scoring ...
+[Stage 0] detcov threshold=8.196  kept 85% of points (dropped extreme-W 15%)
+[Stage 1] detection on cleaned data ...
+   unit 1: transition = 12
+   unit 2: transition = 24
+   unit 3: transition = 12
+   unit 4: transition = 15
+   unit 5: transition = 11
+   unit 6: transition = 21
+   unit 7: transition = 11
+   unit 8: transition = 12
+   unit 9: transition = 16
+[Stage 1] predicted-normal pool = 2147
+[Stage 2] MOGP-Vecchia on predicted-normal ...
+[Stage 3] residuals (cleaned) ...
+[Stage 4] neural HI ...
+[Stage 4] HI start: min=0.21 max=0.25 (want <0.5) | monotonic frac=0.70 | saved hi_curves_v3.png
+[Stage 5] RUL ...
+==============================================================
+v3  (raw detcov filter + T^2 detect + MOGP-Vecchia)
+  truncation RUL RMSE = 8.98 cycles   (mean true RUL 26.0)
+  v1 = 8.18 | reference (old HI) = 9.67
+  wall time = 120s
+==============================================================

@@ -1,0 +1,18 @@
+DS02 V6 C3 — stage-1 sparse-window MOGP, frozen internals (rbf rank1 m=18, 5 sensors), dev only
+  u2: 75 cycles, mean 3.16 h/cycle, hs-onset 17
+  u5: 89 cycles, mean 3.23 h/cycle, hs-onset 17
+  u10: 82 cycles, mean 3.23 h/cycle, hs-onset 17
+  u16: 63 cycles, mean 3.37 h/cycle, hs-onset 16
+  u18: 71 cycles, mean 3.48 h/cycle, hs-onset 17
+  u20: 66 cycles, mean 3.23 h/cycle, hs-onset 17
+seed0: train rows = 18000 (cycle<=3, 1000 per unit-cycle)
+seed0: fitted (785s, retries=0)
+seed0: dev stats written (953s total)
+seed1: train rows = 18000 (cycle<=3, 1000 per unit-cycle)
+seed1: fitted (7002s, retries=0)
+seed1: dev stats written (7170s total)
+seed2: train rows = 18000 (cycle<=3, 1000 per unit-cycle)
+seed2: fitted (827s, retries=0)
+seed2: dev stats written (972s total)
+
+wall=151.6 min

@@ -1,0 +1,11 @@
+V5C BENCH QUALITY — cross-model floor/SNR, dev 27 unit-seed cases, 3 seeds (yardstick: stage-1 mogp healthy sigma per seed)
+
+      model |         floor |           SNR | cases
+   proposed |   0.55 ± 0.15 |   37.2 ± 11.0 | 27
+       mogp |   1.21 ± 0.26 |   16.8 ±  3.2 | 27
+       llke |   1.17 ± 0.71 |   21.1 ±  9.9 | 27
+    bspline |   4.33 ± 1.40 |    4.9 ±  1.5 | 27
+         lr |   5.94 ± 0.71 |    3.1 ±  0.3 | 27
+  (lr row covers cabn — residual-identical by construction)
+
+wall=0.0 min

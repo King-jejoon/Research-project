@@ -1,0 +1,15 @@
+DS08A V6 STAGE2 — healthy-range chain, rule {'NB': 18, 'V_sparse': 20.21, 'V_dense': 17.96, 'wval': 30.0, 'wmode': 'fh', 'clip': 4.0}, stage-1 recipe (2.0, 0.25)
+seed0: conditional onsets {1: 27, 2: 18, 3: 28, 4: 16, 5: 37, 6: 23, 7: 29, 8: 22, 9: 26} (hs truth {1: 31, 2: 16, 3: 29, 4: 22, 5: 19, 6: 15, 7: 21, 8: 23, 9: 30})
+seed0: u1 window cyc<27 (26 cycles, pool 117373) -> 3000 sampled
+seed0: u2 window cyc<18 (17 cycles, pool 240788) -> 3000 sampled
+seed0: u3 window cyc<28 (27 cycles, pool 123679) -> 3000 sampled
+seed0: u4 window cyc<16 (15 cycles, pool 138900) -> 3000 sampled
+seed0: u5 window cyc<37 (36 cycles, pool 332102) -> 3000 sampled
+seed0: u6 window cyc<23 (22 cycles, pool 312051) -> 3000 sampled
+seed0: u7 window cyc<29 (28 cycles, pool 252135) -> 3000 sampled
+seed0: u8 window cyc<22 (21 cycles, pool 183846) -> 3000 sampled
+seed0: u9 window cyc<26 (25 cycles, pool 108937) -> 3000 sampled
+seed0: train total 27000 rows
+seed0: fitted (1938s, retries=0)
+seed0: hr stats written (2202s total)
+STATS_ONLY — stage-2 stats built, downstream left to the merge run

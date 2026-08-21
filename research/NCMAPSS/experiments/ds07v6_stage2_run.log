@@ -1,0 +1,65 @@
+DS07 V6 STAGE2 — healthy-range chain, rule {'NB': 6, 'V_sparse': 20.27, 'V_dense': 20.34, 'wval': 10.0, 'wmode': 'fh', 'clip': 4.0}, stage-1 recipe (8.0, 0.25)
+seed0: conditional onsets {1: 33, 2: 28, 3: 36, 4: 38, 5: 40, 6: 18} (hs truth {1: 24, 2: 19, 3: 26, 4: 36, 5: 36, 6: 19})
+seed1: conditional onsets {1: 33, 2: 23, 3: 24, 4: 43, 5: 43, 6: 16} (hs truth {1: 24, 2: 19, 3: 26, 4: 36, 5: 36, 6: 19})
+seed2: conditional onsets {1: 33, 2: 28, 3: 44, 4: 40, 5: 32, 6: 18} (hs truth {1: 24, 2: 19, 3: 26, 4: 36, 5: 36, 6: 19})
+seed0: hr stats cached (onsets match)
+seed1: hr stats cached (onsets match)
+seed2: hr stats cached (onsets match)
+
+lambda grid RE-SWEEP on stage-2 tables (med3-free)
+  l1= 2.0 l2=0.25: Mon=  -14.41 Curv=  3.29 Range=0.776 Shift=0.0259 LOO RUL=6.33±0.06 shape 3/3
+  l1= 2.0 l2= 0.5: Mon=  -14.02 Curv=  3.34 Range=0.773 Shift=0.0259 LOO RUL=6.32±0.06 shape 3/3
+  l1= 2.0 l2= 1.0: Mon=  -13.48 Curv=  3.39 Range=0.768 Shift=0.0258 LOO RUL=6.31±0.06 shape 3/3
+  l1= 2.0 l2= 2.0: Mon=  -12.95 Curv=  3.44 Range=0.759 Shift=0.0256 LOO RUL=6.31±0.07 shape 3/3
+  l1= 2.0 l2= 4.0: Mon=  -12.40 Curv=  3.50 Range=0.740 Shift=0.0251 LOO RUL=6.31±0.07 shape 3/3
+  l1= 4.0 l2=0.25: Mon=  -13.44 Curv=  3.39 Range=0.771 Shift=0.0260 LOO RUL=6.31±0.06 shape 3/3
+  l1= 4.0 l2= 0.5: Mon=  -13.26 Curv=  3.40 Range=0.769 Shift=0.0259 LOO RUL=6.31±0.06 shape 3/3
+  l1= 4.0 l2= 1.0: Mon=  -13.04 Curv=  3.43 Range=0.764 Shift=0.0259 LOO RUL=6.31±0.07 shape 3/3
+  l1= 4.0 l2= 2.0: Mon=  -12.70 Curv=  3.48 Range=0.755 Shift=0.0256 LOO RUL=6.31±0.07 shape 3/3
+  l1= 4.0 l2= 4.0: Mon=  -12.22 Curv=  3.51 Range=0.737 Shift=0.0250 LOO RUL=6.30±0.07 shape 3/3
+  l1= 6.0 l2=0.25: Mon=  -13.02 Curv=  3.45 Range=0.767 Shift=0.0261 LOO RUL=6.30±0.07 shape 3/3
+  l1= 6.0 l2= 0.5: Mon=  -12.92 Curv=  3.45 Range=0.765 Shift=0.0260 LOO RUL=6.30±0.07 shape 3/3
+  l1= 6.0 l2= 1.0: Mon=  -12.75 Curv=  3.48 Range=0.761 Shift=0.0259 LOO RUL=6.31±0.07 shape 3/3
+  l1= 6.0 l2= 2.0: Mon=  -12.49 Curv=  3.51 Range=0.752 Shift=0.0257 LOO RUL=6.31±0.07 shape 3/3
+  l1= 6.0 l2= 4.0: Mon=  -12.03 Curv=  3.52 Range=0.733 Shift=0.0250 LOO RUL=6.31±0.06 shape 3/3
+  l1= 8.0 l2=0.25: Mon=  -12.74 Curv=  3.48 Range=0.764 Shift=0.0261 LOO RUL=6.30±0.07 shape 3/3
+  l1= 8.0 l2= 0.5: Mon=  -12.66 Curv=  3.50 Range=0.762 Shift=0.0261 LOO RUL=6.30±0.07 shape 3/3
+  l1= 8.0 l2= 1.0: Mon=  -12.54 Curv=  3.51 Range=0.757 Shift=0.0260 LOO RUL=6.30±0.07 shape 3/3
+  l1= 8.0 l2= 2.0: Mon=  -12.29 Curv=  3.54 Range=0.748 Shift=0.0257 LOO RUL=6.31±0.07 shape 3/3
+  l1= 8.0 l2= 4.0: Mon=  -11.81 Curv=  3.52 Range=0.729 Shift=0.0249 LOO RUL=6.31±0.06 shape 3/3
+  l1=12.0 l2=0.25: Mon=  -12.32 Curv=  3.55 Range=0.757 Shift=0.0262 LOO RUL=6.30±0.07 shape 3/3
+  l1=12.0 l2= 0.5: Mon=  -12.24 Curv=  3.54 Range=0.754 Shift=0.0262 LOO RUL=6.30±0.07 shape 3/3
+  l1=12.0 l2= 1.0: Mon=  -11.93 Curv=  3.51 Range=0.750 Shift=0.0258 LOO RUL=6.53±0.26 shape 3/3
+  l1=12.0 l2= 2.0: Mon=  -11.74 Curv=  3.52 Range=0.741 Shift=0.0255 LOO RUL=6.53±0.25 shape 3/3
+  l1=12.0 l2= 4.0: Mon=  -11.26 Curv=  3.50 Range=0.722 Shift=0.0246 LOO RUL=6.47±0.15 shape 3/3
+  l1=16.0 l2=0.25: Mon=  -11.88 Curv=  3.54 Range=0.750 Shift=0.0260 LOO RUL=6.54±0.27 shape 3/3
+  l1=16.0 l2= 0.5: Mon=  -11.81 Curv=  3.54 Range=0.748 Shift=0.0260 LOO RUL=6.53±0.26 shape 3/3
+  l1=16.0 l2= 1.0: Mon=  -11.70 Curv=  3.53 Range=0.743 Shift=0.0257 LOO RUL=6.52±0.24 shape 3/3
+  l1=16.0 l2= 2.0: Mon=  -11.41 Curv=  3.52 Range=0.733 Shift=0.0253 LOO RUL=6.48±0.19 shape 3/3
+  l1=16.0 l2= 4.0: Mon=  -10.90 Curv=  3.47 Range=0.715 Shift=0.0244 LOO RUL=6.41±0.07 shape 3/3
+
+stage-2 grid: shape-passing combos (30): [(2.0, 0.25), (2.0, 0.5), (2.0, 1.0), (2.0, 2.0), (2.0, 4.0), (4.0, 0.25), (4.0, 0.5), (4.0, 1.0), (4.0, 2.0), (4.0, 4.0), (6.0, 0.25), (6.0, 0.5), (6.0, 1.0), (6.0, 2.0), (6.0, 4.0), (8.0, 0.25), (8.0, 0.5), (8.0, 1.0), (8.0, 2.0), (8.0, 4.0), (12.0, 0.25), (12.0, 0.5), (12.0, 1.0), (12.0, 2.0), (12.0, 4.0), (16.0, 0.25), (16.0, 0.5), (16.0, 1.0), (16.0, 2.0), (16.0, 4.0)]
+stage-2 grid: composite ranking top 6:
+  (16.0, 0.25): comp=0.761  LOO RUL=6.54
+  (12.0, 0.25): comp=0.758  LOO RUL=6.30
+  (12.0, 0.5): comp=0.750  LOO RUL=6.30
+  (16.0, 0.5): comp=0.744  LOO RUL=6.53
+  (16.0, 1.0): comp=0.727  LOO RUL=6.52
+  (12.0, 1.0): comp=0.716  LOO RUL=6.53
+stage-1 recipe (8.0, 0.25): comp 0.675 (shape 3/3), stage-2 top (16.0, 0.25) comp 0.761, gap 0.085 (tie band 0.02)
+RECIPE RE-FROZEN: (16.0, 0.25) (stage-1 recipe outside the tie band on the stage-2 tables)
+chain seed0: dev LOO=6.34 shape=OK beta=35
+chain seed1: dev LOO=6.34 shape=OK beta=35
+chain seed2: dev LOO=6.98 shape=OK beta=40
+
+HI #2 chain (healthy range, recipe (16.0, 0.25), med3): dev LOO = 6.55 ± 0.30  NASA 16.8 ± 0.3  shape 3/3  beta=[35, 35, 40]
+dev per-trunc = 8.42 / 7.37 / 5.85 / 3.55
+reference: HI #1 chain dev 6.25 ± 0.06
+
+SNR diagnostic, dev (18 unit-seed cases, ground-truth onsets, diagnostics only)
+  healthy floor RMS : c3 1.034  hr 0.280  ratio 0.29  p=7.6e-06  hr lower in 18/18
+  end-of-life signal: c3 21.535  hr 21.026  ratio 0.98
+  SNR signal/floor  : c3 22.20  hr 77.48  p=7.6e-06  hr better in 18/18
+  per-unit SNR gain (hr/c3, mean over seeds): u1 2.32x  u2 5.25x  u3 5.14x  u4 3.77x  u5 2.54x  u6 3.79x
+
+wall=3.9 min

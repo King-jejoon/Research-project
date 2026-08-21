@@ -1,0 +1,2 @@
+ONSET DETECTION: baseline GPR vs detcov-5%-cleaned GPR (DS03, truth=hs, seeds=[0, 1, 2], NPER=200, cp on fixed-LL)
+seed0: models built (A=baseline, B=clean5%)  (432s)

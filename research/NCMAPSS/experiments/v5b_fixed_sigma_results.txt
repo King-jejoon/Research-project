@@ -1,0 +1,11 @@
+V5B FIXED-SIGMA — fully symmetric scoring: every model, own fixed healthy-window residual covariance only (GP condition-dependent covariance OFF).  Dev 27 cases.
+
+             model | fixed-Sigma RMSE |  p vs cond
+    mogp cond gate |            12.10 |          —
+      mogp ungated |            12.56 |     0.0211
+              llke |             8.44 |     0.0018
+           bspline |             8.53 |     0.0015
+                lr |             9.82 |     0.0083
+              cabn |             9.82 |     0.0083
+
+wall=0.0 min

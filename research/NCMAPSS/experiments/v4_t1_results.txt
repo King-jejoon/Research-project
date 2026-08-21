@@ -1,0 +1,25 @@
+V4 T1 — model-free sensor screening, window cycle<=3, kNN k=10
+  pool cycle<=3: 252581  healthy outside window: 1596690  degraded (hs<0.5): 3722006
+
+  rank | sensor | zRMS (healthy-noise units)
+     1 |    T50 | 2.986
+     2 |    T48 | 2.174
+     3 |     Wf | 1.193
+     4 |     Nc | 1.165
+     5 |    T30 | 1.056
+     6 |    P40 | 1.055
+     7 |   Ps30 | 1.050
+     8 |     Nf | 1.027
+     9 |    T24 | 1.023
+    10 |    P24 | 1.008
+    11 |    P15 | 0.987
+    12 |    P21 | 0.987
+    13 |    P50 | 0.984
+    14 |     P2 | 0.975
+
+  top-3: ['T50', 'T48', 'Wf']
+  top-5: ['T50', 'T48', 'Wf', 'Nc', 'T30']
+  top-7: ['T50', 'T48', 'Wf', 'Nc', 'T30', 'P40', 'Ps30']
+  [old T1 (cycle<5 outputs): T50 T48 Wf Nc T30 P40 Ps30 T24 ...; old sets 3=[T48,T50,Wf] 5=[T30,T48,T50,Nc,Wf] 7=[T24,T30,T48,T50,Ps30,Nc,Wf]]
+
+wall=0.0 min

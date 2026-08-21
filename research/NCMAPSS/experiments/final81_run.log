@@ -1,0 +1,7 @@
+DS03 OFFICIAL(8,1): RMSE 7.47 ±0.08  score 18.9 ±0.1  betas=[30, 30, 30]  (10s)
+DS03 filter grid done (208s)
+DS01 OFFICIAL(8,1): RMSE 8.44 ±0.28  score 19.9 ±1.1  betas=[25, 25, 25]  (217s)
+DS01 filter grid done (382s)
+DS02 OFFICIAL(8,1): RMSE 7.87 ±0.34  score 13.3 ±1.0  betas=[30, 30, 30]  (388s)
+DS02 filter grid done (525s)
+DONE

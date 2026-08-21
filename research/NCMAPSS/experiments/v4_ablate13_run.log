@@ -1,0 +1,36 @@
+SENSITIVITY 1 — gate ablation scored by dev LOO RUL RMSE (final chain, HI recipe frozen)
+  gate off : RUL RMSE=7.12 ± 0.06  NASA=26.7
+  V=18.1 : RUL RMSE=7.12 ± 0.06  NASA=26.8  p=0.386
+  V=18.2 : RUL RMSE=7.12 ± 0.06  NASA=26.8  p=0.462
+  V=18.3 : RUL RMSE=7.12 ± 0.06  NASA=26.7  p=0.821
+  V=18.4 : RUL RMSE=7.12 ± 0.07  NASA=26.7  p=0.672
+  V=18.5 : RUL RMSE=7.12 ± 0.07  NASA=26.7  p=0.736
+  V=18.6 : RUL RMSE=7.12 ± 0.06  NASA=26.7  p=0.679
+  V=18.7 : RUL RMSE=7.12 ± 0.06  NASA=26.7  p=0.797
+  V=18.8 : RUL RMSE=7.12 ± 0.06  NASA=26.7  p=0.265
+  V=18.9 : RUL RMSE=7.11 ± 0.06  NASA=26.7  p=0.675
+  V=19.0 : RUL RMSE=7.11 ± 0.06  NASA=26.7  p=0.840
+  V=19.1 : RUL RMSE=7.11 ± 0.06  NASA=26.7  p=0.971
+  V=19.2 : RUL RMSE=7.11 ± 0.05  NASA=26.7  p=0.978
+  V=19.3 : RUL RMSE=7.12 ± 0.06  NASA=26.7  p=0.773
+  V=19.4 : RUL RMSE=7.11 ± 0.05  NASA=26.7  p=0.558
+  V=19.5 : RUL RMSE=7.13 ± 0.07  NASA=26.9  p=0.702
+  V=19.6 : RUL RMSE=7.13 ± 0.08  NASA=27.0  p=0.873
+  V=19.7 : RUL RMSE=7.12 ± 0.08  NASA=26.8  p=0.598
+  V=19.8 : RUL RMSE=7.11 ± 0.07  NASA=26.8  p=0.180
+  V=19.9 : RUL RMSE=7.11 ± 0.07  NASA=26.8  p=0.600
+  V=20.0 : RUL RMSE=7.12 ± 0.06  NASA=27.0  p=0.512
+  V=20.1 : RUL RMSE=7.16 ± 0.02  NASA=27.1  p=0.609
+  V=20.2 : RUL RMSE=7.30 ± 0.16  NASA=27.4  p=0.949
+  V=20.3 : RUL RMSE=7.15 ± 0.13  NASA=26.8  p=0.720
+  V=20.4 : RUL RMSE=7.35 ± 0.31  NASA=28.0  p=0.272
+  V=20.5 : RUL RMSE=7.32 ± 0.31  NASA=27.5  p=0.218
+
+SENSITIVITY 3 — HI loss-term ablation at V*=20.2 (delete one at a time)
+   variant |      RUL RMSE |        NASA | shape | start/end
+      base |  7.30 ± 0.16 |  27.4 ± 0.5 | 3/3 | 0.22/0.95
+     no_l0 | 12.63 ± 2.48 |  63.9 ± 22.8 | 0/3 | 0.98/1.02
+    no_end | 40.53 ± 0.48 | 2733.9 ± 107.1 | 0/3 | -0.06/-0.02
+   no_flat |  7.54 ± 0.16 |  28.4 ± 0.9 | 3/3 | 0.22/0.96
+
+wall=5.4 min

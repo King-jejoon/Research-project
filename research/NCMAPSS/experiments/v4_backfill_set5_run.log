@@ -1,0 +1,19 @@
+
+STAGE 2b BACKFILL — set5: retry ladder on Cholesky-failed cells
+   matern52 r1 seed0: rescued[d3] zRMSE=0.01453  (2717s)
+   matern52 r1 seed2: rescued[j2] zRMSE=0.01458  (1890s)
+   matern52 r2 seed0: STILL FAILS after ladder (2775s)
+   matern52 r2 seed2: rescued[j2] zRMSE=0.01461  (1880s)
+   matern52 r3 seed0: rescued[d3] zRMSE=0.01848  (2831s)
+   matern52 r3 seed2: STILL FAILS after ladder (2577s)
+
+completed table (mean zRMSE over available seeds; tags per seed: a1=first-try, j1/j2=jitter 1e-5/1e-4, d3=50-row redraw):
+     kernel |                     rank 1 |                     rank 2 |                     rank 3
+        rbf |  0.01223±0.00085[a1,a1,a1] |  0.01341±0.00193[a1,a1,a1] |  0.01345±0.00195[a1,a1,a1]
+   matern52 |  0.01357±0.00139[d3,a1,j2] |  0.01316±0.00145[xx,a1,j2] |  0.01515±0.00334[d3,a1,xx]
+   matern32 |  0.01364±0.00141[a1,a1,a1] |  0.01387±0.00143[a1,a1,a1] |  0.01393±0.00145[a1,a1,a1]
+   matern12 |  0.01563±0.00346[a1,a1,a1] |  0.01575±0.00353[a1,a1,a1] |  0.01594±0.00369[a1,a1,a1]
+
+best by mean (completed table): rbf r1 (0.01223); within-sd candidates: [('rbf', 1)]
+RESELECTED (simplicity rule, completed table): kernel=rbf, rank=1
+backfill wall=244.5 min

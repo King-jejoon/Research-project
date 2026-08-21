@@ -1,0 +1,19 @@
+STAGE-5 MODEL ZOO — HI fixed (official), truncation 20/40/60/80%, 3 seeds
+
+===== DS03 =====
+      quad [1,c2]  (current): RMSE  15.08 ± 0.49   score     93.9 ±   8.0
+             cubic [1,c2,c3]: RMSE   7.14 ± 0.04   score     18.9 ±   0.3
+           quartic [1,c2,c4]: RMSE   7.06 ± 0.17   score     18.7 ±   1.0
+              exp [1,e^bc-1]: RMSE   9.65 ± 0.10   score     37.1 ±   0.9
+       cpquad max(c-tau,0)^2: RMSE   7.82 ± 0.30   score     20.9 ±   0.9
+      REF full quad [1,c,c2]: RMSE   8.05 ± 0.11   score     23.5 ±   0.6
+
+===== DS01 =====
+      quad [1,c2]  (current): RMSE  37.85 ± 1.15   score   1294.8 ± 180.9
+             cubic [1,c2,c3]: RMSE   8.13 ± 0.50   score     16.6 ±   2.3
+           quartic [1,c2,c4]: RMSE   8.79 ± 0.75   score     21.5 ±   4.3
+              exp [1,e^bc-1]: RMSE  11.95 ± 0.53   score     38.6 ±   3.9
+       cpquad max(c-tau,0)^2: RMSE   7.90 ± 0.41   score     16.1 ±   1.6
+      REF full quad [1,c,c2]: RMSE  16.93 ± 0.55   score    111.9 ±   7.1
+
+wall 17s

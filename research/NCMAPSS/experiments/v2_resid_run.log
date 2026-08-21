@@ -1,0 +1,22 @@
+V2 STEP 2 — residuals (200/cycle) + detcov validity, colleague method (mean LL + full-range mean-drop; only the L22 inverse fixed)
+seed0: model rebuilt from stored indices (589s)
+seed0: point stats cached (804s total)
+seed1: model rebuilt from stored indices (653s)
+seed1: point stats cached (883s total)
+seed2: model rebuilt from stored indices (660s)
+seed2: point stats cached (883s total)
+seed0: detcov pct[5,50,95]=[18.803 20.322 20.476]  V grid=[18.803, 19.589, 19.876, 20.114]
+seed1: detcov pct[5,50,95]=[18.114 20.214 20.406]  V grid=[18.114, 19.159, 19.583, 19.926]
+seed2: detcov pct[5,50,95]=[19.073 20.293 20.423]  V grid=[19.073, 19.697, 19.92, 20.118]
+
+state-identification RMSE (cycles; 9 dev units x 3 seeds = 27 cases)
+     no filter: RMSE= 40.05  mean delay=+39.56  |d|<=3:   0%
+          V@p5: RMSE= 40.06  mean delay=+39.56  |d|<=3:   0%   vs off: better 3 worse 2  Wilcoxon p=0.758
+         V@p10: RMSE= 40.07  mean delay=+39.56  |d|<=3:   0%   vs off: better 4 worse 3  Wilcoxon p=0.762
+         V@p15: RMSE= 40.03  mean delay=+39.52  |d|<=3:   0%   vs off: better 5 worse 3  Wilcoxon p=0.564
+         V@p25: RMSE= 39.94  mean delay=+39.44  |d|<=3:   0%   vs off: better 5 worse 2  Wilcoxon p=0.376
+
+best filter: V@p25 (abs [20.11, 19.93, 20.12])  RMSE 39.94  vs no-filter 40.05
+figure: /Users/a1/Desktop/Research-project/research/NCMAPSS/experiments/fig_v2_meanresid_u7.png
+
+wall=42.9 min

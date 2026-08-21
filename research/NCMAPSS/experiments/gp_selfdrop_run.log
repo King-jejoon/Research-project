@@ -1,0 +1,13 @@
+
+===== GP SELF-DROP experiment  07-16 02:58 gpdrops=[0.5, 0.25, 0.75] smoke=False =====
+  GP: s3 matern32 r1 m18 npts=8192 steps=120 lr=0.05 | cand=32768 held=4096 NPER=200 | HI final(L_flat) | ds_drops=[0.0, 0.6, 0.85]
+
+[control gpdrop=0]  det acc=78.5%  |delay|=15.5
+  ds_drop=0%: RMSE 8.60 ±0.03  score 27.2  s9->s10 1.74->1.87  PASS
+  ds_drop=60%: RMSE 8.20 ±0.09  score 24.0  s9->s10 1.77->1.85  PASS
+  ds_drop=85%: RMSE 8.05 ±0.11  score 23.5  s9->s10 1.72->1.84  PASS
+  g50 s0: heldout resid RMSE ['T48', 'T50', 'Wf'] base=[2.073, 1.41, 0.011] filt=[7.669, 4.292, 0.037]  m2 base=0.23 filt=1.75  surv=16397  (344s)
+  g50 s0: full stats ready (647s total)
+  g50 s1: heldout resid RMSE ['T48', 'T50', 'Wf'] base=[2.276, 1.513, 0.011] filt=[7.274, 3.939, 0.036]  m2 base=0.24 filt=1.32  surv=16393  (458s)
+  g50 s1: full stats ready (828s total)
+  g50 s2: heldout resid RMSE ['T48', 'T50', 'Wf'] base=[2.205, 1.309, 0.011] filt=[6.843, 3.835, 0.037]  m2 base=0.20 filt=1.21  surv=16394  (428s)

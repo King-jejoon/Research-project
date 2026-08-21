@@ -1,0 +1,22 @@
+V3 ONE-TIME TEST VERIFICATION (frozen chain; DS03 test 2nd opening as a dataset — recorded)
+seed0: model rebuilt (591s)
+seed0: test stats ready, V*=19.88 (abs, from dev)
+seed0 onset: u10:t18/d33(+15)  u11:t19/d30(+11)  u12:t37/d45(+8)  u13:t19/d25(+6)  u14:t36/d38(+2)  u15:t25/d40(+15)
+seed0 RUL: beta=30  test RMSE=7.45  NASA=19.3  (735s total)
+seed1: model rebuilt (616s)
+seed1: test stats ready, V*=19.58 (abs, from dev)
+seed1 onset: u10:t18/d37(+19)  u11:t19/d26(+7)  u12:t37/d46(+9)  u13:t19/d32(+13)  u14:t36/d40(+4)  u15:t25/d36(+11)
+seed1 RUL: beta=35  test RMSE=8.26  NASA=20.5  (742s total)
+seed2: model rebuilt (600s)
+seed2: test stats ready, V*=19.92 (abs, from dev)
+seed2 onset: u10:t18/d34(+16)  u11:t19/d28(+9)  u12:t37/d45(+8)  u13:t19/d31(+12)  u14:t36/d40(+4)  u15:t25/d28(+3)
+seed2 RUL: beta=35  test RMSE=8.00  NASA=18.9  (728s total)
+
+ONSET (test 6u x 3sd): RMSE=10.65 cyc  mean delay=+9.56  |d|<=3: 11%
+RUL  (test 6u x 4fr x 3sd): RMSE=7.90 ± 0.34   NASA=19.6 ± 0.7
+  20%: RMSE= 11.32  NASA=  27.4
+  40%: RMSE=  9.48  NASA=  19.8
+  60%: RMSE=  4.93  NASA=   7.8
+  80%: RMSE=  2.83  NASA=   3.7
+
+wall=36.8 min

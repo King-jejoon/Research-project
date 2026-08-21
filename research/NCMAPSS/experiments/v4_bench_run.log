@@ -1,0 +1,94 @@
+V4 BENCHMARK — model level, 5-fold CV x 3 seeds on the 27k GPR training data (sensors ['T30', 'T48', 'T50', 'Nc', 'Wf'])
+seed0 fold0       lr: zRMSE=0.08587  LL= 10.636  fit=   0.0s inf=  0.0s  hp={}
+seed0 fold0  bspline: zRMSE=0.05548  LL= 14.996  fit=   0.1s inf=  0.1s  hp={'n_knots': 30}
+seed0 fold0     llke: zRMSE=0.01014  LL=  7.747  fit=   3.0s inf= 15.6s  hp={'h': 0.1}
+seed0 fold0     cabn: zRMSE=0.08587  LL= 10.602  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed0 fold0     mogp: zRMSE=0.01092  LL= 14.994  fit= 844.0s inf=  8.4s
+seed0 fold1       lr: zRMSE=0.08425  LL= 10.718  fit=   0.0s inf=  0.0s  hp={}
+seed0 fold1  bspline: zRMSE=0.05392  LL= 15.110  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed0 fold1     llke: zRMSE=0.01104  LL= 15.721  fit=   2.9s inf= 15.3s  hp={'h': 0.15}
+seed0 fold1     cabn: zRMSE=0.08425  LL= 10.691  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed0 fold1     mogp: zRMSE=0.01080  LL= 15.024  fit= 835.3s inf= 10.0s
+seed0 fold2       lr: zRMSE=0.08465  LL= 10.551  fit=   0.0s inf=  0.0s  hp={}
+seed0 fold2  bspline: zRMSE=0.05440  LL= 15.075  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed0 fold2     llke: zRMSE=0.01239  LL= 20.044  fit=   3.0s inf= 15.5s  hp={'h': 0.1}
+seed0 fold2     cabn: zRMSE=0.08465  LL= 10.572  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed0 fold2     mogp: zRMSE=0.01272  LL= 14.867  fit= 913.5s inf=  9.4s
+seed0 fold3       lr: zRMSE=0.08547  LL= 10.708  fit=   0.0s inf=  0.0s  hp={}
+seed0 fold3  bspline: zRMSE=0.05425  LL= 15.317  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed0 fold3     llke: zRMSE=0.01163  LL= 21.272  fit=   2.9s inf= 15.1s  hp={'h': 0.15}
+seed0 fold3     cabn: zRMSE=0.08547  LL= 10.699  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed0 fold3     mogp: zRMSE=0.01168  LL= 14.995  fit= 921.7s inf=  7.3s
+seed0 fold4       lr: zRMSE=0.08610  LL= 10.522  fit=   0.0s inf=  0.0s  hp={}
+seed0 fold4  bspline: zRMSE=0.05523  LL= 14.137  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed0 fold4     llke: zRMSE=0.01127  LL= -1.215  fit=   2.9s inf= 15.5s  hp={'h': 0.1}
+seed0 fold4     cabn: zRMSE=0.08610  LL= 10.491  fit=   0.1s inf=  0.0s  hp={'lam1': 0.0}
+seed0 fold4     mogp: zRMSE=0.01195  LL= 14.878  fit= 988.1s inf=  8.5s
+seed1 fold0       lr: zRMSE=0.08658  LL= 10.846  fit=   0.0s inf=  0.0s  hp={}
+seed1 fold0  bspline: zRMSE=0.05615  LL= 15.684  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed1 fold0     llke: zRMSE=0.00852  LL= 22.122  fit=   2.9s inf= 15.1s  hp={'h': 0.15}
+seed1 fold0     cabn: zRMSE=0.08658  LL= 10.788  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed1 fold0     mogp: zRMSE=0.00978  LL= 15.269  fit= 922.3s inf=  9.0s
+seed1 fold1       lr: zRMSE=0.08476  LL= 10.887  fit=   0.0s inf=  0.0s  hp={}
+seed1 fold1  bspline: zRMSE=0.05359  LL= 15.797  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed1 fold1     llke: zRMSE=0.00949  LL= 20.840  fit=   2.8s inf= 15.0s  hp={'h': 0.2}
+seed1 fold1     cabn: zRMSE=0.08476  LL= 10.837  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed1 fold1     mogp: zRMSE=0.00907  LL= 15.251  fit= 964.6s inf=  9.7s
+seed1 fold2       lr: zRMSE=0.08619  LL= 10.507  fit=   0.0s inf=  0.0s  hp={}
+seed1 fold2  bspline: zRMSE=0.05545  LL=  9.687  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed1 fold2     llke: zRMSE=0.01170  LL=  1.596  fit=   2.9s inf= 15.5s  hp={'h': 0.1}
+seed1 fold2     cabn: zRMSE=0.08619  LL= 10.431  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed1 fold2     mogp: zRMSE=0.01057  LL= 15.027  fit= 900.9s inf=  9.8s
+seed1 fold3       lr: zRMSE=0.08453  LL= 10.922  fit=   0.0s inf=  0.0s  hp={}
+seed1 fold3  bspline: zRMSE=0.05355  LL= 15.806  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed1 fold3     llke: zRMSE=0.00818  LL= 23.049  fit=   3.0s inf= 15.5s  hp={'h': 0.1}
+seed1 fold3     cabn: zRMSE=0.08453  LL= 10.903  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed1 fold3     mogp: zRMSE=0.00868  LL= 15.276  fit= 899.1s inf=  9.2s
+seed1 fold4       lr: zRMSE=0.08364  LL= 10.938  fit=   0.0s inf=  0.0s  hp={}
+seed1 fold4  bspline: zRMSE=0.05416  LL= 15.757  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed1 fold4     llke: zRMSE=0.01046  LL= 11.167  fit=   2.9s inf= 15.4s  hp={'h': 0.1}
+seed1 fold4     cabn: zRMSE=0.08364  LL= 10.871  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed1 fold4     mogp: zRMSE=0.00851  LL= 15.293  fit= 967.3s inf=  8.1s
+seed2 fold0       lr: zRMSE=0.08505  LL= 10.555  fit=   0.0s inf=  0.0s  hp={}
+seed2 fold0  bspline: zRMSE=0.05579  LL= 14.572  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed2 fold0     llke: zRMSE=0.01065  LL= 18.714  fit=   2.9s inf= 15.1s  hp={'h': 0.15}
+seed2 fold0     cabn: zRMSE=0.08505  LL= 10.526  fit=   0.1s inf=  0.0s  hp={'lam1': 0.0}
+seed2 fold0     mogp: zRMSE=0.01113  LL= 14.923  fit= 953.7s inf=  9.9s
+seed2 fold1       lr: zRMSE=0.08653  LL= 10.094  fit=   0.0s inf=  0.0s  hp={}
+seed2 fold1  bspline: zRMSE=0.05571  LL= 14.529  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed2 fold1     llke: zRMSE=0.01531  LL= 19.860  fit=   2.9s inf= 15.1s  hp={'h': 0.15}
+seed2 fold1     cabn: zRMSE=0.08653  LL= 10.148  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed2 fold1     mogp: zRMSE=0.01525  LL= 14.144  fit= 933.1s inf=  9.1s
+seed2 fold2       lr: zRMSE=0.08482  LL= 10.494  fit=   0.0s inf=  0.0s  hp={}
+seed2 fold2  bspline: zRMSE=0.05501  LL= 14.854  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed2 fold2     llke: zRMSE=0.01212  LL= 19.990  fit=   3.0s inf= 15.5s  hp={'h': 0.1}
+seed2 fold2     cabn: zRMSE=0.08482  LL= 10.483  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed2 fold2     mogp: zRMSE=0.01338  LL= 14.868  fit= 906.5s inf=  9.1s
+seed2 fold3       lr: zRMSE=0.08581  LL= 10.703  fit=   0.0s inf=  0.0s  hp={}
+seed2 fold3  bspline: zRMSE=0.05464  LL= 15.027  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed2 fold3     llke: zRMSE=0.00993  LL= 18.725  fit=   2.9s inf= 15.1s  hp={'h': 0.15}
+seed2 fold3     cabn: zRMSE=0.08581  LL= 10.642  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed2 fold3     mogp: zRMSE=0.01063  LL= 14.970  fit= 924.1s inf=  9.4s
+seed2 fold4       lr: zRMSE=0.08747  LL= 10.512  fit=   0.0s inf=  0.0s  hp={}
+seed2 fold4  bspline: zRMSE=0.05608  LL= 14.556  fit=   0.1s inf=  0.2s  hp={'n_knots': 30}
+seed2 fold4     llke: zRMSE=0.01092  LL=  9.118  fit=   2.9s inf= 15.1s  hp={'h': 0.15}
+seed2 fold4     cabn: zRMSE=0.08747  LL= 10.476  fit=   0.0s inf=  0.0s  hp={'lam1': 0.0}
+seed2 fold4     mogp: zRMSE=0.01147  LL= 14.888  fit= 945.8s inf=  9.5s
+
+SUMMARY — 15 fold-evaluations (5-fold CV x 3 seeds), mean ± sd
+     model |             zRMSE |          pred LL |    fit s |  infer s
+      mogp | 0.01110 ± 0.00174 |   14.978 ± 0.270 |    921.3 |     9.09
+      llke | 0.01092 ± 0.00166 |   15.250 ± 7.459 |      2.9 |    15.30
+   bspline | 0.05489 ± 0.00085 |   14.727 ± 1.436 |      0.1 |     0.15
+        lr | 0.08545 ± 0.00100 |   10.639 ± 0.211 |      0.0 |     0.00
+      cabn | 0.08545 ± 0.00100 |   10.611 ± 0.192 |      0.0 |     0.00
+
+per-sensor raw RMSE (mean over 15 folds):
+     model |      T30 |      T48 |      T50 |       Nc |       Wf
+      mogp |   0.2712 |   1.3287 |   1.2849 |   0.9532 |   0.0047
+      llke |   0.2444 |   1.3480 |   1.2618 |   0.8621 |   0.0045
+   bspline |   0.6840 |   2.3031 |   1.5658 |   1.6218 |   0.0945
+        lr |   3.9057 |   6.8928 |   2.3012 |  16.4526 |   0.1232
+      cabn |   3.9057 |   6.8928 |   2.3012 |  16.4526 |   0.1232
+
+wall=255.5 min

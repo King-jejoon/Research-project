@@ -1,0 +1,51 @@
+CLEANING SWEEP ON ABSOLUTE detcov AXIS  (final 5-sensor RBF rank1)
+  V grid (absolute, keep detcov>=V)=[None, 17.0, 19.0, 19.5, 19.7, 19.85, 20.0, 20.1, 20.2]  seeds=[0, 1, 2]
+  V is the independent variable; removed fraction is a derived by-product
+  select: min healthy-gen zRMSE -> V*
+  pool cycle<5: 326008 | healthy-gen rows: 1523263
+seed0: stage-1 GP + candidate detcov (313s) detcov[min,p1,p2,p5,p50,max]=[15.077,19.599,19.826,20.023,20.330,20.465]
+  seed0 V=none  removed= 0.0%  healthy-gen zRMSE=1.0114 (held-in 1.0013)  (21s)
+  seed0 V= 17.00  removed= 0.0%  healthy-gen zRMSE=0.6735 (held-in 1.0071)  (336s)
+  seed0 V= 19.00  removed= 0.3%  healthy-gen zRMSE=0.6669 (held-in 1.0212)  (320s)
+  seed0 V= 19.50  removed= 0.8%  healthy-gen zRMSE=0.5550 (held-in 1.0297)  (320s)
+  seed0 V= 19.70  removed= 1.4%  healthy-gen zRMSE=0.6245 (held-in 1.0023)  (320s)
+  seed0 V= 19.85  removed= 2.2%  healthy-gen zRMSE=0.5491 (held-in 1.1454)  (310s)
+  seed0 V= 20.00  removed= 4.4%  healthy-gen zRMSE=0.5938 (held-in 1.1551)  (306s)
+  seed0 V= 20.10  removed= 8.0%  healthy-gen zRMSE=0.6239 (held-in 1.0881)  (314s)
+  seed0 V= 20.20  removed=16.0%  healthy-gen zRMSE=0.6760 (held-in 1.3577)  (313s)
+seed1: stage-1 GP + candidate detcov (310s) detcov[min,p1,p2,p5,p50,max]=[14.817,19.709,19.873,20.066,20.363,20.489]
+  seed1 V=none  removed= 0.0%  healthy-gen zRMSE=1.0578 (held-in 1.0003)  (22s)
+  seed1 V= 17.00  removed= 0.0%  healthy-gen zRMSE=1.0627 (held-in 1.0136)  (335s)
+  seed1 V= 19.00  removed= 0.2%  healthy-gen zRMSE=1.0751 (held-in 1.0442)  (346s)
+  seed1 V= 19.50  removed= 0.6%  healthy-gen zRMSE=1.1353 (held-in 1.0383)  (315s)
+  seed1 V= 19.70  removed= 1.0%  healthy-gen zRMSE=1.0477 (held-in 1.0794)  (319s)
+  seed1 V= 19.85  removed= 1.8%  healthy-gen zRMSE=1.0192 (held-in 1.0617)  (327s)
+  seed1 V= 20.00  removed= 3.5%  healthy-gen zRMSE=1.0722 (held-in 1.2731)  (329s)
+  seed1 V= 20.10  removed= 6.1%  healthy-gen zRMSE=1.1250 (held-in 1.1469)  (325s)
+  seed1 V= 20.20  removed=11.6%  healthy-gen zRMSE=1.1400 (held-in 1.3760)  (276s)
+seed2: stage-1 GP + candidate detcov (319s) detcov[min,p1,p2,p5,p50,max]=[15.738,19.607,19.793,20.000,20.335,20.469]
+  seed2 V=none  removed= 0.0%  healthy-gen zRMSE=1.0643 (held-in 1.0006)  (19s)
+  seed2 V= 17.00  removed= 0.0%  healthy-gen zRMSE=1.0139 (held-in 1.0582)  (302s)
+  seed2 V= 19.00  removed= 0.3%  healthy-gen zRMSE=1.1061 (held-in 1.0301)  (348s)
+  seed2 V= 19.50  removed= 0.8%  healthy-gen zRMSE=1.0868 (held-in 1.0352)  (376s)
+  seed2 V= 19.70  removed= 1.4%  healthy-gen zRMSE=1.1119 (held-in 1.2257)  (376s)
+  seed2 V= 19.85  removed= 2.6%  healthy-gen zRMSE=1.3297 (held-in 1.2004)  (382s)
+  seed2 V= 20.00  removed= 5.0%  healthy-gen zRMSE=1.1805 (held-in 1.2440)  (310s)
+  seed2 V= 20.10  removed= 8.4%  healthy-gen zRMSE=1.6353 (held-in 1.7948)  (297s)
+  seed2 V= 20.20  removed=15.9%  healthy-gen zRMSE=1.4309 (held-in 1.9335)  (277s)
+
+ V (abs) | removed% (mean) |    healthy-gen zRMSE |    held-in zRMSE | T48 gen
+----------------------------------------------------------------------------------
+    none |            0.0% |     1.0445 ± 0.0236  |           1.0007 |   2.760
+   17.00 |            0.0% |     0.9167 ± 0.1731  |           1.0263 |   2.346
+   19.00 |            0.3% |     0.9494 ± 0.2001  |           1.0318 |   2.342
+   19.50 |            0.7% |     0.9257 ± 0.2629  |           1.0344 |   2.336
+   19.70 |            1.2% |     0.9280 ± 0.2162  |           1.1025 |   2.308
+   19.85 |            2.2% |     0.9660 ± 0.3209  |           1.1358 |   2.377
+   20.00 |            4.3% |     0.9489 ± 0.2549  |           1.2241 |   2.366
+   20.10 |            7.5% |     1.1281 ± 0.4129  |           1.3433 |   2.693
+   20.20 |           14.5% |     1.0823 ± 0.3108  |           1.5557 |   2.685
+
+V* (min healthy-gen zRMSE, absolute) = 17.00  removed=0.0%  zRMSE=0.9167 ± 0.1731
+
+wall total = 146.3 min  -> /Users/a1/Desktop/Research-project/research/NCMAPSS/experiments/cleaning_absV_sweep.npz

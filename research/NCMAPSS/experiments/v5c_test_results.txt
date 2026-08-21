@@ -1,0 +1,24 @@
+V5C TEST — THIRTEENTH DS03 test opening, pre-registered: proposed healthy-range chain (ungated downstream), frozen on dev
+seed0: dev LOO=7.49 shape=OK beta=30
+seed1: dev LOO=7.61 shape=OK beta=30
+seed2: dev LOO=7.57 shape=OK beta=30
+SANITY dev = 7.56 (frozen v5c_dev 7.56)
+seed0: gp loaded
+seed0: test stats written (100s)
+seed1: gp loaded
+seed1: test stats written (100s)
+seed2: gp loaded
+seed2: test stats written (102s)
+seed0: test=7.13 NASA=17.8
+seed1: test=7.18 NASA=17.8
+seed2: test=7.25 NASA=17.4
+
+V5C test RUL = 7.18 ± 0.05  NASA 17.7 ± 0.2
+test per-trunc = 10.92 / 7.63 / 4.78 / 2.48
+paired |err| (72 preds, unit n=6 caveat): vs official chain 7.52 p=0.579 | vs old healthy ablation 7.26 p=0.084
+
+onset pairing sanity: official conditional test RMSE = 8.54 (expected 8.54)
+onset secondary: proposed ungated test RMSE = 9.21 vs official 8.54, paired p=0.155 (18 cases)
+onset dev reference (circular, 2-pass): proposed ungated dev RMSE = 8.68 vs official 5.21
+
+wall=5.3 min

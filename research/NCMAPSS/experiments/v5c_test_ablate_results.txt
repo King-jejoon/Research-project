@@ -1,0 +1,21 @@
+V5C TEST ABLATE — FIFTEENTH DS03 test opening, pre-registered: (a) HI#2 loss-term ablation on test, (b) cross-model quality extension to test
+SANITY dev base = 7.56 (expected 7.56 ± 0.05)
+  dev     base:   7.56 ± 0.05  shape 3/3
+  dev    no_l0:   9.78 ± 0.51  shape 0/3
+  dev   no_end:  39.32 ± 1.78  shape 0/3
+  dev  no_flat:   8.42 ± 0.57  shape 3/3
+
+(a) HI#2 loss-term variants on test
+  SANITY base test = 7.18 (expected 7.18 ± 0.05)
+      base | test RUL   7.18 ±  0.05 | NASA    17.7 | p vs base      —
+     no_l0 | test RUL   9.86 ±  0.55 | NASA    26.6 | p vs base 0.0005
+    no_end | test RUL  39.10 ±  1.82 | NASA  1495.3 | p vs base 0.0000
+   no_flat | test RUL   8.31 ±  0.68 | NASA    21.1 | p vs base 0.0202
+
+(b) cross-model quality on test (18 cases, stage-1 sigma yardstick)
+      llke | floor  1.47 ± 1.21 | SNR   18.2 ±  8.4
+   bspline | floor  5.09 ± 1.86 | SNR    3.9 ±  1.3
+        lr | floor  5.90 ± 0.61 | SNR    3.0 ±  0.2
+  (reprint, 14th opening)  mogp floor 1.29 SNR 15.1 | proposed floor 0.60 SNR 34.1
+
+wall=0.8 min

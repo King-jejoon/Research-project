@@ -1,0 +1,41 @@
+PHASE 1 — RAW-DATA CLEANING (model-free robust neighbour score)
+  absolute cuts (score > c): [5.0, 3.0, 2.0]   seeds=[0, 1, 2]   k=20
+  every cut is paired with a RANDOM removal of the same size (control)
+  pool=326008  early(cyc<=8)=314662  healthy=1523263  degraded=3722006
+  raw scores computed for the whole pool (2s)  p50=0.59 p99=13.75
+    cut score>5.0: removes 3.74% of the pool
+    cut score>3.0: removes 6.80% of the pool
+    cut score>2.0: removes 10.79% of the pool
+  seed0     baseline: [redraws=0] in=1.0008 early=1.0131 (trim 0.4118, med 0.3319) gen=1.0572  sep=1.323  (334s)
+  seed0      clean>5: [redraws=0] in=0.9509 early=1.0800 (trim 0.3743, med 0.3081) gen=0.9792  sep=1.228  (346s)
+  seed0   random3.7%: [redraws=0] in=1.0672 early=0.9240 (trim 0.4159, med 0.3298) gen=1.1799  sep=1.448  (363s)
+  seed0      clean>3: [redraws=0] in=0.8475 early=1.1346 (trim 0.3884, med 0.3237) gen=1.0629  sep=1.156  (366s)
+  seed0   random6.8%: [redraws=0] in=0.9356 early=0.9675 (trim 0.4244, med 0.3311) gen=1.0274  sep=1.367  (367s)
+  seed0      clean>2: [redraws=0] in=0.8940 early=1.1210 (trim 0.3977, med 0.3266) gen=1.2178  sep=1.187  (352s)
+  seed0  random10.8%: [redraws=0] in=0.9222 early=0.8686 (trim 0.4017, med 0.3324) gen=0.9754  sep=1.509  (337s)
+  seed1     baseline: [redraws=0] in=1.0008 early=1.0128 (trim 0.4053, med 0.3167) gen=1.0502  sep=1.322  (337s)
+  seed1      clean>5: [redraws=0] in=1.0156 early=0.8546 (trim 0.3631, med 0.2924) gen=0.9546  sep=1.529  (328s)
+  seed1   random3.7%: [redraws=0] in=0.9722 early=1.0924 (trim 0.3589, med 0.2971) gen=1.1497  sep=1.193  (352s)
+  seed1      clean>3: [redraws=0] in=0.9227 early=0.8438 (trim 0.3468, med 0.2913) gen=0.8774  sep=1.536  (368s)
+  seed1   random6.8%: [redraws=0] in=0.9518 early=0.8161 (trim 0.3744, med 0.3114) gen=1.1102  sep=1.605  (352s)
+  seed1      clean>2: [redraws=0] in=1.0186 early=1.0166 (trim 0.3514, med 0.2966) gen=0.9216  sep=1.277  (352s)
+  seed1  random10.8%: [redraws=1] in=0.9905 early=0.8309 (trim 0.3629, med 0.3025) gen=0.8816  sep=1.557  (618s)
+  seed2     baseline: [redraws=0] in=1.0011 early=1.0116 (trim 0.4072, med 0.3217) gen=1.0611  sep=1.336  (353s)
+  seed2      clean>5: [redraws=0] in=0.9623 early=0.9513 (trim 0.3719, med 0.3108) gen=1.0017  sep=1.436  (347s)
+  seed2   random3.7%: [redraws=0] in=1.0715 early=1.1809 (trim 0.4238, med 0.3429) gen=1.4259  sep=1.194  (332s)
+  seed2      clean>3: [redraws=0] in=0.9733 early=1.1932 (trim 0.3972, med 0.3146) gen=1.2094  sep=1.138  (328s)
+  seed2   random6.8%: [redraws=0] in=1.0064 early=0.9333 (trim 0.4099, med 0.3270) gen=1.2986  sep=1.501  (322s)
+  seed2      clean>2: [redraws=0] in=0.9849 early=0.8665 (trim 0.3779, med 0.3122) gen=1.0000  sep=1.556  (315s)
+  seed2  random10.8%: [redraws=0] in=1.8484 early=1.6209 (trim 0.4578, med 0.3571) gen=1.5704  sep=0.868  (328s)
+
+      config |         eval_in |      eval_early |      early trim |        eval_gen |    separation
+----------------------------------------------------------------------------------------------------
+    baseline |  1.0009±0.0002 |  1.0125±0.0006 |  0.4081±0.0027 |  1.0562±0.0045 |  1.327±0.006
+     clean>5 |  0.9762±0.0282 |  0.9619±0.0923 |  0.3698±0.0048 |  0.9785±0.0192 |  1.397±0.126
+  random3.7% |  1.0369±0.0458 |  1.0658±0.1066 |  0.3995±0.0289 |  1.2518±0.1237 |  1.278±0.120
+     clean>3 |  0.9145±0.0517 |  1.0572±0.1528 |  0.3775±0.0220 |  1.0499±0.1359 |  1.277±0.183
+  random6.8% |  0.9646±0.0303 |  0.9057±0.0648 |  0.4029±0.0210 |  1.1454±0.1135 |  1.491±0.098
+     clean>2 |  0.9658±0.0526 |  1.0014±0.1045 |  0.3757±0.0190 |  1.0464±0.1253 |  1.340±0.157
+ random10.8% |  1.2537±0.4215 |  1.1068±0.3639 |  0.4075±0.0390 |  1.1425±0.3050 |  1.311±0.314
+
+wall=125.0 min

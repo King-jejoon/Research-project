@@ -1,0 +1,33 @@
+COLLEAGUE DEMO REPRO  DS02-006  unit=10  seed=0  m=100/200  steps=200 lr=0.01  probe=False
+[data] dev rows=5263447  W_var=[np.str_('alt'), np.str_('Mach'), np.str_('TRA'), np.str_('T2')]  outputs=[np.str_('T30'), np.str_('T48'), np.str_('T50'), np.str_('Nc'), np.str_('Wf')]  (0s)
+[data] train (8192, 4) from cycle<5 pool, inputs=[alt,Mach,TRA,T2] (FIXED)
+step    1/200: vecchia log likelihood = -46207.000000
+step   20/200: vecchia log likelihood = -43014.515625
+step   40/200: vecchia log likelihood = -39592.843750
+step   60/200: vecchia log likelihood = -36056.148438
+step   80/200: vecchia log likelihood = -32380.082031
+step  100/200: vecchia log likelihood = -28564.162109
+step  120/200: vecchia log likelihood = -24622.681641
+step  140/200: vecchia log likelihood = -20589.990234
+step  160/200: vecchia log likelihood = -16498.166016
+step  180/200: vecchia log likelihood = -12340.276367
+step  200/200: vecchia log likelihood = -8127.123535
+[train] m=100 steps=200 lr=0.01: final LL=-8127.1 (3214s)
+/Users/a1/Desktop/Research-project/research/NCMAPSS/experiments/exp_colleague_repro.py:176: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/TensorShape.cpp:4419.)
+  quadratic.append(-0.5 * (A.T @ A).reshape(-1))
+  cycle 10/82  (23s)
+  cycle 20/82  (45s)
+  cycle 30/82  (67s)
+  cycle 40/82  (91s)
+  cycle 50/82  (114s)
+  cycle 60/82  (137s)
+  cycle 70/82  (161s)
+  cycle 80/82  (186s)
+  cycle 82/82  (191s)
+[filter] detcov>3.6: kept 9434/9840 pts (95.9%)  detcov pct [5,25,50,75,95]=[3.61 3.68 3.7  3.7  3.71]
+[filter] kept per cycle: min=74 max=120 / 120
+[onset] correct hs==0 first cycle = 17   notebook cell-14 value (full-frame iloc bug) = 16
+[changepoint] raw LL: tau+1=23   filtered LL: tau+1=23   (true onset=17)
+[gp-quality] healthy-cycle residual RMS (scaled): raw=0.0254  filtered=0.0239
+[gp-quality] all-cycle    residual RMS (scaled): raw=0.0728  filtered=0.0700
+DONE  wall=191s

@@ -1,0 +1,60 @@
+STEP1 KERNEL x RANK CV  kernels=['rbf', 'matern52', 'matern32', 'matern12'] ranks=[1, 2, 3] seeds=[0, 1, 2]
+  n_train=8192 n_eval=8192 (cycle<5, shared per seed)  sensors=['T48', 'T50', 'Wf']  inputs=[alt,Mach,TRA,T2]  m=18 steps=120 lr=0.1
+  seed0       rbf r1: zRMSE=0.0186  T48=1.832  T50=1.652  Wf=0.005  (238s)
+  seed0       rbf r2: zRMSE=0.0186  T48=1.829  T50=1.650  Wf=0.005  (239s)
+  seed0       rbf r3: zRMSE=0.0186  T48=1.830  T50=1.651  Wf=0.005  (240s)
+  seed0  matern52 r1: zRMSE=0.0188  T48=1.873  T50=1.663  Wf=0.006  (243s)
+  seed0  matern52 r2: zRMSE=0.0188  T48=1.873  T50=1.662  Wf=0.006  (251s)
+  seed0  matern52 r3: zRMSE=0.0188  T48=1.864  T50=1.661  Wf=0.006  (241s)
+  seed0  matern32 r1: zRMSE=0.0189  T48=1.877  T50=1.653  Wf=0.007  (220s)
+  seed0  matern32 r2: zRMSE=0.0189  T48=1.880  T50=1.653  Wf=0.007  (239s)
+  seed0  matern32 r3: zRMSE=0.0189  T48=1.881  T50=1.653  Wf=0.007  (260s)
+  seed0  matern12 r1: zRMSE=0.0210  T48=2.211  T50=1.745  Wf=0.009  (251s)
+  seed0  matern12 r2: zRMSE=0.0210  T48=2.209  T50=1.746  Wf=0.009  (259s)
+  seed0  matern12 r3: zRMSE=0.0210  T48=2.210  T50=1.746  Wf=0.009  (248s)
+  seed1       rbf r1: zRMSE=0.0149  T48=1.487  T50=1.288  Wf=0.006  (226s)
+  seed1       rbf r2: zRMSE=0.0157  T48=1.576  T50=1.345  Wf=0.006  (232s)
+  seed1       rbf r3: FAILED _LinAlgError: linalg.cholesky: The factorization could not be completed because the input is not positive-definite
+  seed1       rbf r3: zRMSE=nan  T48=nan  T50=nan  Wf=nan  (222s)
+  seed1  matern52 r1: zRMSE=0.0150  T48=1.432  T50=1.326  Wf=0.006  (235s)
+  seed1  matern52 r2: FAILED _LinAlgError: linalg.cholesky: The factorization could not be completed because the input is not positive-definite
+  seed1  matern52 r2: zRMSE=nan  T48=nan  T50=nan  Wf=nan  (202s)
+  seed1  matern52 r3: FAILED _LinAlgError: linalg.cholesky: The factorization could not be completed because the input is not positive-definite
+  seed1  matern52 r3: zRMSE=nan  T48=nan  T50=nan  Wf=nan  (199s)
+  seed1  matern32 r1: zRMSE=0.0147  T48=1.420  T50=1.272  Wf=0.006  (214s)
+  seed1  matern32 r2: zRMSE=0.0147  T48=1.420  T50=1.271  Wf=0.006  (220s)
+  seed1  matern32 r3: zRMSE=0.0147  T48=1.429  T50=1.273  Wf=0.006  (220s)
+  seed1  matern12 r1: zRMSE=0.0169  T48=1.813  T50=1.342  Wf=0.009  (213s)
+  seed1  matern12 r2: zRMSE=0.0169  T48=1.814  T50=1.343  Wf=0.009  (217s)
+  seed1  matern12 r3: zRMSE=0.0170  T48=1.823  T50=1.346  Wf=0.009  (218s)
+  seed2       rbf r1: zRMSE=0.0138  T48=1.229  T50=1.233  Wf=0.004  (211s)
+  seed2       rbf r2: zRMSE=0.0138  T48=1.225  T50=1.234  Wf=0.004  (217s)
+  seed2       rbf r3: zRMSE=0.0138  T48=1.228  T50=1.234  Wf=0.004  (218s)
+  seed2  matern52 r1: zRMSE=0.0175  T48=1.572  T50=1.548  Wf=0.006  (220s)
+  seed2  matern52 r2: zRMSE=0.0174  T48=1.564  T50=1.553  Wf=0.006  (226s)
+  seed2  matern52 r3: zRMSE=0.0174  T48=1.571  T50=1.550  Wf=0.006  (227s)
+  seed2  matern32 r1: zRMSE=0.0158  T48=1.413  T50=1.393  Wf=0.006  (218s)
+  seed2  matern32 r2: zRMSE=0.0158  T48=1.417  T50=1.395  Wf=0.006  (224s)
+  seed2  matern32 r3: zRMSE=0.0158  T48=1.420  T50=1.393  Wf=0.006  (224s)
+  seed2  matern12 r1: zRMSE=0.0167  T48=1.648  T50=1.350  Wf=0.009  (217s)
+  seed2  matern12 r2: zRMSE=0.0167  T48=1.650  T50=1.351  Wf=0.009  (222s)
+  seed2  matern12 r3: zRMSE=0.0167  T48=1.654  T50=1.352  Wf=0.009  (223s)
+
+   kernel rank |    zRMSE mean±sd |     T48     T50       Wf | rank-order
+------------------------------------------------------------------------
+      rbf r  1 |   0.0157 ± 0.0021 |   1.516   1.391   0.0052 | #1
+      rbf r  2 |   0.0160 ± 0.0020 |   1.543   1.410   0.0054 | #2
+      rbf r  3 |   0.0162 ± 0.0024 |   1.529   1.443   0.0049 | #3
+ matern32 r  2 |   0.0165 ± 0.0018 |   1.572   1.439   0.0062 | #4
+ matern32 r  1 |   0.0165 ± 0.0018 |   1.570   1.439   0.0063 | #5
+ matern32 r  3 |   0.0165 ± 0.0018 |   1.577   1.440   0.0063 | #6
+ matern52 r  1 |   0.0171 ± 0.0016 |   1.626   1.513   0.0059 | #7
+ matern52 r  3 |   0.0181 ± 0.0007 |   1.718   1.606   0.0059 | #8
+ matern52 r  2 |   0.0181 ± 0.0007 |   1.719   1.608   0.0059 | #9
+ matern12 r  1 |   0.0182 ± 0.0020 |   1.891   1.479   0.0088 | #10
+ matern12 r  2 |   0.0182 ± 0.0020 |   1.891   1.480   0.0088 | #11
+ matern12 r  3 |   0.0182 ± 0.0020 |   1.896   1.481   0.0088 | #12
+
+WINNER: kernel=rbf  rank=1  zRMSE=0.0157±0.0021
+runner-up: rbf r2  zRMSE=0.0160 (gap 1.7%)
+wall = 136.6 min

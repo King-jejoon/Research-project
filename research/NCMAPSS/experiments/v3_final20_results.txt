@@ -1,0 +1,43 @@
+V3 FINAL CHAIN AT ABSOLUTE V* = 20.0
+
+D — lambda1 x lambda2 grid (gate V=20.0)
+  l1= 2.0 l2=0.5: Mon=  -31.29 Curv=  3.62 Range=0.746 Shift=0.0320 RUL=7.93±0.40 shape 3/3
+  l1= 2.0 l2=1.0: Mon=  -30.41 Curv=  3.65 Range=0.738 Shift=0.0314 RUL=7.89±0.37 shape 3/3
+  l1= 2.0 l2=2.0: Mon=  -29.03 Curv=  3.69 Range=0.720 Shift=0.0303 RUL=7.83±0.32 shape 3/3
+  l1= 2.0 l2=4.0: Mon=  -26.70 Curv=  3.67 Range=0.688 Shift=0.0284 RUL=7.82±0.17 shape 2/3
+  l1= 4.0 l2=0.5: Mon=  -29.61 Curv=  3.72 Range=0.735 Shift=0.0309 RUL=7.84±0.34 shape 3/3
+  l1= 4.0 l2=1.0: Mon=  -29.03 Curv=  3.73 Range=0.727 Shift=0.0304 RUL=7.82±0.30 shape 3/3
+  l1= 4.0 l2=2.0: Mon=  -27.89 Curv=  3.73 Range=0.710 Shift=0.0295 RUL=7.91±0.16 shape 2/3
+  l1= 4.0 l2=4.0: Mon=  -25.62 Curv=  3.69 Range=0.678 Shift=0.0277 RUL=7.75±0.20 shape 0/3
+  l1= 8.0 l2=0.5: Mon=  -27.51 Curv=  3.80 Range=0.715 Shift=0.0294 RUL=7.87±0.18 shape 2/3
+  l1= 8.0 l2=1.0: Mon=  -26.94 Curv=  3.79 Range=0.707 Shift=0.0289 RUL=7.82±0.18 shape 2/3
+  l1= 8.0 l2=2.0: Mon=  -25.78 Curv=  3.77 Range=0.691 Shift=0.0280 RUL=7.74±0.21 shape 1/3
+  l1= 8.0 l2=4.0: Mon=  -23.45 Curv=  3.71 Range=0.659 Shift=0.0263 RUL=7.91±0.11 shape 0/3
+  l1=16.0 l2=0.5: Mon=  -23.43 Curv=  3.85 Range=0.678 Shift=0.0267 RUL=7.86±0.10 shape 0/3
+  l1=16.0 l2=1.0: Mon=  -23.01 Curv=  3.82 Range=0.670 Shift=0.0263 RUL=7.82±0.13 shape 0/3
+  l1=16.0 l2=2.0: Mon=  -21.52 Curv=  3.76 Range=0.654 Shift=0.0253 RUL=7.70±0.12 shape 0/3
+  l1=16.0 l2=4.0: Mon=  -18.95 Curv=  3.62 Range=0.625 Shift=0.0236 RUL=7.76±0.18 shape 0/3
+  shape-passing: [(2.0, 0.5), (2.0, 1.0), (2.0, 2.0), (4.0, 0.5), (4.0, 1.0)]
+  SELECTED: lambda1=4.0, lambda2=1.0 (composite 0.796)  RUL 7.82±0.30 (grid min RUL 7.70)
+
+E — dev LOO truncation RUL (selected lambda)
+  seed0: RMSE=7.75 NASA=31 beta=30
+  seed1: RMSE=8.22 NASA=33 beta=35
+  seed2: RMSE=7.50 NASA=30 beta=30
+  dev overall: 7.82 ± 0.30   per-frac: 20%=11.02  40%=9.15  60%=5.20  80%=3.61
+
+C — extended-low sensitivity grid (gate V=20.0)
+  clip10 row: 3cy=7.93  4cy=9.86  5cy=8.63  6cy=8.43  8cy=7.43  12cy=8.50  20cy=10.72 | 10h=7.28  15h=7.18  20h=6.91  25h=7.05  30h=7.16  50h=12.53
+B — gate figure regenerated (absolute axis)
+
+T — TEST re-verification at V*=20.0 (3rd opening, recorded)
+  seed0 onset: u10:t18/d33(+15)  u11:t19/d26(+7)  u12:t37/d45(+8)  u13:t19/d25(+6)  u14:t36/d38(+2)  u15:t25/d40(+15)
+  seed0 RUL: beta=30  RMSE=7.40  NASA=18.6
+  seed1 onset: u10:t18/d39(+21)  u11:t19/d26(+7)  u12:t37/d46(+9)  u13:t19/d32(+13)  u14:t36/d40(+4)  u15:t25/d37(+12)
+  seed1 RUL: beta=35  RMSE=8.29  NASA=20.6
+  seed2 onset: u10:t18/d34(+16)  u11:t19/d28(+9)  u12:t37/d45(+8)  u13:t19/d31(+12)  u14:t36/d40(+4)  u15:t25/d29(+4)
+  seed2 RUL: beta=30  RMSE=7.25  NASA=19.0
+  TEST onset: RMSE=10.75  delay=+9.56  |d|<=3: 6%
+  TEST RUL: 7.65 ± 0.46  NASA 19.4 ± 0.9  per-frac: 20%=11.06  40%=9.03  60%=4.82  80%=2.76
+
+wall=3.0 min

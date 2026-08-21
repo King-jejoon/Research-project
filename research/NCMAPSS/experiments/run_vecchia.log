@@ -1,0 +1,4 @@
+[data] baseline train = 180 pts | vecchia-big train = 2700 pts | held-out val = 1348 pts
+[ExactGP-180]  rmse=0.9455  nll=4.395  (1.9s)
+[ExactGP-ARD-180]  rmse=0.8823  nll=4.311  (1.4s)
+[scaling] attempting ExactGP-ARD on 2700 pts (multitask dim = 2700x14 = 37800) ...

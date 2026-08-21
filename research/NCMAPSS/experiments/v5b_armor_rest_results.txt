@@ -1,0 +1,8 @@
+V5B ARMOR REST — ungated + competitors, l12 downstream
+  mogp_ungated: trim25+med3: 7.15±0.10 (3/3) | trim25+none: 7.48±0.30 (3/3) | mean+med3: 7.38±0.24 (3/3) | mean+none: 7.48±0.22 (3/3)
+          llke: trim25+med3: 7.58±0.10 (3/3) | trim25+none: 7.51±0.08 (3/3) | mean+med3: 7.47±0.04 (3/3) | mean+none: 7.49±0.06 (3/3)
+       bspline: trim25+med3: 7.44±0.06 (3/3) | trim25+none: 7.49±0.12 (3/3) | mean+med3: 7.46±0.08 (3/3) | mean+none: 7.45±0.14 (3/3)
+            lr: trim25+med3: 7.72±0.05 (3/3) | trim25+none: 7.65±0.05 (3/3) | mean+med3: 7.59±0.05 (3/3) | mean+none: 7.49±0.06 (3/3)
+          cabn: trim25+med3: 7.72±0.05 (3/3) | trim25+none: 7.65±0.05 (3/3) | mean+med3: 7.59±0.05 (3/3) | mean+none: 7.49±0.06 (3/3)
+
+wall=5.8 min

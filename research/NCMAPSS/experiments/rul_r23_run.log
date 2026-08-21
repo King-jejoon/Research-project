@@ -1,0 +1,28 @@
+R2+R3  variants=['mean', 'median', 'trim']  HI_CFG frozen  dev-only LOO evaluation
+  seed0   mean: shape=FAIL (start 0.22 end 0.92)  cycLOO RMSE=7.47 nasa=30 beta=30  (3s)
+  seed0 median: shape=FAIL (start 0.23 end 0.91)  cycLOO RMSE=7.84 nasa=30 beta=35  (6s)
+  seed0   trim: shape=FAIL (start 0.23 end 0.91)  cycLOO RMSE=7.38 nasa=29 beta=30  (10s)
+  seed0 -> variant trim
+  seed1   mean: shape=FAIL (start 0.22 end 0.92)  cycLOO RMSE=7.40 nasa=29 beta=30  (13s)
+  seed1 median: shape=FAIL (start 0.23 end 0.91)  cycLOO RMSE=7.27 nasa=28 beta=30  (16s)
+  seed1   trim: shape=FAIL (start 0.22 end 0.92)  cycLOO RMSE=7.33 nasa=28 beta=30  (19s)
+  seed1 -> variant trim
+  seed2   mean: shape=FAIL (start 0.22 end 0.92)  cycLOO RMSE=8.08 nasa=31 beta=35  (22s)
+  seed2 median: shape=FAIL (start 0.23 end 0.91)  cycLOO RMSE=7.36 nasa=29 beta=30  (25s)
+  seed2   trim: shape=FAIL (start 0.22 end 0.92)  cycLOO RMSE=7.41 nasa=29 beta=30  (29s)
+  seed2 -> variant median
+
+   axis |        RMSE s0/s1/s2 | RMSE mean | NASA mean | beta
+------------------------------------------------------------------------
+  cycle |   7.38   7.33   7.36 |      7.36 |      28.6 | [30, 30, 30]
+  hours |  18.11  18.16  18.23 |     18.17 |     148.8 | [20, 20, 20]
+
+per-truncation RMSE (mean over seeds):
+  frac |   cycle |   hours
+   20% |   10.66 |   27.12
+   40% |    7.63 |   18.19
+   60% |    5.26 |   13.36
+   80% |    4.12 |    8.67
+
+chosen variants: {0: 'trim', 1: 'trim', 2: 'median'}
+wall=0.6 min

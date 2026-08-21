@@ -1,0 +1,134 @@
+BENCHMARK (design A): HI-construction methods on the frozen residual table
+  input = rul_input_s*.npz `_trim` (5 sensors), dev 9 units, seeds=[0, 1, 2]
+  LOO with per-fold HI refit for every method; beta grid=[2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 25, 30, 35, 40, 45, 50]; fracs=[0.2, 0.4, 0.6, 0.8]
+
+      ours {}                                           RMSE=  7.46 NASA=    29.4 beta=[30, 30, 30] fit=2.86s pred=0.0ms (80s)
+  -> ours selected {}
+
+        lr {'smooth': 0}                                RMSE=  8.73 NASA=    37.8 beta=[25, 25, 25] fit=0.00s pred=0.0ms (82s)
+        lr {'smooth': 3}                                RMSE=  8.59 NASA=    37.9 beta=[25, 25, 25] fit=0.00s pred=0.0ms (85s)
+        lr {'smooth': 5}                                RMSE=  8.95 NASA=    36.9 beta=[30, 30, 30] fit=0.00s pred=0.0ms (87s)
+        lr {'smooth': 7}                                RMSE=  8.73 NASA=    36.3 beta=[30, 30, 30] fit=0.00s pred=0.0ms (90s)
+  -> lr selected {'smooth': 7}
+
+   bspline {'n_knots': 0, 'smooth': 0}                  RMSE=  9.15 NASA=    38.3 beta=[10, 10, 10] fit=0.00s pred=0.2ms (92s)
+   bspline {'n_knots': 0, 'smooth': 3}                  RMSE=  9.35 NASA=    40.3 beta=[10, 10, 12] fit=0.00s pred=0.2ms (94s)
+   bspline {'n_knots': 0, 'smooth': 5}                  RMSE=  9.55 NASA=    41.0 beta=[12, 12, 12] fit=0.00s pred=0.2ms (95s)
+   bspline {'n_knots': 0, 'smooth': 7}                  RMSE=  9.60 NASA=    43.3 beta=[12, 12, 12] fit=0.00s pred=0.2ms (97s)
+   bspline {'n_knots': 1, 'smooth': 0}                  RMSE=  8.43 NASA=    33.1 beta=[6, 8, 8] fit=0.00s pred=0.2ms (99s)
+   bspline {'n_knots': 1, 'smooth': 3}                  RMSE=  9.24 NASA=    37.7 beta=[8, 8, 10] fit=0.00s pred=0.2ms (101s)
+   bspline {'n_knots': 1, 'smooth': 5}                  RMSE= 10.01 NASA=    42.1 beta=[10, 10, 12] fit=0.00s pred=0.2ms (103s)
+   bspline {'n_knots': 1, 'smooth': 7}                  RMSE= 10.48 NASA=    45.5 beta=[12, 12, 12] fit=0.00s pred=0.2ms (105s)
+   bspline {'n_knots': 2, 'smooth': 0}                  RMSE=  9.86 NASA=    41.9 beta=[8, 8, 6] fit=0.00s pred=0.2ms (106s)
+   bspline {'n_knots': 2, 'smooth': 3}                  RMSE= 10.92 NASA=    47.8 beta=[10, 10, 8] fit=0.00s pred=0.2ms (108s)
+   bspline {'n_knots': 2, 'smooth': 5}                  RMSE= 11.12 NASA=    50.2 beta=[10, 10, 10] fit=0.00s pred=0.2ms (110s)
+   bspline {'n_knots': 2, 'smooth': 7}                  RMSE= 11.53 NASA=    51.6 beta=[12, 12, 12] fit=0.00s pred=0.2ms (111s)
+   bspline {'n_knots': 3, 'smooth': 0}                  RMSE= 10.35 NASA=    44.9 beta=[8, 8, 8] fit=0.00s pred=0.2ms (113s)
+   bspline {'n_knots': 3, 'smooth': 3}                  RMSE= 11.39 NASA=    51.0 beta=[10, 10, 10] fit=0.00s pred=0.2ms (115s)
+   bspline {'n_knots': 3, 'smooth': 5}                  RMSE= 11.43 NASA=    53.6 beta=[10, 10, 10] fit=0.00s pred=0.2ms (117s)
+   bspline {'n_knots': 3, 'smooth': 7}                  RMSE= 11.75 NASA=    54.1 beta=[12, 12, 12] fit=0.00s pred=0.2ms (118s)
+  -> bspline selected {'n_knots': 1, 'smooth': 0}
+
+      llke {'h': 1.0, 'smooth': 0}                      RMSE=  8.75 NASA=    35.4 beta=[12, 12, 12] fit=0.00s pred=3.4ms (121s)
+      llke {'h': 1.0, 'smooth': 3}                      RMSE=  9.14 NASA=    39.5 beta=[12, 12, 12] fit=0.00s pred=3.3ms (124s)
+      llke {'h': 1.0, 'smooth': 5}                      RMSE= 10.11 NASA=    42.1 beta=[16, 16, 16] fit=0.00s pred=3.3ms (126s)
+      llke {'h': 1.0, 'smooth': 7}                      RMSE=  9.87 NASA=    41.4 beta=[16, 16, 16] fit=0.00s pred=3.4ms (129s)
+      llke {'h': 1.5, 'smooth': 0}                      RMSE=  8.87 NASA=    35.7 beta=[16, 16, 16] fit=0.00s pred=3.3ms (132s)
+      llke {'h': 1.5, 'smooth': 3}                      RMSE=  8.85 NASA=    36.4 beta=[16, 16, 16] fit=0.00s pred=3.4ms (135s)
+      llke {'h': 1.5, 'smooth': 5}                      RMSE=  8.97 NASA=    38.7 beta=[16, 16, 16] fit=0.00s pred=3.3ms (138s)
+      llke {'h': 1.5, 'smooth': 7}                      RMSE=  9.65 NASA=    39.9 beta=[20, 20, 20] fit=0.00s pred=3.4ms (141s)
+      llke {'h': 2.5, 'smooth': 0}                      RMSE=  8.65 NASA=    35.2 beta=[20, 20, 20] fit=0.00s pred=3.4ms (144s)
+      llke {'h': 2.5, 'smooth': 3}                      RMSE=  8.59 NASA=    35.5 beta=[20, 20, 20] fit=0.00s pred=3.4ms (147s)
+      llke {'h': 2.5, 'smooth': 5}                      RMSE=  8.72 NASA=    38.0 beta=[20, 20, 20] fit=0.00s pred=3.4ms (150s)
+      llke {'h': 2.5, 'smooth': 7}                      RMSE=  9.47 NASA=    38.9 beta=[25, 25, 25] fit=0.00s pred=3.4ms (153s)
+      llke {'h': 4.0, 'smooth': 0}                      RMSE=  9.25 NASA=    38.4 beta=[25, 25, 25] fit=0.00s pred=3.3ms (156s)
+      llke {'h': 4.0, 'smooth': 3}                      RMSE=  8.98 NASA=    36.9 beta=[25, 25, 25] fit=0.00s pred=3.3ms (159s)
+      llke {'h': 4.0, 'smooth': 5}                      RMSE=  8.78 NASA=    36.8 beta=[25, 25, 25] fit=0.00s pred=3.4ms (163s)
+      llke {'h': 4.0, 'smooth': 7}                      RMSE=  8.78 NASA=    37.9 beta=[25, 25, 25] fit=0.00s pred=3.2ms (166s)
+  -> llke selected {'h': 2.5, 'smooth': 0}
+
+      cabn {'n_healthy': 5, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.39 NASA=    41.1 beta=[35, 35, 40] fit=0.04s pred=0.0ms nnz(W)=10 (170s)
+      cabn {'n_healthy': 5, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.40 NASA=    42.2 beta=[35, 35, 45] fit=0.04s pred=0.0ms nnz(W)=10 (174s)
+      cabn {'n_healthy': 5, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 5} RMSE=  9.29 NASA=    42.5 beta=[35, 35, 45] fit=0.04s pred=0.0ms nnz(W)=10 (178s)
+      cabn {'n_healthy': 5, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 7} RMSE=  9.42 NASA=    43.9 beta=[35, 40, 45] fit=0.04s pred=0.0ms nnz(W)=10 (183s)
+      cabn {'n_healthy': 5, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.01 NASA=    39.1 beta=[30, 35, 35] fit=0.03s pred=0.0ms nnz(W)=6 (186s)
+      cabn {'n_healthy': 5, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 3} RMSE=  8.95 NASA=    38.4 beta=[35, 35, 35] fit=0.03s pred=0.0ms nnz(W)=6 (190s)
+      cabn {'n_healthy': 5, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 5} RMSE=  8.78 NASA=    37.7 beta=[35, 35, 35] fit=0.03s pred=0.0ms nnz(W)=6 (193s)
+      cabn {'n_healthy': 5, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 7} RMSE=  9.02 NASA=    38.3 beta=[35, 40, 40] fit=0.03s pred=0.0ms nnz(W)=6 (197s)
+      cabn {'n_healthy': 5, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 0} RMSE=  8.78 NASA=    37.0 beta=[30, 35, 35] fit=0.01s pred=0.0ms nnz(W)=2 (200s)
+      cabn {'n_healthy': 5, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 3} RMSE=  8.72 NASA=    35.9 beta=[35, 35, 35] fit=0.01s pred=0.0ms nnz(W)=2 (203s)
+      cabn {'n_healthy': 5, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 5} RMSE=  8.57 NASA=    35.3 beta=[35, 35, 35] fit=0.01s pred=0.0ms nnz(W)=2 (206s)
+      cabn {'n_healthy': 5, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 7} RMSE=  8.58 NASA=    36.0 beta=[35, 35, 35] fit=0.01s pred=0.0ms nnz(W)=2 (209s)
+      cabn {'n_healthy': 5, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 0} RMSE=  8.85 NASA=    36.5 beta=[35, 35, 35] fit=0.01s pred=0.0ms nnz(W)=1 (211s)
+      cabn {'n_healthy': 5, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 3} RMSE=  8.64 NASA=    35.4 beta=[35, 35, 35] fit=0.01s pred=0.0ms nnz(W)=1 (214s)
+      cabn {'n_healthy': 5, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 5} RMSE=  8.50 NASA=    34.8 beta=[35, 35, 35] fit=0.01s pred=0.0ms nnz(W)=1 (217s)
+      cabn {'n_healthy': 5, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 7} RMSE=  8.51 NASA=    35.5 beta=[35, 35, 35] fit=0.01s pred=0.0ms nnz(W)=1 (220s)
+      cabn {'n_healthy': 5, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 0} RMSE=  8.84 NASA=    36.4 beta=[35, 35, 35] fit=0.00s pred=0.0ms nnz(W)=0 (223s)
+      cabn {'n_healthy': 5, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 3} RMSE=  8.63 NASA=    35.4 beta=[35, 35, 35] fit=0.00s pred=0.0ms nnz(W)=0 (226s)
+      cabn {'n_healthy': 5, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 5} RMSE=  8.49 NASA=    34.8 beta=[35, 35, 35] fit=0.00s pred=0.0ms nnz(W)=0 (228s)
+      cabn {'n_healthy': 5, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 7} RMSE=  8.50 NASA=    35.5 beta=[35, 35, 35] fit=0.00s pred=0.0ms nnz(W)=0 (231s)
+      cabn {'n_healthy': 10, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.09 NASA=    38.5 beta=[35, 40, 40] fit=0.05s pred=0.0ms nnz(W)=9 (235s)
+      cabn {'n_healthy': 10, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.11 NASA=    38.0 beta=[40, 40, 40] fit=0.05s pred=0.0ms nnz(W)=9 (240s)
+      cabn {'n_healthy': 10, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 5} RMSE=  8.90 NASA=    37.0 beta=[40, 40, 40] fit=0.05s pred=0.0ms nnz(W)=9 (244s)
+      cabn {'n_healthy': 10, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 7} RMSE=  8.83 NASA=    37.0 beta=[40, 40, 40] fit=0.05s pred=0.0ms nnz(W)=9 (249s)
+      cabn {'n_healthy': 10, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 0} RMSE=  8.94 NASA=    37.6 beta=[35, 40, 40] fit=0.05s pred=0.0ms nnz(W)=9 (253s)
+      cabn {'n_healthy': 10, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.01 NASA=    37.6 beta=[40, 40, 40] fit=0.05s pred=0.0ms nnz(W)=9 (257s)
+      cabn {'n_healthy': 10, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 5} RMSE=  8.86 NASA=    37.1 beta=[40, 40, 40] fit=0.05s pred=0.0ms nnz(W)=9 (261s)
+      cabn {'n_healthy': 10, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 7} RMSE=  8.85 NASA=    37.5 beta=[40, 40, 40] fit=0.05s pred=0.0ms nnz(W)=9 (266s)
+      cabn {'n_healthy': 10, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.41 NASA=    38.9 beta=[40, 40, 40] fit=0.04s pred=0.0ms nnz(W)=5 (270s)
+      cabn {'n_healthy': 10, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.27 NASA=    38.5 beta=[40, 40, 40] fit=0.04s pred=0.0ms nnz(W)=5 (273s)
+      cabn {'n_healthy': 10, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 5} RMSE=  9.11 NASA=    38.0 beta=[40, 40, 40] fit=0.04s pred=0.0ms nnz(W)=5 (277s)
+      cabn {'n_healthy': 10, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 7} RMSE=  9.19 NASA=    38.4 beta=[40, 45, 40] fit=0.04s pred=0.0ms nnz(W)=5 (281s)
+      cabn {'n_healthy': 10, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.39 NASA=    39.5 beta=[40, 40, 35] fit=0.02s pred=0.0ms nnz(W)=4 (285s)
+      cabn {'n_healthy': 10, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.41 NASA=    39.1 beta=[40, 40, 40] fit=0.02s pred=0.0ms nnz(W)=4 (288s)
+      cabn {'n_healthy': 10, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 5} RMSE=  9.26 NASA=    38.7 beta=[40, 40, 40] fit=0.02s pred=0.0ms nnz(W)=4 (292s)
+      cabn {'n_healthy': 10, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 7} RMSE=  9.32 NASA=    39.1 beta=[40, 45, 40] fit=0.02s pred=0.0ms nnz(W)=4 (296s)
+      cabn {'n_healthy': 10, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 0} RMSE=  8.87 NASA=    37.5 beta=[35, 35, 35] fit=0.01s pred=0.0ms nnz(W)=2 (299s)
+      cabn {'n_healthy': 10, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.38 NASA=    38.6 beta=[40, 40, 40] fit=0.01s pred=0.0ms nnz(W)=2 (302s)
+      cabn {'n_healthy': 10, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 5} RMSE=  9.18 NASA=    37.9 beta=[40, 40, 40] fit=0.01s pred=0.0ms nnz(W)=2 (305s)
+      cabn {'n_healthy': 10, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 7} RMSE=  9.09 NASA=    38.0 beta=[40, 40, 40] fit=0.01s pred=0.0ms nnz(W)=2 (309s)
+/opt/anaconda3/envs/pt_prac/lib/python3.10/site-packages/scipy/linalg/_matfuncs.py:373: RuntimeWarning: overflow encountered in matmul
+  eAw = eAw @ eAw
+/Users/a1/Desktop/Research-project/research/NCMAPSS/experiments/exp_bench_hi.py:224: RuntimeWarning: invalid value encountered in multiply
+  G_h = E.T * W * 2
+      cabn {'n_healthy': 15, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.38 NASA=    39.8 beta=[40, 40, 40] fit=0.06s pred=0.0ms nnz(W)=8 (313s)
+      cabn {'n_healthy': 15, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.21 NASA=    39.5 beta=[40, 40, 40] fit=0.06s pred=0.0ms nnz(W)=8 (318s)
+      cabn {'n_healthy': 15, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 5} RMSE=  8.99 NASA=    38.7 beta=[40, 40, 40] fit=0.06s pred=0.0ms nnz(W)=8 (323s)
+      cabn {'n_healthy': 15, 'lam1': 0.0, 'stat': 'sqrt', 'smooth': 7} RMSE=  8.93 NASA=    39.0 beta=[40, 40, 40] fit=0.06s pred=0.0ms nnz(W)=8 (328s)
+      cabn {'n_healthy': 15, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.03 NASA=    38.8 beta=[35, 40, 40] fit=0.06s pred=0.0ms nnz(W)=7 (332s)
+      cabn {'n_healthy': 15, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.09 NASA=    39.0 beta=[40, 40, 40] fit=0.06s pred=0.0ms nnz(W)=7 (337s)
+      cabn {'n_healthy': 15, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 5} RMSE=  9.07 NASA=    38.5 beta=[40, 40, 45] fit=0.06s pred=0.0ms nnz(W)=7 (341s)
+      cabn {'n_healthy': 15, 'lam1': 0.001, 'stat': 'sqrt', 'smooth': 7} RMSE=  9.09 NASA=    38.4 beta=[40, 45, 45] fit=0.06s pred=0.0ms nnz(W)=7 (346s)
+      cabn {'n_healthy': 15, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.53 NASA=    40.8 beta=[40, 40, 40] fit=0.05s pred=0.0ms nnz(W)=5 (350s)
+      cabn {'n_healthy': 15, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.78 NASA=    41.7 beta=[40, 45, 45] fit=0.05s pred=0.0ms nnz(W)=5 (355s)
+      cabn {'n_healthy': 15, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 5} RMSE=  9.69 NASA=    40.6 beta=[45, 45, 45] fit=0.05s pred=0.0ms nnz(W)=5 (359s)
+      cabn {'n_healthy': 15, 'lam1': 0.005, 'stat': 'sqrt', 'smooth': 7} RMSE=  9.53 NASA=    40.1 beta=[45, 45, 45] fit=0.05s pred=0.0ms nnz(W)=5 (364s)
+      cabn {'n_healthy': 15, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.55 NASA=    40.2 beta=[40, 40, 40] fit=0.03s pred=0.0ms nnz(W)=4 (367s)
+      cabn {'n_healthy': 15, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.64 NASA=    41.0 beta=[40, 45, 40] fit=0.03s pred=0.0ms nnz(W)=4 (371s)
+      cabn {'n_healthy': 15, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 5} RMSE=  9.62 NASA=    40.6 beta=[45, 45, 40] fit=0.03s pred=0.0ms nnz(W)=4 (375s)
+      cabn {'n_healthy': 15, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 7} RMSE=  9.56 NASA=    39.9 beta=[45, 45, 45] fit=0.03s pred=0.0ms nnz(W)=4 (379s)
+      cabn {'n_healthy': 15, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 0} RMSE=  9.59 NASA=    40.0 beta=[40, 40, 40] fit=0.02s pred=0.0ms nnz(W)=2 (382s)
+      cabn {'n_healthy': 15, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 3} RMSE=  9.41 NASA=    39.8 beta=[40, 40, 40] fit=0.02s pred=0.0ms nnz(W)=2 (386s)
+      cabn {'n_healthy': 15, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 5} RMSE=  9.45 NASA=    40.1 beta=[40, 45, 40] fit=0.02s pred=0.0ms nnz(W)=2 (389s)
+      cabn {'n_healthy': 15, 'lam1': 0.05, 'stat': 'sqrt', 'smooth': 7} RMSE=  9.60 NASA=    40.1 beta=[45, 45, 45] fit=0.02s pred=0.0ms nnz(W)=2 (393s)
+  -> cabn selected {'n_healthy': 5, 'lam1': 0.01, 'stat': 'sqrt', 'smooth': 5}
+
+
+  method |         RMSE |     NASA |    20%    40%    60%    80% | train(s) test(ms)
+--------------------------------------------------------------------------------------------
+    ours |   7.46+/-0.07 |     29.4 |  10.76   7.80   5.34   4.19 |     2.86      0.0
+      lr |   8.73+/-0.13 |     36.3 |  11.39  10.80   6.03   4.71 |     0.00      0.0
+ bspline |   8.43+/-0.23 |     33.1 |  12.27   8.00   4.98   6.64 |     0.00      0.2
+    llke |   8.65+/-0.03 |     35.2 |  11.78   9.72   5.52   5.94 |     0.00      3.4
+    cabn |   8.50+/-0.11 |     34.8 |  11.39  10.13   5.80   4.71 |     0.01      0.0
+
+paired comparison against `ours` over the 108 dev LOO cases (9 units x 4 truncations x 3 seeds), absolute error:
+  method |    MAE | ours better | Wilcoxon p
+------------------------------------------------
+    ours |   5.51 |           - |          -
+      lr |   7.16 |        70% |   7.90e-07
+ bspline |   6.76 |        61% |   1.12e-02
+    llke |   7.23 |        67% |   3.63e-06
+    cabn |   6.75 |        68% |   4.51e-05
+
+wall=6.5 min

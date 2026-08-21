@@ -1,0 +1,65 @@
+V5C BENCH HR — SEVENTEENTH DS03 test opening, pre-registered: competitors retrained on the proposed healthy-range window (v5c train_idx, byte-identical rows), frozen l12 downstream, ungated; hyperparameters frozen at stage-1 CV values
+seed0: healthy-range train rows = 27000 (onsets {np.int64(1): np.int64(38), np.int64(2): np.int64(23), np.int64(3): np.int64(31), np.int64(4): np.int64(23), np.int64(5): np.int64(46), np.int64(6): np.int64(24), np.int64(7): np.int64(32), np.int64(8): np.int64(24), np.int64(9): np.int64(41)})
+seed0 llke: residuals ready (806s)
+seed0 bspline: residuals ready (6s)
+seed0 lr: residuals ready (0s)
+seed0 cabn: residuals ready (0s)
+seed1: healthy-range train rows = 27000 (onsets {np.int64(1): np.int64(38), np.int64(2): np.int64(23), np.int64(3): np.int64(31), np.int64(4): np.int64(24), np.int64(5): np.int64(46), np.int64(6): np.int64(24), np.int64(7): np.int64(33), np.int64(8): np.int64(24), np.int64(9): np.int64(41)})
+seed1 llke: residuals ready (801s)
+seed1 bspline: residuals ready (6s)
+seed1 lr: residuals ready (0s)
+seed1 cabn: residuals ready (0s)
+seed2: healthy-range train rows = 27000 (onsets {np.int64(1): np.int64(36), np.int64(2): np.int64(23), np.int64(3): np.int64(31), np.int64(4): np.int64(22), np.int64(5): np.int64(46), np.int64(6): np.int64(27), np.int64(7): np.int64(29), np.int64(8): np.int64(24), np.int64(9): np.int64(38)})
+seed2 llke: residuals ready (796s)
+seed2 bspline: residuals ready (6s)
+seed2 lr: residuals ready (0s)
+seed2 cabn: residuals ready (0s)
+
+(dev) healthy-range competitors, l12 downstream, ungated
+  llke seed0: dev LOO=7.59 shape=OK (start 0.22 end 0.94) beta=30
+  llke seed1: dev LOO=7.63 shape=OK (start 0.22 end 0.95) beta=30
+  llke seed2: dev LOO=7.59 shape=OK (start 0.22 end 0.95) beta=30
+  bspline seed0: dev LOO=7.57 shape=OK (start 0.22 end 0.95) beta=30
+  bspline seed1: dev LOO=7.46 shape=OK (start 0.22 end 0.95) beta=30
+  bspline seed2: dev LOO=7.57 shape=OK (start 0.22 end 0.96) beta=30
+  lr seed0: dev LOO=7.66 shape=OK (start 0.21 end 0.95) beta=30
+  lr seed1: dev LOO=7.70 shape=OK (start 0.21 end 0.96) beta=30
+  lr seed2: dev LOO=7.67 shape=OK (start 0.21 end 0.96) beta=30
+  cabn seed0: dev LOO=7.66 shape=OK (start 0.21 end 0.95) beta=30
+  cabn seed1: dev LOO=7.70 shape=OK (start 0.21 end 0.96) beta=30
+  cabn seed2: dev LOO=7.67 shape=OK (start 0.21 end 0.96) beta=30
+
+(test) one-time scoring, frozen from the dev side above
+  llke seed0: test=7.30 NASA=18.6
+  llke seed1: test=7.45 NASA=18.7
+  llke seed2: test=7.57 NASA=18.8
+  llke: dev 7.60 ± 0.02 | test 7.44 ± 0.11  NASA 18.7 ± 0.1  trunc 11.18 / 8.07 / 4.98 / 2.54
+  bspline seed0: test=7.34 NASA=18.7
+  bspline seed1: test=7.51 NASA=18.9
+  bspline seed2: test=7.58 NASA=18.3
+  bspline: dev 7.54 ± 0.05 | test 7.48 ± 0.10  NASA 18.6 ± 0.2  trunc 11.50 / 8.03 / 4.55 / 2.50
+  lr seed0: test=7.54 NASA=19.4
+  lr seed1: test=7.35 NASA=18.5
+  lr seed2: test=7.41 NASA=19.2
+  lr: dev 7.68 ± 0.01 | test 7.44 ± 0.08  NASA 19.0 ± 0.4  trunc 10.94 / 8.46 / 4.80 / 2.60
+  cabn seed0: test=7.54 NASA=19.4
+  cabn seed1: test=7.35 NASA=18.5
+  cabn seed2: test=7.41 NASA=19.2
+  cabn: dev 7.68 ± 0.01 | test 7.44 ± 0.08  NASA 19.0 ± 0.4  trunc 10.94 / 8.46 / 4.80 / 2.60
+
+references (recorded, not re-run): proposed healthy-range MOGP test 7.18 ± 0.05; cycle<=3 rows in Table 6
+
+paired |err| Wilcoxon (72 preds, unit n=6 caveat):
+  llke: vs proposed 7.18 p=0.003 | vs own cycle<=3 7.67 p=0.189
+  bspline: vs proposed 7.18 p=0.397 | vs own cycle<=3 7.32 p=0.982
+  lr: vs proposed 7.18 p=0.195 | vs own cycle<=3 7.31 p=0.000
+  cabn: vs proposed 7.18 p=0.195 | vs own cycle<=3 7.31 p=0.000
+
+SUMMARY — healthy-range window, frozen l12 downstream, ungated
+     model |    20%    40%    60%    80% |   overall RMSE |        NASA |       dev LOO | shape | beta
+      llke |  11.18   8.07   4.98   2.54 |   7.44 ± 0.11 |  18.7 ± 0.1 |   7.60 ± 0.02 | 3/3 | [30, 30, 30]
+   bspline |  11.50   8.03   4.55   2.50 |   7.48 ± 0.10 |  18.6 ± 0.2 |   7.54 ± 0.05 | 3/3 | [30, 30, 30]
+        lr |  10.94   8.46   4.80   2.60 |   7.44 ± 0.08 |  19.0 ± 0.4 |   7.68 ± 0.01 | 3/3 | [30, 30, 30]
+      cabn |  10.94   8.46   4.80   2.60 |   7.44 ± 0.08 |  19.0 ± 0.4 |   7.68 ± 0.01 | 3/3 | [30, 30, 30]
+
+wall=41.1 min

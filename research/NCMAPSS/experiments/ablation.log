@@ -1,0 +1,22 @@
+ABLATION  seeds=[0, 1, 2]  NPER=20  drop=0.15
+  seed0      none: RUL RMSE = 9.21
+  seed0     resid: RUL RMSE = 9.03
+  seed0       raw: RUL RMSE = 9.07
+  seed0 raw+resid: RUL RMSE = 9.72
+  seed1      none: RUL RMSE = 9.15
+  seed1     resid: RUL RMSE = 9.84
+  seed1       raw: RUL RMSE = 9.20
+  seed1 raw+resid: RUL RMSE = 8.93
+  seed2      none: RUL RMSE = 8.91
+  seed2     resid: RUL RMSE = 8.58
+  seed2       raw: RUL RMSE = 8.52
+  seed2 raw+resid: RUL RMSE = 8.10
+======================================================
+    config | mean RUL RMSE |    std | runs
+------------------------------------------------------
+      none |          9.09 |   0.13 | 3
+       raw |          8.93 |   0.29 | 3
+     resid |          9.15 |   0.52 | 3
+ raw+resid |          8.92 |   0.66 | 3
+======================================================
+reference (old ExactGP pipeline) = 9.67

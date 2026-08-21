@@ -1,0 +1,28 @@
+CLEAN TIMING RUN of the HI benchmark
+  load average at start: 3.85 4.53 4.65
+  OMP_NUM_THREADS=10  NTHREADS=10
+  3 warm-up + 9 timed repeats, median reported, averaged over seeds [0, 1, 2]
+
+      ours measured
+        lr measured
+   bspline measured
+      llke measured
+      cabn measured
+
+   model |     TRAINING |    HI pred        RUL     TESTING
+--------------------------------------------------------------
+    ours |    2911.90ms |     0.05ms    21.63ms     21.69ms
+      lr |       0.12ms |     0.06ms    21.63ms     21.69ms
+ bspline |       0.66ms |     0.93ms    21.43ms     22.36ms
+    llke |       0.06ms |    20.81ms    20.57ms     41.38ms
+    cabn |       5.46ms |     0.12ms    33.47ms     33.60ms
+
+   model |  TRAINING (s) |  TESTING (s)
+----------------------------------------
+    ours |        2.9119 |       0.0217
+      lr |        0.0001 |       0.0217
+ bspline |        0.0007 |       0.0224
+    llke |        0.0001 |       0.0414
+    cabn |        0.0055 |       0.0336
+
+load average at end: 3.95 4.26 4.52

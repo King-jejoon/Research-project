@@ -1,0 +1,28 @@
+SENSITIVITY 2 — healthy-range retraining chain (detected onsets define the window; onset scoring skipped; dev LOO RUL only)
+seed0: detected onsets {1: 38, 2: 23, 3: 31, 4: 23, 5: 46, 6: 28, 7: 32, 8: 24, 9: 41}
+seed0: healthy-range train=27000 rows (9 units x ~3000)
+seed0: fitted (1642s, retries=0)
+seed0: stats cached (1916s total)
+seed1: detected onsets {1: 38, 2: 23, 3: 31, 4: 24, 5: 46, 6: 24, 7: 33, 8: 24, 9: 41}
+seed1: healthy-range train=27000 rows (9 units x ~3000)
+seed1: fitted (1474s, retries=0)
+seed1: stats cached (1669s total)
+seed2: detected onsets {1: 36, 2: 23, 3: 31, 4: 22, 5: 46, 6: 30, 7: 29, 8: 24, 9: 38}
+seed2: healthy-range train=27000 rows (9 units x ~3000)
+seed2: fitted (1583s, retries=0)
+seed2: stats cached (1794s total)
+pooled detcov (descriptive): p1=19.58  p2=19.82  p5=20.03  p10=20.14  p25=20.25  p50=20.32  p75=20.39  p90=20.44  p99=20.50
+gate off : RUL RMSE=7.57 ± 0.01  NASA=30.2  shape 3/3   [cycle<=3 chain reference: 7.30 ± 0.16]
+absolute V sweep 19.8..20.5 step 0.1 (8 values)
+  V= 19.8 ( 98.1% kept): RUL RMSE=7.56 ± 0.01  NASA=30.2  shape 3/3  p=0.026
+  V= 19.9 ( 97.3% kept): RUL RMSE=7.56 ± 0.01  NASA=30.2  shape 3/3  p=0.033
+  V= 20.0 ( 95.8% kept): RUL RMSE=7.56 ± 0.01  NASA=30.2  shape 3/3  p=0.075
+  V= 20.1 ( 92.7% kept): RUL RMSE=7.56 ± 0.01  NASA=30.1  shape 3/3  p=0.131
+  V= 20.2 ( 84.3% kept): RUL RMSE=7.58 ± 0.02  NASA=30.2  shape 3/3  p=0.697
+  V= 20.3 ( 57.5% kept): RUL RMSE=7.74 ± 0.20  NASA=30.7  shape 3/3  p=0.261
+  V= 20.4 ( 20.6% kept): RUL RMSE=7.86 ± 0.22  NASA=30.8  shape 3/3  p=0.057
+  V= 20.5 (  0.9% kept): RUL RMSE=7.76 ± 0.28  NASA=30.9  shape 3/3  p=0.225
+
+best V=20.1 (RUL RMSE 7.56, p=0.131) vs gate off 7.57 — coverage-dependence check
+
+wall=91.1 min

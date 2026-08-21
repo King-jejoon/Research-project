@@ -1,0 +1,44 @@
+DOWNSTREAM FRAGILITY GRID — summary {trim25, mean} x filter {med3, none}, frozen HI recipe, dev LOO, 3 seeds
+
+--- summary=trim25  filter=med3 ---
+     mogp gated: RUL   7.30 ± 0.16  NASA     27.4  shape 3/3
+   mogp ungated: RUL   7.12 ± 0.06  NASA     26.7  shape 3/3
+           llke: RUL   7.63 ± 0.13  NASA     29.1  shape 3/3
+        bspline: RUL   7.43 ± 0.05  NASA     28.6  shape 3/3
+             lr: RUL   7.77 ± 0.09  NASA     30.6  shape 3/3
+           cabn: RUL   7.77 ± 0.09  NASA     30.6  shape 3/3
+
+--- summary=trim25  filter=none ---
+     mogp gated: RUL   7.54 ± 0.18  NASA     29.2  shape 3/3
+   mogp ungated: RUL   7.30 ± 0.05  NASA     27.9  shape 3/3
+           llke: RUL   7.57 ± 0.10  NASA     29.1  shape 3/3
+        bspline: RUL   7.46 ± 0.10  NASA     29.0  shape 3/3
+             lr: RUL   7.67 ± 0.07  NASA     30.5  shape 3/3
+           cabn: RUL   7.67 ± 0.07  NASA     30.5  shape 3/3
+
+--- summary=mean  filter=med3 ---
+     mogp gated: RUL   7.45 ± 0.24  NASA     28.4  shape 3/3
+   mogp ungated: RUL   7.24 ± 0.11  NASA     27.7  shape 3/3
+           llke: RUL   7.51 ± 0.05  NASA     28.6  shape 3/3
+        bspline: RUL   7.49 ± 0.11  NASA     28.3  shape 3/3
+             lr: RUL   7.66 ± 0.05  NASA     29.9  shape 3/3
+           cabn: RUL   7.66 ± 0.05  NASA     29.9  shape 3/3
+
+--- summary=mean  filter=none ---
+     mogp gated: RUL   7.65 ± 0.19  NASA     29.9  shape 3/3
+   mogp ungated: RUL   7.38 ± 0.12  NASA     28.6  shape 3/3
+           llke: RUL   7.51 ± 0.05  NASA     28.8  shape 3/3
+        bspline: RUL   7.52 ± 0.14  NASA     29.0  shape 3/3
+             lr: RUL   7.53 ± 0.05  NASA     29.5  shape 3/3
+           cabn: RUL   7.53 ± 0.05  NASA     29.5  shape 3/3
+
+GRID SUMMARY — dev LOO RUL RMSE (shape)
+          model | trim25+med3 | trim25 only | mean+med3 | mean only
+     mogp gated |   7.30 3/3 |   7.54 3/3 |   7.45 3/3 |   7.65 3/3
+   mogp ungated |   7.12 3/3 |   7.30 3/3 |   7.24 3/3 |   7.38 3/3
+           llke |   7.63 3/3 |   7.57 3/3 |   7.51 3/3 |   7.51 3/3
+        bspline |   7.43 3/3 |   7.46 3/3 |   7.49 3/3 |   7.52 3/3
+             lr |   7.77 3/3 |   7.67 3/3 |   7.66 3/3 |   7.53 3/3
+           cabn |   7.77 3/3 |   7.67 3/3 |   7.66 3/3 |   7.53 3/3
+
+wall=3.9 min

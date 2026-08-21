@@ -1,0 +1,40 @@
+Vecchia GP healthy baseline  vs  current ExactGP baseline
+=========================================================
+config: per_range_big=300 (=> 2700 normal pts), m=15, vecchia_iters=200, gp_iters=100
+data:   baseline train = 180 pts | vecchia-big train = 2700 pts | held-out val = 1348 pts
+metrics: held-out healthy RMSE / Gaussian NLL (lower better); degradation SNR (higher better)
+         SNR(HI3) = SNR averaged over the 3 sensors used by the neural HI {T48,T50,Wf}
+
+====================================================================================
+            method |     RMSE |      NLL |  meanSNR | SNR(HI3) |    sec | note
+------------------------------------------------------------------------------------
+       ExactGP-180 |   0.9455 |    4.395 |    4.508 |   11.330 |    1.9 | current baseline (isotropic RBF, ICM)
+   ExactGP-ARD-180 |   0.8823 |    4.311 |      -   |      -   |    1.4 | fair control: ARD RBF, same 180 pts
+       Vecchia-180 |   0.8246 |   -0.697 |    4.892 |   11.594 |    2.7 | Vecchia, SAME 180 pts (isolates approx)
+      Vecchia-2700 |   0.7225 |   -1.005 |    6.048 |   12.274 |   25.8 | Vecchia, 15x more normal pts (the win)
+   ExactGP-ARD-2700|     -    |     -    |      -   |      -   |  ~397  | feasible but ~15x slower; 37,800-dim dense
+====================================================================================
+
+Reading the table
+-----------------
+* ARD alone explains only part of the gap:  RMSE 0.945 -> 0.882 (ExactGP-ARD-180).
+* Vecchia at the SAME 180 pts already beats the ARD control: RMSE 0.825, and NLL
+  collapses from +4.31 to -0.70 (per-sensor noise => well-calibrated predictive var).
+* Scaling to 2700 normal pts (only possible because Vecchia is O(n m^3), not O(n^3))
+  is the real improvement:
+     - held-out healthy RMSE   0.945 -> 0.723   ( -24% vs current )
+     - held-out healthy NLL    4.395 -> -1.005  ( far better calibration )
+     - degradation SNR (mean)  4.508 -> 6.048   ( +34% cleaner residuals )
+     - degradation SNR (HI3)  11.330 -> 12.274  ( +8.3% on the HI sensors )
+* ExactGP cannot reach the same operating point cheaply: at 2700 pts the multitask
+  system is 37,800-dimensional; one fit took ~6.6 min (vs Vecchia 26 s for 200 iters).
+
+Conclusion: replacing the 180-point ExactGP healthy baseline with a Vecchia GP fit on
+thousands of normal points yields a sharper, better-calibrated baseline and cleaner
+degradation residuals on every metric -- directly benefiting Stage 3 (residuals) and
+Stage 4 (health index).
+
+Artifacts:
+  NCMAPSS/vecchia_gp.py                  - Vecchia GP (max-min ordering + m-NN, RBF-ARD)
+  NCMAPSS/experiments/exp_vecchia.py     - this comparison (run with env pt_prac)
+  NCMAPSS/experiments/vecchia_comparison.png - RMSE / NLL / SNR bar chart (3 methods)
