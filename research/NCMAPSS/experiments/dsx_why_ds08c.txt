@@ -1,0 +1,25 @@
+=== DS08C  rule {'NB': 10, 'V_sparse': 17.36, 'V_dense': 17.36, 'wval': 50.0, 'wmode': 'fh'}
+(A) gate precondition — healthy cycles only, seed 0
+    detcov P10/P50/P90 = 19.48/20.20/20.34  spread P90-P10 = 0.86
+    u1   |z| low-conf/rest = 2.11   rho(detcov,|z|) = -0.37   below V:  1.7%
+    u2   |z| low-conf/rest = 2.17   rho(detcov,|z|) = -0.42   below V:  2.1%
+    u3   |z| low-conf/rest = 2.14   rho(detcov,|z|) = -0.35   below V:  2.7%
+    u4   |z| low-conf/rest = 1.99   rho(detcov,|z|) = -0.36   below V:  2.0%
+    u5   |z| low-conf/rest = 1.88   rho(detcov,|z|) = -0.28   below V:  2.0%
+    u6   |z| low-conf/rest = 1.46   rho(detcov,|z|) = -0.22   below V:  1.6%
+    MEAN: low-conf points are 1.96x noisier; rho = -0.33; 2.0% dropped
+(B) label-signal alignment (oracle = |z|>3 on any channel, 3 consecutive cycles)
+    u1   hs  17  oracle  19  lag   +2   |z|max at hs+10 = 3.1   EOL |z|max = 26
+    u2   hs  17  oracle  25  lag   +8   |z|max at hs+10 = 4.3   EOL |z|max = 66
+    u3   hs  17  oracle  32  lag  +15   |z|max at hs+10 = 2.9   EOL |z|max = 48
+    u4   hs  17  oracle  29  lag  +12   |z|max at hs+10 = 2.2   EOL |z|max = 30
+    u5   hs  16  oracle  28  lag  +12   |z|max at hs+10 = 4.3   EOL |z|max = 57
+    u6   hs  22  oracle  39  lag  +17   |z|max at hs+10 = 2.5   EOL |z|max = 27
+    lag mean +11.0 cycles (median +12); units with lag > 10: 4/6
+(C) sensor screen, model-free kNN k=10 (cycle<=3 reference), all 14 sensors
+    T50=2.39  T48=1.66  Wf=1.02  P2=0.96  T30=0.95  P40=0.94  Ps30=0.93  P15=0.92  P21=0.92  P50=0.92  P24=0.91  Nf=0.91  Nc=0.88  T24=0.85
+    top-5 here: ['T50', 'T48', 'Wf', 'P2', 'T30']; frozen set ranks: {'T30': 5, 'T48': 2, 'T50': 1, 'Nc': 13, 'Wf': 3}; overlap 4/5; zRMS mass frozen 6.90 vs top-5 6.98
+(D) fleet structure
+    dev: n=6 life 53±4 (CV 0.07) onset-frac 0.33±0.02 classes [2, 3, 3, 3, 3, 3]
+    test: n=4 life 59±3 onset-frac 0.38±0.02 classes [2, 2, 2, 2]  class-mix shift: none
+done

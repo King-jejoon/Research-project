@@ -1,0 +1,31 @@
+=== DS03  rule {'NB': 10, 'V_sparse': 19.0, 'V_dense': 20.2, 'wval': 30.0, 'wmode': 'fh'}
+(A) gate precondition — healthy cycles only, seed 0
+    detcov P10/P50/P90 = 19.72/20.27/20.38  spread P90-P10 = 0.65
+    u1   |z| low-conf/rest = 1.81   rho(detcov,|z|) = -0.29   below V: 20.4%
+    u2   |z| low-conf/rest = 1.96   rho(detcov,|z|) = -0.37   below V: 44.7%
+    u3   |z| low-conf/rest = 2.10   rho(detcov,|z|) = -0.36   below V: 43.6%
+    u4   |z| low-conf/rest = 2.07   rho(detcov,|z|) = -0.36   below V: 39.6%
+    u5   |z| low-conf/rest = 1.73   rho(detcov,|z|) = -0.24   below V: 21.0%
+    u6   |z| low-conf/rest = 1.91   rho(detcov,|z|) = -0.36   below V:  6.3%
+    u7   |z| low-conf/rest = 1.48   rho(detcov,|z|) = -0.26   below V: 45.0%
+    u8   |z| low-conf/rest = 2.17   rho(detcov,|z|) = -0.36   below V:  6.8%
+    u9   |z| low-conf/rest = 1.50   rho(detcov,|z|) = -0.17   below V: 21.2%
+    MEAN: low-conf points are 1.86x noisier; rho = -0.31; 27.6% dropped
+(B) label-signal alignment (oracle = |z|>3 on any channel, 3 consecutive cycles)
+    u1   hs  37  oracle  44  lag   +7   |z|max at hs+10 = 3.6   EOL |z|max = 46
+    u2   hs  24  oracle  34  lag  +10   |z|max at hs+10 = 3.4   EOL |z|max = 40
+    u3   hs  25  oracle  34  lag   +9   |z|max at hs+10 = 4.3   EOL |z|max = 52
+    u4   hs  24  oracle  31  lag   +7   |z|max at hs+10 = 3.8   EOL |z|max = 44
+    u5   hs  38  oracle  54  lag  +16   |z|max at hs+10 = 1.6   EOL |z|max = 44
+    u6   hs  18  oracle  33  lag  +15   |z|max at hs+10 = 2.5   EOL |z|max = 38
+    u7   hs  25  oracle  39  lag  +14   |z|max at hs+10 = 1.8   EOL |z|max = 39
+    u8   hs  18  oracle  34  lag  +16   |z|max at hs+10 = 2.4   EOL |z|max = 47
+    u9   hs  37  oracle  49  lag  +12   |z|max at hs+10 = 3.5   EOL |z|max = 44
+    lag mean +11.8 cycles (median +12); units with lag > 10: 5/9
+(C) sensor screen, model-free kNN k=10 (cycle<=3 reference), all 14 sensors
+    T50=2.99  T48=2.17  Wf=1.19  Nc=1.16  T30=1.06  P40=1.06  Ps30=1.05  Nf=1.03  T24=1.02  P24=1.01  P15=0.99  P21=0.99  P50=0.98  P2=0.97
+    top-5 here: ['T50', 'T48', 'Wf', 'Nc', 'T30']; frozen set ranks: {'T30': 5, 'T48': 2, 'T50': 1, 'Nc': 4, 'Wf': 3}; overlap 5/5; zRMS mass frozen 8.57 vs top-5 8.57
+(D) fleet structure
+    dev: n=9 life 74±10 (CV 0.13) onset-frac 0.37±0.08 classes [1, 1, 1, 2, 2, 2, 2, 3, 3]
+    test: n=6 life 73±11 onset-frac 0.35±0.08 classes [1, 1, 2, 3, 3, 3]  class-mix shift: none
+done
